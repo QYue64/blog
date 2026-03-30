@@ -22,51 +22,51 @@ concurrency:
 jobs:
   # Build job
   build-and-deploy:
-    runs-on: ${{ matrix.os }}
-    defaults:
-      run:
-        working-directory: .starters/default
+    runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        os: [ubuntu-latest]
         node: [18]
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Identify package manager
-        id: pkgman
-        run: |
-          cache=`[ -f "pnpm-lock.yaml" ] && echo "pnpm" || ([ -f "package-lock.json" ] && echo "npm" || ([ -f "yarn.lock" ] && echo "yarn" || echo ""))`
-          package_manager=`[ ! -z "$cache" ] && echo "$cache" || echo "pnpm"`
-          echo "cache=$cache" >> $GITHUB_OUTPUT
-          echo "package_manager=$package_manager" >> $GITHUB_OUTPUT
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node }}
 
-      - uses: pnpm/action-setup@v2.2.4
-        if: ${{ steps.pkgman.outputs.package_manager == 'pnpm' }}
-        name: Install pnpm
-        id: pnpm-install
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2.2.4
         with:
           version: 8
 
-      - uses: actions/setup-node@v3
+      - name: Get pnpm store directory
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
         with:
-          version: ${{ matrix.node }}
-          cache: ${{ steps.pkgman.outputs.cache }}
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
-        run: ${{ steps.pkgman.outputs.package_manager }} install
+        run: pnpm install
 
-      - name: Generate
-        run: ${{ steps.pkgman.outputs.package_manager }} generate
+      - name: Generate static site
+        run: pnpm generate
 
       - name: Add .nojekyll file
-        run: touch .output/public/.nojekyll
+        run: touch .starters/default/.output/public/.nojekyll
 
-        # Deployment job
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: .starters/default/.output/public
+          branch: gh-pages
+          clean: true
