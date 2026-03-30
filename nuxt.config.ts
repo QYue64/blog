@@ -47,7 +47,7 @@ export default defineNuxtConfig({
   pages: true,
   modules: [
     envModules.tokens,
-    envModules.studio,
+    process.env.NODE_ENV === 'production' ? false : envModules.studio,
     '@nuxt/content',
     updateModule as any
   ],
@@ -63,7 +63,7 @@ export default defineNuxtConfig({
     classSuffix: ''
   },
   pinceau: {
-    studio: true
+    studio: process.env.NODE_ENV !== 'production'
   },
   content: {
     documentDriven: true,

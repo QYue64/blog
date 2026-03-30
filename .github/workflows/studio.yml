@@ -49,6 +49,8 @@ jobs:
 
       - name: Generate static site
         run: pnpm generate
+        env:
+          NODE_ENV: production
 
       - name: Add .nojekyll file
         run: touch .starters/default/.output/public/.nojekyll
