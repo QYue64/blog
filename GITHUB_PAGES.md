@@ -1,20 +1,30 @@
 # GitHub Pages 部署指南
 
-## 自动部署（推荐）
+## 自动部署（已配置）
 
-项目已配置 GitHub Actions 工作流，每次推送到 `main` 分支时会自动部署到 GitHub Pages。
+项目已使用 `studio.yml` 工作流自动部署到 GitHub Pages。
+
+### 工作流程：
+
+每次推送到 `main` 分支时会自动：
+1. 安装 Node.js 18 和 pnpm 8
+2. 安装项目依赖
+3. 运行 `nuxi generate` 构建静态站点
+4. 自动部署 `.output/public` 目录到 `gh-pages` 分支
+5. GitHub Pages 会自动从 `gh-pages` 分支提供服务
 
 ### 步骤：
 
 1. **在 GitHub 仓库启用 Pages**
    - 打开 https://github.com/QYue64/blog/settings/pages
    - 在 "Build and deployment" 部分：
-     - Source: 选择 "GitHub Actions"
+     - Source: 选择 "GitHub Actions"（如果可用）
+     - 或者使用 Branch: 选择 `gh-pages` 分支，文件夹选择 `/ (root)`
 
 2. **推送到 GitHub**
    ```bash
    git add .
-   git commit -m "准备部署到 GitHub Pages"
+   git commit -m "更新内容"
    git push origin main
    ```
 
@@ -74,15 +84,18 @@ export NUXT_APP_BASE_URL=/blog/
 pnpm generate
 ```
 
+或者在 GitHub Actions 工作流中设置环境变量。
+
 ### GitHub Actions 工作流
 
-工作流文件位于：`.github/workflows/pages.yml`
+工作流文件位于：`.github/workflows/studio.yml`
 
 它会在每次推送到 `main` 分支时：
-1. 安装 Node.js 和 pnpm
+1. 安装 Node.js 18 和 pnpm 8
 2. 安装依赖
-3. 执行 `pnpm generate` 构建静态站点
-4. 自动部署到 GitHub Pages
+3. 执行 `nuxi generate` 构建静态站点
+4. 添加 `.nojekyll` 文件（防止 GitHub Pages 忽略某些文件）
+5. 使用 `JamesIves/github-pages-deploy-action` 部署到 `gh-pages` 分支
 
 ## 访问地址
 
