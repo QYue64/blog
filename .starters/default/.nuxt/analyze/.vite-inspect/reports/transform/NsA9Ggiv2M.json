@@ -1,0 +1,240 @@
+{
+  "resolvedId": "/Users/jiyankang/vscodeProjects/witque-blog/components/content/Hero.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<script setup lang=\"ts\">\ndefineProps({\n  image: {\n    type: String,\n    default: null\n  },\n  imageAlt: {\n    type: String,\n    default: 'Hero Image'\n  },\n  imagePosition: {\n    type: String,\n    default: 'right'\n  }\n})\n</script>\n\n<template>\n  <section class=\"hero\">\n    <div class=\"layout\">\n      <div class=\"content\">\n        <div class=\"title\">\n          <ContentSlot :use=\"$slots.title\" unwrap=\"p\">\n            Hero title\n          </ContentSlot>\n        </div>\n        <div class=\"description\">\n          <ContentSlot :use=\"$slots.description\" unwrap=\"p\">\n            Hero description\n          </ContentSlot>\n        </div>\n      </div>\n      <NuxtImg\n        v-if=\"image\"\n        :class=\"imagePosition\"\n        :src=\"image\"\n        :alt=\"imageAlt\"\n        :width=\"16\"\n        :height=\"9\"\n      />\n    </div>\n  </section>\n</template>\n\n<style scoped lang=\"ts\">\ncss({\n  '.hero': {\n    '.layout': {\n      display: 'grid',\n      gridTemplateColumns: 'repeat(1, minmax(0, 1fr))',\n      gap: '{space.8}',\n      '@lg': {\n        gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',\n      },\n      '.title': {\n        fontSize: '{text.4xl.fontSize}',\n        lineHeight: '{text.4xl.lineHeight}',\n        fontWeight: '{fontWeight.bold}',\n      },\n      '.description': {\n        marginTop: '{space.3}',\n        fontSize: '{text.xl.fontSize}',\n        lineHeight: '{text.xl.lineHeight}',\n      },\n      img: {\n        width: '100%',\n        aspectRatio: '16 / 9',\n        objectFit: 'cover',\n        borderRadius: '{radii.md}',\n        '&.left': {\n          order: -1\n        }\n      },\n    }\n  }\n})\n</style>\n",
+      "start": 1774875879207,
+      "end": 1774875879259,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1774875879259,
+      "end": 1774875879259,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1774875879259,
+      "end": 1774875879259,
+      "order": "pre"
+    },
+    {
+      "name": "pinceau-transforms",
+      "result": "<script setup lang=\"ts\">\ndefineProps({\n  image: {\n    type: String,\n    default: null\n  },\n  imageAlt: {\n    type: String,\n    default: 'Hero Image'\n  },\n  imagePosition: {\n    type: String,\n    default: 'right'\n  }\n})\n</script>\n\n<template>\n  <section class=\"hero\">\n    <div class=\"layout\">\n      <div class=\"content\">\n        <div class=\"title\">\n          <ContentSlot :use=\"$slots.title\" unwrap=\"p\">\n            Hero title\n          </ContentSlot>\n        </div>\n        <div class=\"description\">\n          <ContentSlot :use=\"$slots.description\" unwrap=\"p\">\n            Hero description\n          </ContentSlot>\n        </div>\n      </div>\n      <NuxtImg\n        v-if=\"image\"\n        :class=\"imagePosition\"\n        :src=\"image\"\n        :alt=\"imageAlt\"\n        :width=\"16\"\n        :height=\"9\"\n      />\n    </div>\n  </section>\n</template>\n\n<style scoped lang=\"postcss\" transformed>\n.hero .layout{display:grid;grid-template-columns:repeat(1, minmax(0, 1fr));gap:var(--space-8);}@media (min-width: 1024px){.hero .layout{grid-template-columns:repeat(2, minmax(0, 1fr));}}.hero .layout .title{font-size:var(--text-4xl-fontSize);line-height:var(--text-4xl-lineHeight);font-weight:var(--fontWeight-bold);}.hero .layout .description{margin-top:var(--space-3);font-size:var(--text-xl-fontSize);line-height:var(--text-xl-lineHeight);}.hero .layout img{width:100%;aspect-ratio:16 / 9;object-fit:cover;border-radius:var(--radii-md);}.hero .layout img.left{order:-1;}\n</style>\n",
+      "start": 1774875879259,
+      "end": 1774875879260,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "file": "/Users/jiyankang/vscodeProjects/witque-blog/components/content/Hero.vue",
+        "sources": [
+          "/Users/jiyankang/vscodeProjects/witque-blog/components/content/Hero.vue"
+        ],
+        "names": [],
+        "mappings": "AAAA,wBAAwB;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,AAexB;AACA;AACA,UAAU;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,AAyBV;AACA;AACA;;AAgCA;"
+      }
+    },
+    {
+      "name": "content-slot",
+      "result": "<script setup lang=\"ts\">\ndefineProps({\n  image: {\n    type: String,\n    default: null\n  },\n  imageAlt: {\n    type: String,\n    default: 'Hero Image'\n  },\n  imagePosition: {\n    type: String,\n    default: 'right'\n  }\n})\n</script>\n\n<template>\n  <section class=\"hero\">\n    <div class=\"layout\">\n      <div class=\"content\">\n        <div class=\"title\">\n          <MDCSlot  name=\"title\" unwrap=\"p\">\n            Hero title\n          </MDCSlot>\n        </div>\n        <div class=\"description\">\n          <MDCSlot  name=\"description\" unwrap=\"p\">\n            Hero description\n          </MDCSlot>\n        </div>\n      </div>\n      <NuxtImg\n        v-if=\"image\"\n        :class=\"imagePosition\"\n        :src=\"image\"\n        :alt=\"imageAlt\"\n        :width=\"16\"\n        :height=\"9\"\n      />\n    </div>\n  </section>\n</template>\n\n<style scoped lang=\"postcss\" transformed>\n.hero .layout{display:grid;grid-template-columns:repeat(1, minmax(0, 1fr));gap:var(--space-8);}@media (min-width: 1024px){.hero .layout{grid-template-columns:repeat(2, minmax(0, 1fr));}}.hero .layout .title{font-size:var(--text-4xl-fontSize);line-height:var(--text-4xl-lineHeight);font-weight:var(--fontWeight-bold);}.hero .layout .description{margin-top:var(--space-3);font-size:var(--text-xl-fontSize);line-height:var(--text-xl-lineHeight);}.hero .layout img{width:100%;aspect-ratio:16 / 9;object-fit:cover;border-radius:var(--radii-md);}.hero .layout img.left{order:-1;}\n</style>\n",
+      "start": 1774875879260,
+      "end": 1774875879260,
+      "order": "pre",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1774875879260,
+      "end": 1774875879260,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1774875879260,
+      "end": 1774875879260,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1774875879260,
+      "end": 1774875879260,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1774875879260,
+      "end": 1774875879260,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1774875879260,
+      "end": 1774875879260,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "import _sfc_main from \"/Users/jiyankang/vscodeProjects/witque-blog/components/content/Hero.vue?vue&type=script&setup=true&lang.ts\";\nexport * from \"/Users/jiyankang/vscodeProjects/witque-blog/components/content/Hero.vue?vue&type=script&setup=true&lang.ts\";\nimport \"/Users/jiyankang/vscodeProjects/witque-blog/components/content/Hero.vue?vue&type=style&index=0&scoped=ce2c89e1&transformed=true&lang.postcss\";\nimport _export_sfc from \"\\0plugin-vue:export-helper\";\nexport default /* @__PURE__ */ _export_sfc(_sfc_main, [[\"__scopeId\", \"data-v-ce2c89e1\"]]);\n",
+      "start": 1774875879260,
+      "end": 1774875879277,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1774875879277,
+      "end": 1774875879278,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1774875879278,
+      "end": 1774875879278,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1774875879278,
+      "end": 1774875879278,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1774875879278,
+      "end": 1774875879278,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1774875879278,
+      "end": 1774875879278,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1774875879278,
+      "end": 1774875879278,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1774875879278,
+      "end": 1774875879278,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1774875879278,
+      "end": 1774875879278,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1774875879278,
+      "end": 1774875879278,
+      "order": "normal"
+    }
+  ]
+}

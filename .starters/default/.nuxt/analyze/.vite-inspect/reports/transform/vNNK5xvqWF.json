@@ -1,0 +1,236 @@
+{
+  "resolvedId": "/Users/jiyankang/vscodeProjects/witque-blog/components/data-entry/Input.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<script setup lang=\"ts\">\nimport type { PropType } from 'vue'\nimport type { Field } from '../types/contact'\n\ndefineEmits(['update:modelValue'])\n\ndefineProps({\n  modelValue: {\n    type: String,\n    required: true\n  },\n  field: {\n    type: Object as PropType<Field>,\n    required: true,\n    validator: (value: Field) => {\n      if (!value.name) {\n        return false\n      }\n      return true\n    }\n  }\n})\n\n</script>\n\n<template>\n  <div>\n    <label :for=\"field.name\">\n      {{ field.label }}\n    </label>\n    <input\n      v-if=\"field.type !== 'textarea'\"\n      :id=\"field.name\"\n      :name=\"field.name\"\n      :value=\"modelValue\"\n      :type=\"field.type ? field.type : 'text'\"\n      :placeholder=\"field.placeholder ? field.placeholder : ''\"\n      @input=\"$emit('update:modelValue', $event.target.value)\"\n    >\n    <textarea\n      v-else\n      :id=\"field.name\"\n      :name=\"field.name\"\n      :value=\"modelValue\"\n      :type=\"field.type ? field.type : 'text'\"\n      :placeholder=\"field.placeholder ? field.placeholder : ''\"\n      @input=\"$emit('update:modelValue', $event.target.value)\"\n    />\n  </div>\n</template>\n\n<style scoped lang=\"ts\">\ncss({\n  div: {\n    label: {\n      display: 'block',\n      fontSize: '{text.base.fontSize}',\n      lineHeight: '{text.base.lineHeight}',\n      fontWeight: '{fontWeight.semibold}',\n      marginBottom: '{space.2}',\n      cursor: 'pointer',\n    },\n    'input, textarea': {\n      backgroundColor: 'transparent',\n      outline: 'none',\n      border: '1px solid {color.gray.300}',\n      borderRadius: '{radii.sm}',\n      padding: '{space.2} {space.4}',\n      width: '100%',\n      caretColor: '{color.gray.500}',\n      '&:focus': {\n        borderColor: '{color.gray.700}'\n      },\n      '@dark': {\n        borderColor: '{color.gray.700}',\n        '&:focus': {\n          borderColor: '{color.gray.400}'\n        },\n      }\n    },\n    textarea: {\n      resize: 'none',\n      height: '{space.48}'\n    }\n  }\n})\n</style>\n",
+      "start": 1774875879219,
+      "end": 1774875879271,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1774875879271,
+      "end": 1774875879271,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1774875879271,
+      "end": 1774875879271,
+      "order": "pre"
+    },
+    {
+      "name": "pinceau-transforms",
+      "result": "<script setup lang=\"ts\">\nimport type { PropType } from 'vue'\nimport type { Field } from '../types/contact'\n\ndefineEmits(['update:modelValue'])\n\ndefineProps({\n  modelValue: {\n    type: String,\n    required: true\n  },\n  field: {\n    type: Object as PropType<Field>,\n    required: true,\n    validator: (value: Field) => {\n      if (!value.name) {\n        return false\n      }\n      return true\n    }\n  }\n})\n\n</script>\n\n<template>\n  <div>\n    <label :for=\"field.name\">\n      {{ field.label }}\n    </label>\n    <input\n      v-if=\"field.type !== 'textarea'\"\n      :id=\"field.name\"\n      :name=\"field.name\"\n      :value=\"modelValue\"\n      :type=\"field.type ? field.type : 'text'\"\n      :placeholder=\"field.placeholder ? field.placeholder : ''\"\n      @input=\"$emit('update:modelValue', $event.target.value)\"\n    >\n    <textarea\n      v-else\n      :id=\"field.name\"\n      :name=\"field.name\"\n      :value=\"modelValue\"\n      :type=\"field.type ? field.type : 'text'\"\n      :placeholder=\"field.placeholder ? field.placeholder : ''\"\n      @input=\"$emit('update:modelValue', $event.target.value)\"\n    />\n  </div>\n</template>\n\n<style scoped lang=\"postcss\" transformed>\ndiv label{display:block;font-size:var(--text-base-fontSize);line-height:var(--text-base-lineHeight);font-weight:var(--fontWeight-semibold);margin-bottom:var(--space-2);cursor:pointer;}div input,div textarea{background-color:transparent;outline:none;border:1px solid var(--color-gray-300);border-radius:var(--radii-sm);padding:var(--space-2) var(--space-4);width:100%;caret-color:var(--color-gray-500);}div input:focus,div textarea:focus{border-color:var(--color-gray-700);}:root.dark div input,:root.dark div textarea{border-color:var(--color-gray-700);}:root.dark div input:focus,:root.dark div textarea:focus{border-color:var(--color-gray-400);}div textarea{resize:none;height:var(--space-48);}\n</style>\n",
+      "start": 1774875879271,
+      "end": 1774875879272,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "file": "/Users/jiyankang/vscodeProjects/witque-blog/components/data-entry/Input.vue",
+        "sources": [
+          "/Users/jiyankang/vscodeProjects/witque-blog/components/data-entry/Input.vue"
+        ],
+        "names": [],
+        "mappings": "AAAA,wBAAwB;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,AAuBxB;AACA;AACA,UAAU;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,AAwBV;AACA;AACA;;AAmCA;"
+      }
+    },
+    {
+      "name": "content-slot",
+      "start": 1774875879272,
+      "end": 1774875879272,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1774875879272,
+      "end": 1774875879272,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1774875879272,
+      "end": 1774875879272,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1774875879272,
+      "end": 1774875879272,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1774875879272,
+      "end": 1774875879272,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1774875879272,
+      "end": 1774875879272,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "import _sfc_main from \"/Users/jiyankang/vscodeProjects/witque-blog/components/data-entry/Input.vue?vue&type=script&setup=true&lang.ts\";\nexport * from \"/Users/jiyankang/vscodeProjects/witque-blog/components/data-entry/Input.vue?vue&type=script&setup=true&lang.ts\";\nimport \"/Users/jiyankang/vscodeProjects/witque-blog/components/data-entry/Input.vue?vue&type=style&index=0&scoped=d1bc9653&transformed=true&lang.postcss\";\nimport _export_sfc from \"\\0plugin-vue:export-helper\";\nexport default /* @__PURE__ */ _export_sfc(_sfc_main, [[\"__scopeId\", \"data-v-d1bc9653\"]]);\n",
+      "start": 1774875879272,
+      "end": 1774875879277,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1774875879277,
+      "end": 1774875879278,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1774875879278,
+      "end": 1774875879278,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1774875879278,
+      "end": 1774875879278,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1774875879278,
+      "end": 1774875879278,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1774875879278,
+      "end": 1774875879278,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1774875879278,
+      "end": 1774875879278,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1774875879278,
+      "end": 1774875879278,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1774875879278,
+      "end": 1774875879278,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1774875879278,
+      "end": 1774875879278,
+      "order": "normal"
+    }
+  ]
+}

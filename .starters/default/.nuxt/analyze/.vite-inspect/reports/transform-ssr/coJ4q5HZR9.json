@@ -1,0 +1,294 @@
+{
+  "resolvedId": "/Users/jiyankang/vscodeProjects/witque-blog/components/ColorModeSwitch.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<script setup lang=\"ts\">\nconst colorMode = useColorMode()\nconst onClick = () => {\n  const values = ['system', 'light', 'dark']\n  const index = values.indexOf(colorMode.preference)\n  const next = (index + 1) % values.length\n\n  colorMode.preference = values[next]\n}\n</script>\n\n<template>\n  <button aria-label=\"Color Mode\" @click=\"onClick\">\n    <ColorScheme>\n      <template v-if=\"colorMode.preference === 'dark'\">\n        <Icon name=\"uil:moon\" />\n        <span class=\"sr-only\">Dark mode</span>\n      </template>\n      <template v-else-if=\"colorMode.preference === 'light'\">\n        <Icon name=\"uil:sun\" />\n        <span class=\"sr-only\">Light mode</span>\n      </template>\n      <template v-else>\n        <Icon name=\"uil:desktop\" />\n        <span class=\"sr-only\">System mode</span>\n      </template>\n    </ColorScheme>\n  </button>\n</template>\n\n<style scoped lang=\"ts\">\ncss({\n  button: {\n    display: 'flex',\n    '--color-mode-switcher-size': '24px',\n    width: 'var(--color-mode-switcher-size)',\n    height: 'var(--color-mode-switcher-size)',\n    ':hover': {\n      color: '{color.primary.500}',\n    },\n    svg: {\n      width: '100%',\n      height: '100%',\n    }\n  }\n})\n</style>\n",
+      "start": 1774875880841,
+      "end": 1774875880886,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1774875880886,
+      "end": 1774875880886,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1774875880886,
+      "end": 1774875880886,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1774875880886,
+      "end": 1774875880886,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1774875880886,
+      "end": 1774875880886,
+      "order": "pre"
+    },
+    {
+      "name": "pinceau-transforms",
+      "result": "<script setup lang=\"ts\">\nconst colorMode = useColorMode()\nconst onClick = () => {\n  const values = ['system', 'light', 'dark']\n  const index = values.indexOf(colorMode.preference)\n  const next = (index + 1) % values.length\n\n  colorMode.preference = values[next]\n}\n</script>\n\n<template>\n  <button aria-label=\"Color Mode\" @click=\"onClick\">\n    <ColorScheme>\n      <template v-if=\"colorMode.preference === 'dark'\">\n        <Icon name=\"uil:moon\" />\n        <span class=\"sr-only\">Dark mode</span>\n      </template>\n      <template v-else-if=\"colorMode.preference === 'light'\">\n        <Icon name=\"uil:sun\" />\n        <span class=\"sr-only\">Light mode</span>\n      </template>\n      <template v-else>\n        <Icon name=\"uil:desktop\" />\n        <span class=\"sr-only\">System mode</span>\n      </template>\n    </ColorScheme>\n  </button>\n</template>\n\n<style scoped lang=\"postcss\" transformed>\nbutton{display:flex;--color-mode-switcher-size:24px;width:var(--color-mode-switcher-size);height:var(--color-mode-switcher-size);}button :hover{color:var(--color-primary-500);}button svg{width:100%;height:100%;}\n</style>\n",
+      "start": 1774875880886,
+      "end": 1774875880886,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "file": "/Users/jiyankang/vscodeProjects/witque-blog/components/ColorModeSwitch.vue",
+        "sources": [
+          "/Users/jiyankang/vscodeProjects/witque-blog/components/ColorModeSwitch.vue"
+        ],
+        "names": [],
+        "mappings": "AAAA,wBAAwB;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,AASxB;AACA;AACA,UAAU;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,AAiBV;AACA;AACA;;AAgBA;"
+      }
+    },
+    {
+      "name": "pinceau-transforms",
+      "result": "<script setup lang=\"ts\">\nconst colorMode = useColorMode()\nconst onClick = () => {\n  const values = ['system', 'light', 'dark']\n  const index = values.indexOf(colorMode.preference)\n  const next = (index + 1) % values.length\n\n  colorMode.preference = values[next]\n}\n</script>\n\n<template>\n  <button aria-label=\"Color Mode\" @click=\"onClick\">\n    <ColorScheme>\n      <template v-if=\"colorMode.preference === 'dark'\">\n        <Icon name=\"uil:moon\" />\n        <span class=\"sr-only\">Dark mode</span>\n      </template>\n      <template v-else-if=\"colorMode.preference === 'light'\">\n        <Icon name=\"uil:sun\" />\n        <span class=\"sr-only\">Light mode</span>\n      </template>\n      <template v-else>\n        <Icon name=\"uil:desktop\" />\n        <span class=\"sr-only\">System mode</span>\n      </template>\n    </ColorScheme>\n  </button>\n</template>\n\n<style scoped lang=\"postcss\" transformed>\nbutton{display:flex;--color-mode-switcher-size:24px;width:var(--color-mode-switcher-size);height:var(--color-mode-switcher-size);}button :hover{color:var(--color-primary-500);}button svg{width:100%;height:100%;}\n</style>\n",
+      "start": 1774875880886,
+      "end": 1774875880886,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "file": "/Users/jiyankang/vscodeProjects/witque-blog/components/ColorModeSwitch.vue",
+        "sources": [
+          "/Users/jiyankang/vscodeProjects/witque-blog/components/ColorModeSwitch.vue"
+        ],
+        "names": [],
+        "mappings": "AAAA,wBAAwB;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,AASxB;AACA;AACA,UAAU;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,AAiBV;AACA;AACA;;AAgBA;"
+      }
+    },
+    {
+      "name": "content-slot",
+      "start": 1774875880886,
+      "end": 1774875880886,
+      "order": "pre"
+    },
+    {
+      "name": "content-slot",
+      "start": 1774875880886,
+      "end": 1774875880886,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1774875880886,
+      "end": 1774875880886,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1774875880886,
+      "end": 1774875880886,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1774875880886,
+      "end": 1774875880886,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1774875880886,
+      "end": 1774875880886,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1774875880886,
+      "end": 1774875880886,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "import _sfc_main from \"/Users/jiyankang/vscodeProjects/witque-blog/components/ColorModeSwitch.vue?vue&type=script&setup=true&lang.ts\";\nexport * from \"/Users/jiyankang/vscodeProjects/witque-blog/components/ColorModeSwitch.vue?vue&type=script&setup=true&lang.ts\";\nimport \"/Users/jiyankang/vscodeProjects/witque-blog/components/ColorModeSwitch.vue?vue&type=style&index=0&scoped=7ddac757&transformed=true&lang.postcss\";\nimport { useSSRContext as __vite_useSSRContext } from \"vue\";\nconst _sfc_setup = _sfc_main.setup;\n_sfc_main.setup = (props, ctx) => {\n  const ssrContext = __vite_useSSRContext();\n  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add(\"../../components/ColorModeSwitch.vue\");\n  return _sfc_setup ? _sfc_setup(props, ctx) : void 0;\n};\nimport _export_sfc from \"\\0plugin-vue:export-helper\";\nexport default /* @__PURE__ */ _export_sfc(_sfc_main, [[\"__scopeId\", \"data-v-7ddac757\"]]);\n",
+      "start": 1774875880886,
+      "end": 1774875880893,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1774875880893,
+      "end": 1774875880893,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1774875880893,
+      "end": 1774875880893,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1774875880893,
+      "end": 1774875880893,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1774875880893,
+      "end": 1774875880893,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1774875880893,
+      "end": 1774875880893,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1774875880893,
+      "end": 1774875880893,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1774875880893,
+      "end": 1774875880893,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1774875880893,
+      "end": 1774875880894,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1774875880894,
+      "end": 1774875880894,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1774875880894,
+      "end": 1774875880894,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1774875880894,
+      "end": 1774875880894,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1774875880894,
+      "end": 1774875880894,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1774875880894,
+      "end": 1774875880894,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1774875880894,
+      "end": 1774875880894,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1774875880894,
+      "end": 1774875880894,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1774875880894,
+      "end": 1774875880894,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1774875880894,
+      "end": 1774875880894,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1774875880894,
+      "end": 1774875880894,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1774875880894,
+      "end": 1774875880894,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1774875880894,
+      "end": 1774875880894,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1774875880894,
+      "end": 1774875880894,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1774875880894,
+      "end": 1774875880894,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1774875880894,
+      "end": 1774875880894,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1774875880894,
+      "end": 1774875880894,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1774875880894,
+      "end": 1774875880894,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1774875880894,
+      "end": 1774875880894,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1774875880894,
+      "end": 1774875880894,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1774875880894,
+      "end": 1774875880894,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1774875880894,
+      "end": 1774875880894,
+      "order": "normal"
+    }
+  ]
+}

@@ -1,0 +1,244 @@
+{
+  "resolvedId": "/Users/jiyankang/vscodeProjects/witque-blog/.starters/default/app.config.ts",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "// https://github.com/nuxt-themes/alpine/blob/main/nuxt.schema.ts\nexport default defineAppConfig({\n  alpine: {\n    title: '雀雀博客',\n    description: '这里是雀雀的新博客，基于 Alpine 二次开发，一个由 Nuxt 驱动的 Markdown 博客系统.',\n    image: {\n      src: '/social-card-preview.png',\n      alt: '雀雀博客',\n      width: 400,\n      height: 300\n    },\n    header: {\n      position: 'right'\n    },\n    footer: {\n      credits: {\n        enabled: true,\n        text: '浙 ICP 备 18035094 号 -1',\n        repository: 'https://beian.miit.gov.cn/'\n      },\n      navigation: false,\n      alignment: 'center',\n      message: ''\n    },\n    socials: {},\n    form: {\n      successMessage: 'Message sent. Thank you!'\n    }\n  }\n})\n",
+      "start": 1774875879875,
+      "end": 1774875879906,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1774875879906,
+      "end": 1774875879906,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1774875879906,
+      "end": 1774875879906,
+      "order": "pre"
+    },
+    {
+      "name": "pinceau-transforms",
+      "result": "// https://github.com/nuxt-themes/alpine/blob/main/nuxt.schema.ts\nexport default defineAppConfig({\n  alpine: {\n    title: '雀雀博客',\n    description: '这里是雀雀的新博客，基于 Alpine 二次开发，一个由 Nuxt 驱动的 Markdown 博客系统.',\n    image: {\n      src: '/social-card-preview.png',\n      alt: '雀雀博客',\n      width: 400,\n      height: 300\n    },\n    header: {\n      position: 'right'\n    },\n    footer: {\n      credits: {\n        enabled: true,\n        text: '浙 ICP 备 18035094 号 -1',\n        repository: 'https://beian.miit.gov.cn/'\n      },\n      navigation: false,\n      alignment: 'center',\n      message: ''\n    },\n    socials: {},\n    form: {\n      successMessage: 'Message sent. Thank you!'\n    }\n  }\n})\n",
+      "start": 1774875879906,
+      "end": 1774875879907,
+      "order": "pre"
+    },
+    {
+      "name": "content-slot",
+      "start": 1774875879907,
+      "end": 1774875879907,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1774875879907,
+      "end": 1774875879907,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1774875879907,
+      "end": 1774875879907,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "export default defineAppConfig({\n  alpine: {\n    title: \"雀雀博客\",\n    description: \"这里是雀雀的新博客，基于 Alpine 二次开发，一个由 Nuxt 驱动的 Markdown 博客系统.\",\n    image: {\n      src: \"/social-card-preview.png\",\n      alt: \"雀雀博客\",\n      width: 400,\n      height: 300\n    },\n    header: {\n      position: \"right\"\n    },\n    footer: {\n      credits: {\n        enabled: true,\n        text: \"浙 ICP 备 18035094 号 -1\",\n        repository: \"https://beian.miit.gov.cn/\"\n      },\n      navigation: false,\n      alignment: \"center\",\n      message: \"\"\n    },\n    socials: {},\n    form: {\n      successMessage: \"Message sent. Thank you!\"\n    }\n  }\n});\n",
+      "start": 1774875879907,
+      "end": 1774875879917,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/Users/jiyankang/vscodeProjects/witque-blog/.starters/default/app.config.ts"
+        ],
+        "sourcesContent": [
+          "// https://github.com/nuxt-themes/alpine/blob/main/nuxt.schema.ts\nexport default defineAppConfig({\n  alpine: {\n    title: '雀雀博客',\n    description: '这里是雀雀的新博客，基于 Alpine 二次开发，一个由 Nuxt 驱动的 Markdown 博客系统.',\n    image: {\n      src: '/social-card-preview.png',\n      alt: '雀雀博客',\n      width: 400,\n      height: 300\n    },\n    header: {\n      position: 'right'\n    },\n    footer: {\n      credits: {\n        enabled: true,\n        text: '浙 ICP 备 18035094 号 -1',\n        repository: 'https://beian.miit.gov.cn/'\n      },\n      navigation: false,\n      alignment: 'center',\n      message: ''\n    },\n    socials: {},\n    form: {\n      successMessage: 'Message sent. Thank you!'\n    }\n  }\n})\n"
+        ],
+        "mappings": "AACA,eAAe,gBAAgB;AAAA,EAC7B,QAAQ;AAAA,IACN,OAAO;AAAA,IACP,aAAa;AAAA,IACb,OAAO;AAAA,MACL,KAAK;AAAA,MACL,KAAK;AAAA,MACL,OAAO;AAAA,MACP,QAAQ;AAAA,IACV;AAAA,IACA,QAAQ;AAAA,MACN,UAAU;AAAA,IACZ;AAAA,IACA,QAAQ;AAAA,MACN,SAAS;AAAA,QACP,SAAS;AAAA,QACT,MAAM;AAAA,QACN,YAAY;AAAA,MACd;AAAA,MACA,YAAY;AAAA,MACZ,WAAW;AAAA,MACX,SAAS;AAAA,IACX;AAAA,IACA,SAAS,CAAC;AAAA,IACV,MAAM;AAAA,MACJ,gBAAgB;AAAA,IAClB;AAAA,EACF;AACF,CAAC;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:json",
+      "start": 1774875879917,
+      "end": 1774875879917,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1774875879917,
+      "end": 1774875879917,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1774875879917,
+      "end": 1774875879917,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1774875879917,
+      "end": 1774875879917,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1774875879917,
+      "end": 1774875879918,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1774875879918,
+      "end": 1774875879918,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1774875879918,
+      "end": 1774875879918,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1774875879918,
+      "end": 1774875879918,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1774875879919,
+      "end": 1774875879919,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1774875879919,
+      "end": 1774875879919,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1774875879919,
+      "end": 1774875879919,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1774875879919,
+      "end": 1774875879919,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1774875879919,
+      "end": 1774875879919,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1774875879919,
+      "end": 1774875879919,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1774875879919,
+      "end": 1774875879919,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1774875879919,
+      "end": 1774875879919,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1774875879919,
+      "end": 1774875879919,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1774875879919,
+      "end": 1774875879919,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1774875879919,
+      "end": 1774875879919,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "result": "import { defineAppConfig } from '#app/nuxt';\nexport default defineAppConfig({\n  alpine: {\n    title: \"雀雀博客\",\n    description: \"这里是雀雀的新博客，基于 Alpine 二次开发，一个由 Nuxt 驱动的 Markdown 博客系统.\",\n    image: {\n      src: \"/social-card-preview.png\",\n      alt: \"雀雀博客\",\n      width: 400,\n      height: 300\n    },\n    header: {\n      position: \"right\"\n    },\n    footer: {\n      credits: {\n        enabled: true,\n        text: \"浙 ICP 备 18035094 号 -1\",\n        repository: \"https://beian.miit.gov.cn/\"\n      },\n      navigation: false,\n      alignment: \"center\",\n      message: \"\"\n    },\n    socials: {},\n    form: {\n      successMessage: \"Message sent. Thank you!\"\n    }\n  }\n});\n",
+      "start": 1774875879919,
+      "end": 1774875879919,
+      "order": "post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          ""
+        ],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChD,CAAC,CAAC,CAAC,CAAC,CAAC;AACL,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC;"
+      }
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1774875879919,
+      "end": 1774875879919,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1774875879919,
+      "end": 1774875879919,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1774875879919,
+      "end": 1774875879919,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1774875879919,
+      "end": 1774875879919,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1774875879919,
+      "end": 1774875879919,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1774875879919,
+      "end": 1774875879919,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1774875879919,
+      "end": 1774875879919,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1774875879919,
+      "end": 1774875879919,
+      "order": "normal"
+    }
+  ]
+}

@@ -1,0 +1,236 @@
+{
+  "resolvedId": "/Users/jiyankang/vscodeProjects/witque-blog/components/content/Gallery.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<script setup lang=\"ts\">\nimport type { PropType } from 'vue'\n\ndefineProps({\n  images: {\n    type: Array as PropType<string[]>,\n    default: () => []\n  }\n})\n</script>\n\n<template>\n  <section class=\"gallery\">\n    <div\n      class=\"layout\"\n    >\n      <NuxtImg\n        v-for=\"(image, index) in images\"\n        :key=\"index\"\n        :src=\"image\"\n        :width=\"16\"\n        :height=\"9\"\n      />\n    </div>\n  </section>\n</template>\n\n<style scoped lang=\"ts\">\ncss({\n  '.gallery': {\n    '.layout': {\n      display: 'grid',\n      gap: '{space.8}',\n      my: '{space.16}',\n      '--cols': 1,\n      gridTemplateColumns: 'repeat(var(--cols), minmax(0, 1fr))',\n      '@md': {\n        '--cols': (props) => props.images.length < 2 ? props.images.length : 2\n      },\n      img: {\n        objectFit: 'cover',\n        width: '100%',\n        aspectRatio: '16 / 9',\n        borderRadius: '{radii.md}'\n      }\n    }\n  }\n})\n</style>\n",
+      "start": 1774875879228,
+      "end": 1774875879273,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1774875879273,
+      "end": 1774875879273,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1774875879273,
+      "end": 1774875879273,
+      "order": "pre"
+    },
+    {
+      "name": "pinceau-transforms",
+      "result": "<script setup lang=\"ts\">\nconst _6Li_cols = computed(() => ((props = __$pProps) => props.images.length < 2 ? props.images.length : 2)())\nimport { reactive, computed, getCurrentInstance, ref } from 'vue'\nimport { usePinceauRuntime } from 'pinceau/runtime'\n\nimport type { PropType } from 'vue'\n\nconst __$pProps = defineProps({\n  images: {\n    type: Array as PropType<string[]>,\n    default: () => []\n  }\n})\n\nconst { $pinceau } = usePinceauRuntime(__$pProps, undefined, { _6Li_cols })\n</script>\n\n<template>\n  <section class=\"gallery\" :class=\"[$pinceau]\">\n    <div\n      class=\"layout\"\n    >\n      <NuxtImg\n        v-for=\"(image, index) in images\"\n        :key=\"index\"\n        :src=\"image\"\n        :width=\"16\"\n        :height=\"9\"\n      />\n    </div>\n  </section>\n</template>\n\n<style scoped lang=\"postcss\" transformed>\n.gallery .layout{display:grid;gap:var(--space-8);margin-top:var(--space-16);margin-bottom:var(--space-16);--cols:1;grid-template-columns:repeat(var(--cols), minmax(0, 1fr));}@media (min-width: 768px){.gallery .layout{--cols:var(---6-li-cols);}}.gallery .layout img{object-fit:cover;width:100%;aspect-ratio:16 / 9;border-radius:var(--radii-md);}\n</style>\n",
+      "start": 1774875879273,
+      "end": 1774875879275,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "file": "/Users/jiyankang/vscodeProjects/witque-blog/components/content/Gallery.vue",
+        "sources": [
+          "/Users/jiyankang/vscodeProjects/witque-blog/components/content/Gallery.vue"
+        ],
+        "names": [],
+        "mappings": "AAAA,wBAAwB;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,AASxB;AACA;AACA,UAAU;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,AAcV;AACA;AACA;;AAqBA;"
+      }
+    },
+    {
+      "name": "content-slot",
+      "start": 1774875879275,
+      "end": 1774875879275,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1774875879275,
+      "end": 1774875879275,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1774875879275,
+      "end": 1774875879275,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1774875879275,
+      "end": 1774875879275,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1774875879275,
+      "end": 1774875879275,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1774875879275,
+      "end": 1774875879275,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "import _sfc_main from \"/Users/jiyankang/vscodeProjects/witque-blog/components/content/Gallery.vue?vue&type=script&setup=true&lang.ts\";\nexport * from \"/Users/jiyankang/vscodeProjects/witque-blog/components/content/Gallery.vue?vue&type=script&setup=true&lang.ts\";\nimport \"/Users/jiyankang/vscodeProjects/witque-blog/components/content/Gallery.vue?vue&type=style&index=0&scoped=e572c204&transformed=true&lang.postcss\";\nimport _export_sfc from \"\\0plugin-vue:export-helper\";\nexport default /* @__PURE__ */ _export_sfc(_sfc_main, [[\"__scopeId\", \"data-v-e572c204\"]]);\n",
+      "start": 1774875879275,
+      "end": 1774875879277,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1774875879277,
+      "end": 1774875879278,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1774875879278,
+      "end": 1774875879278,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1774875879278,
+      "end": 1774875879278,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1774875879278,
+      "end": 1774875879278,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1774875879278,
+      "end": 1774875879278,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1774875879278,
+      "end": 1774875879278,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1774875879278,
+      "end": 1774875879278,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1774875879278,
+      "end": 1774875879278,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1774875879278,
+      "end": 1774875879278,
+      "order": "normal"
+    }
+  ]
+}

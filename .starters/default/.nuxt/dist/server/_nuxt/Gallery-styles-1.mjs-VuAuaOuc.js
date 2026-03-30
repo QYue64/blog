@@ -1,0 +1,5 @@
+const Gallery_vue_vue_type_style_index_0_scoped_e572c204_transformed_true_lang = ".gallery .layout[data-v-e572c204]{display:grid;gap:var(--space-8);margin-bottom:var(--space-16);margin-top:var(--space-16);--cols:1;grid-template-columns:repeat(1,minmax(0,1fr));grid-template-columns:repeat(var(--cols),minmax(0,1fr))}@media (min-width:768px){.gallery .layout[data-v-e572c204]{--cols:var(---6-li-cols)}}.gallery .layout img[data-v-e572c204]{aspect-ratio:16/9;border-radius:var(--radii-md);-o-object-fit:cover;object-fit:cover;width:100%}";
+export {
+  Gallery_vue_vue_type_style_index_0_scoped_e572c204_transformed_true_lang as default
+};
+//# sourceMappingURL=Gallery-styles-1.mjs-VuAuaOuc.js.map

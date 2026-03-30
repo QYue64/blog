@@ -1,0 +1,294 @@
+{
+  "resolvedId": "/Users/jiyankang/vscodeProjects/witque-blog/layouts/article.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n  <article ref=\"article\">\n    <!-- TODO: could be refactored as a transparent ButtonLink -->\n    <NuxtLink\n      :to=\"parentPath\"\n      class=\"back\"\n    >\n      <Icon name=\"ph:arrow-left\" />\n      <span>\n        Back\n      </span>\n    </NuxtLink>\n    <header>\n      <h1\n        v-if=\"page?.title\"\n        class=\"title\"\n      >\n        {{ page.title }}\n      </h1>\n      <time\n        v-if=\"page?.date\"\n        :datetime=\"page.date\"\n      >\n        {{ formatDate(page.date) }}\n      </time>\n    </header>\n\n    <div class=\"prose\">\n      <slot />\n      <div\n        v-if=\"alpine?.backToTop\"\n        class=\"back-to-top\"\n      >\n        <ProseA @click.prevent.stop=\"onBackToTop\">\n          {{ alpine?.backToTop?.text || 'Back to top' }}\n          <Icon :name=\"alpine?.backToTop?.icon || 'material-symbols:arrow-upward'\" />\n        </ProseA>\n      </div>\n    </div>\n  </article>\n</template>\n\n<script setup lang=\"ts\">\nconst { page } = useContent()\nconst route = useRoute()\nconst alpine = useAppConfig().alpine\n\nconst article = ref<HTMLElement | null>(null)\n\nif (page.value) {\n  const linkArray = []\n  const metaArray = []\n  \n  if (page.value.cover) {\n    metaArray.push({ property: 'og:image', content: page.value.cover })\n  }\n  if (page.value.canonical) {\n    linkArray.push({ rel: 'canonical', href: page.value.canonical })\n  }\n  useHead({\n    meta: metaArray,\n    link: linkArray\n  })\n}\n\nconst parentPath = computed(\n  () => {\n    const pathTabl = route.path.split('/')\n    pathTabl.pop()\n    return pathTabl.join('/')\n  }\n)\n\nconst onBackToTop = () => {\n  article.value?.scrollIntoView({\n    behavior: 'smooth'\n  })\n}\n</script>\n\n<style scoped lang=\"ts\">\ncss({\n  article: {\n    maxWidth: '{alpine.readableLine}',\n    mx: 'auto',\n    py: '{space.4}',\n    '@sm': {\n      py: '{space.12}',\n    },\n    '.back': {\n      display: 'inline-flex',\n      alignItems: 'center',\n      fontSize: '{text.lg.fontSize}',\n      borderBottom: '1px solid {elements.border.secondary.static}',\n      '& :deep(svg)': {\n        width: '{size.16}',\n        height: '{size.16}',\n        marginRight: '{space.2}'\n      }\n    },\n    header: {\n      marginTop: '{space.16}',\n      marginBottom: '{space.12}',\n    },\n    '.title': {\n      fontSize: '{text.5xl.fontSize}',\n      lineHeight: '{text.5xl.lineHeight}',\n      fontWeight: '{fontWeight.semibold}',\n      marginBottom: '{space.4}'\n    },\n    time: {\n      color: '{elements.text.secondary.color.static}'\n    },\n    '.prose': {\n      '.back-to-top': {\n        display: 'flex',\n        justifyContent: 'flex-end',\n        alignItems: 'center',\n        width: '100%',\n        a: {\n          cursor: 'pointer',\n          fontSize: '{text.lg.fontSize}'\n        }\n      },\n      '& :deep(h1)': {\n        display: 'none'\n      },\n    }\n  }\n})\n</style>\n",
+      "start": 1774875881017,
+      "end": 1774875881048,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1774875881048,
+      "end": 1774875881048,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1774875881048,
+      "end": 1774875881048,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1774875881048,
+      "end": 1774875881048,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1774875881048,
+      "end": 1774875881048,
+      "order": "pre"
+    },
+    {
+      "name": "pinceau-transforms",
+      "result": "<template>\n  <article ref=\"article\">\n    <!-- TODO: could be refactored as a transparent ButtonLink -->\n    <NuxtLink\n      :to=\"parentPath\"\n      class=\"back\"\n    >\n      <Icon name=\"ph:arrow-left\" />\n      <span>\n        Back\n      </span>\n    </NuxtLink>\n    <header>\n      <h1\n        v-if=\"page?.title\"\n        class=\"title\"\n      >\n        {{ page.title }}\n      </h1>\n      <time\n        v-if=\"page?.date\"\n        :datetime=\"page.date\"\n      >\n        {{ formatDate(page.date) }}\n      </time>\n    </header>\n\n    <div class=\"prose\">\n      <slot />\n      <div\n        v-if=\"alpine?.backToTop\"\n        class=\"back-to-top\"\n      >\n        <ProseA @click.prevent.stop=\"onBackToTop\">\n          {{ alpine?.backToTop?.text || 'Back to top' }}\n          <Icon :name=\"alpine?.backToTop?.icon || 'material-symbols:arrow-upward'\" />\n        </ProseA>\n      </div>\n    </div>\n  </article>\n</template>\n\n<script setup lang=\"ts\">\nconst { page } = useContent()\nconst route = useRoute()\nconst alpine = useAppConfig().alpine\n\nconst article = ref<HTMLElement | null>(null)\n\nif (page.value) {\n  const linkArray = []\n  const metaArray = []\n  \n  if (page.value.cover) {\n    metaArray.push({ property: 'og:image', content: page.value.cover })\n  }\n  if (page.value.canonical) {\n    linkArray.push({ rel: 'canonical', href: page.value.canonical })\n  }\n  useHead({\n    meta: metaArray,\n    link: linkArray\n  })\n}\n\nconst parentPath = computed(\n  () => {\n    const pathTabl = route.path.split('/')\n    pathTabl.pop()\n    return pathTabl.join('/')\n  }\n)\n\nconst onBackToTop = () => {\n  article.value?.scrollIntoView({\n    behavior: 'smooth'\n  })\n}\n</script>\n\n<style scoped lang=\"postcss\" transformed>\narticle{max-width:var(--alpine-readableLine);margin-left:auto;margin-right:auto;padding-top:var(--space-4);padding-bottom:var(--space-4);}@media (min-width: 640px){article{padding-top:var(--space-12);padding-bottom:var(--space-12);}}article .back{display:inline-flex;align-items:center;font-size:var(--text-lg-fontSize);border-bottom:1px solid var(--elements-border-secondary-static);}article .back :deep(svg){width:var(--size-16);height:var(--size-16);margin-right:var(--space-2);}article header{margin-top:var(--space-16);margin-bottom:var(--space-12);}article .title{font-size:var(--text-5xl-fontSize);line-height:var(--text-5xl-lineHeight);font-weight:var(--fontWeight-semibold);margin-bottom:var(--space-4);}article time{color:var(--elements-text-secondary-color-static);}article .prose .back-to-top{display:flex;justify-content:flex-end;align-items:center;width:100%;}article .prose .back-to-top a{cursor:pointer;font-size:var(--text-lg-fontSize);}article .prose :deep(h1){display:none;}\n</style>\n",
+      "start": 1774875881048,
+      "end": 1774875881049,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "file": "/Users/jiyankang/vscodeProjects/witque-blog/layouts/article.vue",
+        "sources": [
+          "/Users/jiyankang/vscodeProjects/witque-blog/layouts/article.vue"
+        ],
+        "names": [],
+        "mappings": "AAAA,UAAU;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,AAwCV;AACA;AACA,wBAAwB;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,AAoCxB;AACA;AACA;;AAkDA;"
+      }
+    },
+    {
+      "name": "pinceau-transforms",
+      "result": "<template>\n  <article ref=\"article\">\n    <!-- TODO: could be refactored as a transparent ButtonLink -->\n    <NuxtLink\n      :to=\"parentPath\"\n      class=\"back\"\n    >\n      <Icon name=\"ph:arrow-left\" />\n      <span>\n        Back\n      </span>\n    </NuxtLink>\n    <header>\n      <h1\n        v-if=\"page?.title\"\n        class=\"title\"\n      >\n        {{ page.title }}\n      </h1>\n      <time\n        v-if=\"page?.date\"\n        :datetime=\"page.date\"\n      >\n        {{ formatDate(page.date) }}\n      </time>\n    </header>\n\n    <div class=\"prose\">\n      <slot />\n      <div\n        v-if=\"alpine?.backToTop\"\n        class=\"back-to-top\"\n      >\n        <ProseA @click.prevent.stop=\"onBackToTop\">\n          {{ alpine?.backToTop?.text || 'Back to top' }}\n          <Icon :name=\"alpine?.backToTop?.icon || 'material-symbols:arrow-upward'\" />\n        </ProseA>\n      </div>\n    </div>\n  </article>\n</template>\n\n<script setup lang=\"ts\">\nconst { page } = useContent()\nconst route = useRoute()\nconst alpine = useAppConfig().alpine\n\nconst article = ref<HTMLElement | null>(null)\n\nif (page.value) {\n  const linkArray = []\n  const metaArray = []\n  \n  if (page.value.cover) {\n    metaArray.push({ property: 'og:image', content: page.value.cover })\n  }\n  if (page.value.canonical) {\n    linkArray.push({ rel: 'canonical', href: page.value.canonical })\n  }\n  useHead({\n    meta: metaArray,\n    link: linkArray\n  })\n}\n\nconst parentPath = computed(\n  () => {\n    const pathTabl = route.path.split('/')\n    pathTabl.pop()\n    return pathTabl.join('/')\n  }\n)\n\nconst onBackToTop = () => {\n  article.value?.scrollIntoView({\n    behavior: 'smooth'\n  })\n}\n</script>\n\n<style scoped lang=\"postcss\" transformed>\narticle{max-width:var(--alpine-readableLine);margin-left:auto;margin-right:auto;padding-top:var(--space-4);padding-bottom:var(--space-4);}@media (min-width: 640px){article{padding-top:var(--space-12);padding-bottom:var(--space-12);}}article .back{display:inline-flex;align-items:center;font-size:var(--text-lg-fontSize);border-bottom:1px solid var(--elements-border-secondary-static);}article .back :deep(svg){width:var(--size-16);height:var(--size-16);margin-right:var(--space-2);}article header{margin-top:var(--space-16);margin-bottom:var(--space-12);}article .title{font-size:var(--text-5xl-fontSize);line-height:var(--text-5xl-lineHeight);font-weight:var(--fontWeight-semibold);margin-bottom:var(--space-4);}article time{color:var(--elements-text-secondary-color-static);}article .prose .back-to-top{display:flex;justify-content:flex-end;align-items:center;width:100%;}article .prose .back-to-top a{cursor:pointer;font-size:var(--text-lg-fontSize);}article .prose :deep(h1){display:none;}\n</style>\n",
+      "start": 1774875881048,
+      "end": 1774875881049,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "file": "/Users/jiyankang/vscodeProjects/witque-blog/layouts/article.vue",
+        "sources": [
+          "/Users/jiyankang/vscodeProjects/witque-blog/layouts/article.vue"
+        ],
+        "names": [],
+        "mappings": "AAAA,UAAU;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,AAwCV;AACA;AACA,wBAAwB;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,AAoCxB;AACA;AACA;;AAkDA;"
+      }
+    },
+    {
+      "name": "content-slot",
+      "start": 1774875881049,
+      "end": 1774875881049,
+      "order": "pre"
+    },
+    {
+      "name": "content-slot",
+      "start": 1774875881049,
+      "end": 1774875881049,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1774875881049,
+      "end": 1774875881049,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1774875881049,
+      "end": 1774875881049,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1774875881049,
+      "end": 1774875881049,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1774875881049,
+      "end": 1774875881049,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1774875881049,
+      "end": 1774875881049,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "import _sfc_main from \"/Users/jiyankang/vscodeProjects/witque-blog/layouts/article.vue?vue&type=script&setup=true&lang.ts\";\nexport * from \"/Users/jiyankang/vscodeProjects/witque-blog/layouts/article.vue?vue&type=script&setup=true&lang.ts\";\nimport \"/Users/jiyankang/vscodeProjects/witque-blog/layouts/article.vue?vue&type=style&index=0&scoped=c46ef290&transformed=true&lang.postcss\";\nimport { useSSRContext as __vite_useSSRContext } from \"vue\";\nconst _sfc_setup = _sfc_main.setup;\n_sfc_main.setup = (props, ctx) => {\n  const ssrContext = __vite_useSSRContext();\n  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add(\"../../layouts/article.vue\");\n  return _sfc_setup ? _sfc_setup(props, ctx) : void 0;\n};\nimport _export_sfc from \"\\0plugin-vue:export-helper\";\nexport default /* @__PURE__ */ _export_sfc(_sfc_main, [[\"__scopeId\", \"data-v-c46ef290\"]]);\n",
+      "start": 1774875881049,
+      "end": 1774875881237,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1774875881237,
+      "end": 1774875881237,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1774875881237,
+      "end": 1774875881237,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1774875881237,
+      "end": 1774875881237,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1774875881237,
+      "end": 1774875881237,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1774875881237,
+      "end": 1774875881237,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1774875881237,
+      "end": 1774875881238,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1774875881238,
+      "end": 1774875881238,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1774875881238,
+      "end": 1774875881242,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1774875881242,
+      "end": 1774875881242,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1774875881242,
+      "end": 1774875881242,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1774875881242,
+      "end": 1774875881242,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1774875881243,
+      "end": 1774875881243,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1774875881243,
+      "end": 1774875881243,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1774875881243,
+      "end": 1774875881243,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1774875881243,
+      "end": 1774875881243,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1774875881244,
+      "end": 1774875881244,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1774875881244,
+      "end": 1774875881244,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1774875881244,
+      "end": 1774875881244,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1774875881244,
+      "end": 1774875881244,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1774875881244,
+      "end": 1774875881244,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1774875881244,
+      "end": 1774875881244,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1774875881244,
+      "end": 1774875881244,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1774875881244,
+      "end": 1774875881244,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1774875881244,
+      "end": 1774875881244,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1774875881244,
+      "end": 1774875881244,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1774875881244,
+      "end": 1774875881244,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1774875881244,
+      "end": 1774875881244,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1774875881244,
+      "end": 1774875881244,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1774875881244,
+      "end": 1774875881244,
+      "order": "normal"
+    }
+  ]
+}

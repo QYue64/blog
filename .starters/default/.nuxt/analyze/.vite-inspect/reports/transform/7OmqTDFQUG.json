@@ -1,0 +1,235 @@
+{
+  "resolvedId": "/Users/jiyankang/vscodeProjects/witque-blog/components/content/Hero.vue?vue&type=script&setup=true&lang.ts",
+  "transforms": [
+    {
+      "name": "vite:vue",
+      "result": "import { defineComponent as _defineComponent } from 'vue'\nimport { createTextVNode as _createTextVNode, resolveComponent as _resolveComponent, withCtx as _withCtx, createVNode as _createVNode, renderSlot as _renderSlot, createElementVNode as _createElementVNode, normalizeClass as _normalizeClass, openBlock as _openBlock, createBlock as _createBlock, createCommentVNode as _createCommentVNode, createElementBlock as _createElementBlock, pushScopeId as _pushScopeId, popScopeId as _popScopeId } from \"vue\"\nimport { renderSlot as _renderMDCSlot } from '/Users/jiyankang/vscodeProjects/witque-blog/node_modules/.pnpm/@nuxtjs+mdc@0.3.2_rollup@3.29.3/node_modules/@nuxtjs/mdc/dist/runtime/utils/slot'\n\n\nconst _withScopeId = n => (_pushScopeId(\"data-v-ce2c89e1\"),n=n(),_popScopeId(),n)\nconst _hoisted_1 = { class: \"hero\" }\nconst _hoisted_2 = { class: \"layout\" }\nconst _hoisted_3 = { class: \"content\" }\nconst _hoisted_4 = { class: \"title\" }\nconst _hoisted_5 = { class: \"description\" }\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'Hero',\n  props: {\n  image: {\n    type: String,\n    default: null\n  },\n  imageAlt: {\n    type: String,\n    default: 'Hero Image'\n  },\n  imagePosition: {\n    type: String,\n    default: 'right'\n  }\n},\n  setup(__props) {\n\n\n\nreturn (_ctx: any,_cache: any) => {\n  const _component_MDCSlot = _resolveComponent(\"MDCSlot\")!\n  const _component_NuxtImg = _resolveComponent(\"NuxtImg\")!\n\n  return (_openBlock(), _createElementBlock(\"section\", _hoisted_1, [\n    _createElementVNode(\"div\", _hoisted_2, [\n      _createElementVNode(\"div\", _hoisted_3, [\n        _createElementVNode(\"div\", _hoisted_4, [\n          _renderMDCSlot(_ctx.$slots, \"title\", { unwrap: \"p\" }, () => [\n            _createTextVNode(\" Hero title \")\n          ], true)\n        ]),\n        _createElementVNode(\"div\", _hoisted_5, [\n          _renderMDCSlot(_ctx.$slots, \"description\", { unwrap: \"p\" }, () => [\n            _createTextVNode(\" Hero description \")\n          ], true)\n        ])\n      ]),\n      (__props.image)\n        ? (_openBlock(), _createBlock(_component_NuxtImg, {\n            key: 0,\n            class: _normalizeClass(__props.imagePosition),\n            src: __props.image,\n            alt: __props.imageAlt,\n            width: 16,\n            height: 9\n          }, null, 8, [\"class\", \"src\", \"alt\"]))\n        : _createCommentVNode(\"\", true)\n    ])\n  ]))\n}\n}\n\n})",
+      "start": 1774875879561,
+      "end": 1774875879561
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1774875879561,
+      "end": 1774875879561,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1774875879562,
+      "end": 1774875879562,
+      "order": "pre"
+    },
+    {
+      "name": "pinceau-transforms",
+      "result": "import { defineComponent as _defineComponent } from 'vue'\nimport { createTextVNode as _createTextVNode, resolveComponent as _resolveComponent, withCtx as _withCtx, createVNode as _createVNode, renderSlot as _renderSlot, createElementVNode as _createElementVNode, normalizeClass as _normalizeClass, openBlock as _openBlock, createBlock as _createBlock, createCommentVNode as _createCommentVNode, createElementBlock as _createElementBlock, pushScopeId as _pushScopeId, popScopeId as _popScopeId } from \"vue\"\nimport { renderSlot as _renderMDCSlot } from '/Users/jiyankang/vscodeProjects/witque-blog/node_modules/.pnpm/@nuxtjs+mdc@0.3.2_rollup@3.29.3/node_modules/@nuxtjs/mdc/dist/runtime/utils/slot'\n\n\nconst _withScopeId = n => (_pushScopeId(\"data-v-ce2c89e1\"),n=n(),_popScopeId(),n)\nconst _hoisted_1 = { class: \"hero\" }\nconst _hoisted_2 = { class: \"layout\" }\nconst _hoisted_3 = { class: \"content\" }\nconst _hoisted_4 = { class: \"title\" }\nconst _hoisted_5 = { class: \"description\" }\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'Hero',\n  props: {\n  image: {\n    type: String,\n    default: null\n  },\n  imageAlt: {\n    type: String,\n    default: 'Hero Image'\n  },\n  imagePosition: {\n    type: String,\n    default: 'right'\n  }\n},\n  setup(__props) {\n\n\n\nreturn (_ctx: any,_cache: any) => {\n  const _component_MDCSlot = _resolveComponent(\"MDCSlot\")!\n  const _component_NuxtImg = _resolveComponent(\"NuxtImg\")!\n\n  return (_openBlock(), _createElementBlock(\"section\", _hoisted_1, [\n    _createElementVNode(\"div\", _hoisted_2, [\n      _createElementVNode(\"div\", _hoisted_3, [\n        _createElementVNode(\"div\", _hoisted_4, [\n          _renderMDCSlot(_ctx.$slots, \"title\", { unwrap: \"p\" }, () => [\n            _createTextVNode(\" Hero title \")\n          ], true)\n        ]),\n        _createElementVNode(\"div\", _hoisted_5, [\n          _renderMDCSlot(_ctx.$slots, \"description\", { unwrap: \"p\" }, () => [\n            _createTextVNode(\" Hero description \")\n          ], true)\n        ])\n      ]),\n      (__props.image)\n        ? (_openBlock(), _createBlock(_component_NuxtImg, {\n            key: 0,\n            class: _normalizeClass(__props.imagePosition),\n            src: __props.image,\n            alt: __props.imageAlt,\n            width: 16,\n            height: 9\n          }, null, 8, [\"class\", \"src\", \"alt\"]))\n        : _createCommentVNode(\"\", true)\n    ])\n  ]))\n}\n}\n\n})",
+      "start": 1774875879562,
+      "end": 1774875879562,
+      "order": "pre"
+    },
+    {
+      "name": "content-slot",
+      "start": 1774875879562,
+      "end": 1774875879562,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1774875879562,
+      "end": 1774875879563,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1774875879563,
+      "end": 1774875879563,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { defineComponent as _defineComponent } from \"vue\";\nimport { createTextVNode as _createTextVNode, resolveComponent as _resolveComponent, createElementVNode as _createElementVNode, normalizeClass as _normalizeClass, openBlock as _openBlock, createBlock as _createBlock, createCommentVNode as _createCommentVNode, createElementBlock as _createElementBlock, pushScopeId as _pushScopeId, popScopeId as _popScopeId } from \"vue\";\nimport { renderSlot as _renderMDCSlot } from \"/Users/jiyankang/vscodeProjects/witque-blog/node_modules/.pnpm/@nuxtjs+mdc@0.3.2_rollup@3.29.3/node_modules/@nuxtjs/mdc/dist/runtime/utils/slot\";\nconst _withScopeId = (n) => (_pushScopeId(\"data-v-ce2c89e1\"), n = n(), _popScopeId(), n);\nconst _hoisted_1 = { class: \"hero\" };\nconst _hoisted_2 = { class: \"layout\" };\nconst _hoisted_3 = { class: \"content\" };\nconst _hoisted_4 = { class: \"title\" };\nconst _hoisted_5 = { class: \"description\" };\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"Hero\",\n  props: {\n    image: {\n      type: String,\n      default: null\n    },\n    imageAlt: {\n      type: String,\n      default: \"Hero Image\"\n    },\n    imagePosition: {\n      type: String,\n      default: \"right\"\n    }\n  },\n  setup(__props) {\n    return (_ctx, _cache) => {\n      const _component_MDCSlot = _resolveComponent(\"MDCSlot\");\n      const _component_NuxtImg = _resolveComponent(\"NuxtImg\");\n      return _openBlock(), _createElementBlock(\"section\", _hoisted_1, [\n        _createElementVNode(\"div\", _hoisted_2, [\n          _createElementVNode(\"div\", _hoisted_3, [\n            _createElementVNode(\"div\", _hoisted_4, [\n              _renderMDCSlot(_ctx.$slots, \"title\", { unwrap: \"p\" }, () => [\n                _createTextVNode(\" Hero title \")\n              ], true)\n            ]),\n            _createElementVNode(\"div\", _hoisted_5, [\n              _renderMDCSlot(_ctx.$slots, \"description\", { unwrap: \"p\" }, () => [\n                _createTextVNode(\" Hero description \")\n              ], true)\n            ])\n          ]),\n          __props.image ? (_openBlock(), _createBlock(_component_NuxtImg, {\n            key: 0,\n            class: _normalizeClass(__props.imagePosition),\n            src: __props.image,\n            alt: __props.imageAlt,\n            width: 16,\n            height: 9\n          }, null, 8, [\"class\", \"src\", \"alt\"])) : _createCommentVNode(\"\", true)\n        ])\n      ]);\n    };\n  }\n});\n",
+      "start": 1774875879563,
+      "end": 1774875879676,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/Users/jiyankang/vscodeProjects/witque-blog/components/content/Hero.vue?vue&type=script&setup=true&lang.ts"
+        ],
+        "sourcesContent": [
+          "import { defineComponent as _defineComponent } from 'vue'\nimport { createTextVNode as _createTextVNode, resolveComponent as _resolveComponent, withCtx as _withCtx, createVNode as _createVNode, renderSlot as _renderSlot, createElementVNode as _createElementVNode, normalizeClass as _normalizeClass, openBlock as _openBlock, createBlock as _createBlock, createCommentVNode as _createCommentVNode, createElementBlock as _createElementBlock, pushScopeId as _pushScopeId, popScopeId as _popScopeId } from \"vue\"\nimport { renderSlot as _renderMDCSlot } from '/Users/jiyankang/vscodeProjects/witque-blog/node_modules/.pnpm/@nuxtjs+mdc@0.3.2_rollup@3.29.3/node_modules/@nuxtjs/mdc/dist/runtime/utils/slot'\n\n\nconst _withScopeId = n => (_pushScopeId(\"data-v-ce2c89e1\"),n=n(),_popScopeId(),n)\nconst _hoisted_1 = { class: \"hero\" }\nconst _hoisted_2 = { class: \"layout\" }\nconst _hoisted_3 = { class: \"content\" }\nconst _hoisted_4 = { class: \"title\" }\nconst _hoisted_5 = { class: \"description\" }\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'Hero',\n  props: {\n  image: {\n    type: String,\n    default: null\n  },\n  imageAlt: {\n    type: String,\n    default: 'Hero Image'\n  },\n  imagePosition: {\n    type: String,\n    default: 'right'\n  }\n},\n  setup(__props) {\n\n\n\nreturn (_ctx: any,_cache: any) => {\n  const _component_MDCSlot = _resolveComponent(\"MDCSlot\")!\n  const _component_NuxtImg = _resolveComponent(\"NuxtImg\")!\n\n  return (_openBlock(), _createElementBlock(\"section\", _hoisted_1, [\n    _createElementVNode(\"div\", _hoisted_2, [\n      _createElementVNode(\"div\", _hoisted_3, [\n        _createElementVNode(\"div\", _hoisted_4, [\n          _renderMDCSlot(_ctx.$slots, \"title\", { unwrap: \"p\" }, () => [\n            _createTextVNode(\" Hero title \")\n          ], true)\n        ]),\n        _createElementVNode(\"div\", _hoisted_5, [\n          _renderMDCSlot(_ctx.$slots, \"description\", { unwrap: \"p\" }, () => [\n            _createTextVNode(\" Hero description \")\n          ], true)\n        ])\n      ]),\n      (__props.image)\n        ? (_openBlock(), _createBlock(_component_NuxtImg, {\n            key: 0,\n            class: _normalizeClass(__props.imagePosition),\n            src: __props.image,\n            alt: __props.imageAlt,\n            width: 16,\n            height: 9\n          }, null, 8, [\"class\", \"src\", \"alt\"]))\n        : _createCommentVNode(\"\", true)\n    ])\n  ]))\n}\n}\n\n})"
+        ],
+        "mappings": "AAAA,SAAS,mBAAmB,wBAAwB;AACpD,SAAS,mBAAmB,kBAAkB,oBAAoB,mBAAgG,sBAAsB,qBAAqB,kBAAkB,iBAAiB,aAAa,YAAY,eAAe,cAAc,sBAAsB,qBAAqB,sBAAsB,qBAAqB,eAAe,cAAc,cAAc,mBAAmB;AAC1b,SAAS,cAAc,sBAAsB;AAG7C,MAAM,eAAe,QAAM,aAAa,iBAAiB,GAAE,IAAE,EAAE,GAAE,YAAY,GAAE;AAC/E,MAAM,aAAa,EAAE,OAAO,OAAO;AACnC,MAAM,aAAa,EAAE,OAAO,SAAS;AACrC,MAAM,aAAa,EAAE,OAAO,UAAU;AACtC,MAAM,aAAa,EAAE,OAAO,QAAQ;AACpC,MAAM,aAAa,EAAE,OAAO,cAAc;AAG1C,eAA4B,iCAAiB;AAAA,EAC3C,QAAQ;AAAA,EACR,OAAO;AAAA,IACP,OAAO;AAAA,MACL,MAAM;AAAA,MACN,SAAS;AAAA,IACX;AAAA,IACA,UAAU;AAAA,MACR,MAAM;AAAA,MACN,SAAS;AAAA,IACX;AAAA,IACA,eAAe;AAAA,MACb,MAAM;AAAA,MACN,SAAS;AAAA,IACX;AAAA,EACF;AAAA,EACE,MAAM,SAAS;AAIjB,WAAO,CAAC,MAAU,WAAgB;AAChC,YAAM,qBAAqB,kBAAkB,SAAS;AACtD,YAAM,qBAAqB,kBAAkB,SAAS;AAEtD,aAAQ,WAAW,GAAG,oBAAoB,WAAW,YAAY;AAAA,QAC/D,oBAAoB,OAAO,YAAY;AAAA,UACrC,oBAAoB,OAAO,YAAY;AAAA,YACrC,oBAAoB,OAAO,YAAY;AAAA,cACrC,eAAe,KAAK,QAAQ,SAAS,EAAE,QAAQ,IAAI,GAAG,MAAM;AAAA,gBAC1D,iBAAiB,cAAc;AAAA,cACjC,GAAG,IAAI;AAAA,YACT,CAAC;AAAA,YACD,oBAAoB,OAAO,YAAY;AAAA,cACrC,eAAe,KAAK,QAAQ,eAAe,EAAE,QAAQ,IAAI,GAAG,MAAM;AAAA,gBAChE,iBAAiB,oBAAoB;AAAA,cACvC,GAAG,IAAI;AAAA,YACT,CAAC;AAAA,UACH,CAAC;AAAA,UACA,QAAQ,SACJ,WAAW,GAAG,aAAa,oBAAoB;AAAA,YAC9C,KAAK;AAAA,YACL,OAAO,gBAAgB,QAAQ,aAAa;AAAA,YAC5C,KAAK,QAAQ;AAAA,YACb,KAAK,QAAQ;AAAA,YACb,OAAO;AAAA,YACP,QAAQ;AAAA,UACV,GAAG,MAAM,GAAG,CAAC,SAAS,OAAO,KAAK,CAAC,KACnC,oBAAoB,IAAI,IAAI;AAAA,QAClC,CAAC;AAAA,MACH,CAAC;AAAA,IACH;AAAA,EACA;AAEA,CAAC;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:json",
+      "start": 1774875879676,
+      "end": 1774875879676,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1774875879676,
+      "end": 1774875879676,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1774875879676,
+      "end": 1774875879676,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1774875879676,
+      "end": 1774875879676,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1774875879676,
+      "end": 1774875879676,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1774875879676,
+      "end": 1774875879676,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1774875879676,
+      "end": 1774875879676,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1774875879676,
+      "end": 1774875879676,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1774875879677,
+      "end": 1774875879677,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1774875879677,
+      "end": 1774875879677,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1774875879677,
+      "end": 1774875879677,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1774875879677,
+      "end": 1774875879677,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1774875879677,
+      "end": 1774875879677,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1774875879677,
+      "end": 1774875879677,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1774875879677,
+      "end": 1774875879677,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1774875879677,
+      "end": 1774875879677,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1774875879677,
+      "end": 1774875879677,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1774875879677,
+      "end": 1774875879677,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1774875879677,
+      "end": 1774875879677,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1774875879677,
+      "end": 1774875879680,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1774875879680,
+      "end": 1774875879680,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1774875879680,
+      "end": 1774875879680,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1774875879680,
+      "end": 1774875879680,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1774875879680,
+      "end": 1774875879680,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "result": "import { default as __nuxt_component_0 } from \"/Users/jiyankang/vscodeProjects/witque-blog/node_modules/.pnpm/@nuxtjs+mdc@0.3.2_rollup@3.29.3/node_modules/@nuxtjs/mdc/dist/runtime/components/MDCSlot\";\nimport { default as __nuxt_component_1 } from \"/Users/jiyankang/vscodeProjects/witque-blog/node_modules/.pnpm/@nuxt-themes+elements@0.9.5_rollup@3.29.3_vue@3.4.15/node_modules/@nuxt-themes/elements/components/globals/NuxtImg.vue\";\nimport { defineComponent as _defineComponent } from \"vue\";\nimport { createTextVNode as _createTextVNode, resolveComponent as _resolveComponent, createElementVNode as _createElementVNode, normalizeClass as _normalizeClass, openBlock as _openBlock, createBlock as _createBlock, createCommentVNode as _createCommentVNode, createElementBlock as _createElementBlock, pushScopeId as _pushScopeId, popScopeId as _popScopeId } from \"vue\";\nimport { renderSlot as _renderMDCSlot } from \"/Users/jiyankang/vscodeProjects/witque-blog/node_modules/.pnpm/@nuxtjs+mdc@0.3.2_rollup@3.29.3/node_modules/@nuxtjs/mdc/dist/runtime/utils/slot\";\nconst _withScopeId = (n) => (_pushScopeId(\"data-v-ce2c89e1\"), n = n(), _popScopeId(), n);\nconst _hoisted_1 = { class: \"hero\" };\nconst _hoisted_2 = { class: \"layout\" };\nconst _hoisted_3 = { class: \"content\" };\nconst _hoisted_4 = { class: \"title\" };\nconst _hoisted_5 = { class: \"description\" };\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"Hero\",\n  props: {\n    image: {\n      type: String,\n      default: null\n    },\n    imageAlt: {\n      type: String,\n      default: \"Hero Image\"\n    },\n    imagePosition: {\n      type: String,\n      default: \"right\"\n    }\n  },\n  setup(__props) {\n    return (_ctx, _cache) => {\n      const _component_MDCSlot = __nuxt_component_0;\n      const _component_NuxtImg = __nuxt_component_1;\n      return _openBlock(), _createElementBlock(\"section\", _hoisted_1, [\n        _createElementVNode(\"div\", _hoisted_2, [\n          _createElementVNode(\"div\", _hoisted_3, [\n            _createElementVNode(\"div\", _hoisted_4, [\n              _renderMDCSlot(_ctx.$slots, \"title\", { unwrap: \"p\" }, () => [\n                _createTextVNode(\" Hero title \")\n              ], true)\n            ]),\n            _createElementVNode(\"div\", _hoisted_5, [\n              _renderMDCSlot(_ctx.$slots, \"description\", { unwrap: \"p\" }, () => [\n                _createTextVNode(\" Hero description \")\n              ], true)\n            ])\n          ]),\n          __props.image ? (_openBlock(), _createBlock(_component_NuxtImg, {\n            key: 0,\n            class: _normalizeClass(__props.imagePosition),\n            src: __props.image,\n            alt: __props.imageAlt,\n            width: 16,\n            height: 9\n          }, null, 8, [\"class\", \"src\", \"alt\"])) : _createCommentVNode(\"\", true)\n        ])\n      ]);\n    };\n  }\n});\n",
+      "start": 1774875879680,
+      "end": 1774875879681,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1774875879681,
+      "end": 1774875879681,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1774875879681,
+      "end": 1774875879681,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1774875879681,
+      "end": 1774875879681,
+      "order": "normal"
+    }
+  ]
+}

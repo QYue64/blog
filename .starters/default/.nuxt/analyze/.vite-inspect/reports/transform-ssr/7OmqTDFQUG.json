@@ -1,0 +1,303 @@
+{
+  "resolvedId": "/Users/jiyankang/vscodeProjects/witque-blog/components/content/Hero.vue?vue&type=script&setup=true&lang.ts",
+  "transforms": [
+    {
+      "name": "vite:vue",
+      "result": "import { defineComponent as _defineComponent } from 'vue'\nimport { resolveComponent as _resolveComponent, withCtx as _withCtx, createTextVNode as _createTextVNode, mergeProps as _mergeProps } from \"vue\"\nimport { ssrRenderComponent as _ssrRenderComponent, ssrRenderSlot as _ssrRenderSlot, ssrRenderAttrs as _ssrRenderAttrs } from \"vue/server-renderer\"\nimport { ssrRenderSlot as _ssrRenderMDCSlot } from '/Users/jiyankang/vscodeProjects/witque-blog/node_modules/.pnpm/@nuxtjs+mdc@0.3.2_rollup@3.29.3/node_modules/@nuxtjs/mdc/dist/runtime/utils/ssrSlot'\n\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'Hero',\n  __ssrInlineRender: true,\n  props: {\n  image: {\n    type: String,\n    default: null\n  },\n  imageAlt: {\n    type: String,\n    default: 'Hero Image'\n  },\n  imagePosition: {\n    type: String,\n    default: 'right'\n  }\n},\n  setup(__props) {\n\n\n\nreturn (_ctx: any,_push: any,_parent: any,_attrs: any) => {\n  const _component_MDCSlot = _resolveComponent(\"MDCSlot\")!\n  const _component_NuxtImg = _resolveComponent(\"NuxtImg\")!\n\n  _push(`<section${_ssrRenderAttrs(_mergeProps({ class: \"hero\" }, _attrs))} data-v-ce2c89e1><div class=\"layout\" data-v-ce2c89e1><div class=\"content\" data-v-ce2c89e1><div class=\"title\" data-v-ce2c89e1>`)\n  _ssrRenderMDCSlot(_ctx.$slots, \"title\", { unwrap: \"p\" }, () => {\n    _push(` Hero title `)\n  }, _push, _parent)\n  _push(`</div><div class=\"description\" data-v-ce2c89e1>`)\n  _ssrRenderMDCSlot(_ctx.$slots, \"description\", { unwrap: \"p\" }, () => {\n    _push(` Hero description `)\n  }, _push, _parent)\n  _push(`</div></div>`)\n  if (__props.image) {\n    _push(_ssrRenderComponent(_component_NuxtImg, {\n      class: __props.imagePosition,\n      src: __props.image,\n      alt: __props.imageAlt,\n      width: 16,\n      height: 9\n    }, null, _parent))\n  } else {\n    _push(`<!---->`)\n  }\n  _push(`</div></section>`)\n}\n}\n\n})",
+      "start": 1774875881094,
+      "end": 1774875881094,
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/Users/jiyankang/vscodeProjects/witque-blog/components/content/Hero.vue"
+        ],
+        "sourcesContent": [
+          "<script setup lang=\"ts\">\ndefineProps({\n  image: {\n    type: String,\n    default: null\n  },\n  imageAlt: {\n    type: String,\n    default: 'Hero Image'\n  },\n  imagePosition: {\n    type: String,\n    default: 'right'\n  }\n})\n</script>\n\n<template>\n  <section class=\"hero\">\n    <div class=\"layout\">\n      <div class=\"content\">\n        <div class=\"title\">\n          <MDCSlot  name=\"title\" unwrap=\"p\">\n            Hero title\n          </MDCSlot>\n        </div>\n        <div class=\"description\">\n          <MDCSlot  name=\"description\" unwrap=\"p\">\n            Hero description\n          </MDCSlot>\n        </div>\n      </div>\n      <NuxtImg\n        v-if=\"image\"\n        :class=\"imagePosition\"\n        :src=\"image\"\n        :alt=\"imageAlt\"\n        :width=\"16\"\n        :height=\"9\"\n      />\n    </div>\n  </section>\n</template>\n\n<style scoped lang=\"postcss\" transformed>\n.hero .layout{display:grid;grid-template-columns:repeat(1, minmax(0, 1fr));gap:var(--space-8);}@media (min-width: 1024px){.hero .layout{grid-template-columns:repeat(2, minmax(0, 1fr));}}.hero .layout .title{font-size:var(--text-4xl-fontSize);line-height:var(--text-4xl-lineHeight);font-weight:var(--fontWeight-bold);}.hero .layout .description{margin-top:var(--space-3);font-size:var(--text-xl-fontSize);line-height:var(--text-xl-lineHeight);}.hero .layout img{width:100%;aspect-ratio:16 / 9;object-fit:cover;border-radius:var(--radii-md);}.hero .layout img.left{order:-1;}\n</style>\n"
+        ],
+        "names": [],
+        "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;AAAwB;AActB;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;"
+      }
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1774875881094,
+      "end": 1774875881094,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1774875881094,
+      "end": 1774875881094,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1774875881095,
+      "end": 1774875881095,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1774875881095,
+      "end": 1774875881095,
+      "order": "pre"
+    },
+    {
+      "name": "pinceau-transforms",
+      "result": "import { defineComponent as _defineComponent } from 'vue'\nimport { resolveComponent as _resolveComponent, withCtx as _withCtx, createTextVNode as _createTextVNode, mergeProps as _mergeProps } from \"vue\"\nimport { ssrRenderComponent as _ssrRenderComponent, ssrRenderSlot as _ssrRenderSlot, ssrRenderAttrs as _ssrRenderAttrs } from \"vue/server-renderer\"\nimport { ssrRenderSlot as _ssrRenderMDCSlot } from '/Users/jiyankang/vscodeProjects/witque-blog/node_modules/.pnpm/@nuxtjs+mdc@0.3.2_rollup@3.29.3/node_modules/@nuxtjs/mdc/dist/runtime/utils/ssrSlot'\n\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'Hero',\n  __ssrInlineRender: true,\n  props: {\n  image: {\n    type: String,\n    default: null\n  },\n  imageAlt: {\n    type: String,\n    default: 'Hero Image'\n  },\n  imagePosition: {\n    type: String,\n    default: 'right'\n  }\n},\n  setup(__props) {\n\n\n\nreturn (_ctx: any,_push: any,_parent: any,_attrs: any) => {\n  const _component_MDCSlot = _resolveComponent(\"MDCSlot\")!\n  const _component_NuxtImg = _resolveComponent(\"NuxtImg\")!\n\n  _push(`<section${_ssrRenderAttrs(_mergeProps({ class: \"hero\" }, _attrs))} data-v-ce2c89e1><div class=\"layout\" data-v-ce2c89e1><div class=\"content\" data-v-ce2c89e1><div class=\"title\" data-v-ce2c89e1>`)\n  _ssrRenderMDCSlot(_ctx.$slots, \"title\", { unwrap: \"p\" }, () => {\n    _push(` Hero title `)\n  }, _push, _parent)\n  _push(`</div><div class=\"description\" data-v-ce2c89e1>`)\n  _ssrRenderMDCSlot(_ctx.$slots, \"description\", { unwrap: \"p\" }, () => {\n    _push(` Hero description `)\n  }, _push, _parent)\n  _push(`</div></div>`)\n  if (__props.image) {\n    _push(_ssrRenderComponent(_component_NuxtImg, {\n      class: __props.imagePosition,\n      src: __props.image,\n      alt: __props.imageAlt,\n      width: 16,\n      height: 9\n    }, null, _parent))\n  } else {\n    _push(`<!---->`)\n  }\n  _push(`</div></section>`)\n}\n}\n\n})",
+      "start": 1774875881096,
+      "end": 1774875881096,
+      "order": "pre"
+    },
+    {
+      "name": "pinceau-transforms",
+      "result": "import { defineComponent as _defineComponent } from 'vue'\nimport { resolveComponent as _resolveComponent, withCtx as _withCtx, createTextVNode as _createTextVNode, mergeProps as _mergeProps } from \"vue\"\nimport { ssrRenderComponent as _ssrRenderComponent, ssrRenderSlot as _ssrRenderSlot, ssrRenderAttrs as _ssrRenderAttrs } from \"vue/server-renderer\"\nimport { ssrRenderSlot as _ssrRenderMDCSlot } from '/Users/jiyankang/vscodeProjects/witque-blog/node_modules/.pnpm/@nuxtjs+mdc@0.3.2_rollup@3.29.3/node_modules/@nuxtjs/mdc/dist/runtime/utils/ssrSlot'\n\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'Hero',\n  __ssrInlineRender: true,\n  props: {\n  image: {\n    type: String,\n    default: null\n  },\n  imageAlt: {\n    type: String,\n    default: 'Hero Image'\n  },\n  imagePosition: {\n    type: String,\n    default: 'right'\n  }\n},\n  setup(__props) {\n\n\n\nreturn (_ctx: any,_push: any,_parent: any,_attrs: any) => {\n  const _component_MDCSlot = _resolveComponent(\"MDCSlot\")!\n  const _component_NuxtImg = _resolveComponent(\"NuxtImg\")!\n\n  _push(`<section${_ssrRenderAttrs(_mergeProps({ class: \"hero\" }, _attrs))} data-v-ce2c89e1><div class=\"layout\" data-v-ce2c89e1><div class=\"content\" data-v-ce2c89e1><div class=\"title\" data-v-ce2c89e1>`)\n  _ssrRenderMDCSlot(_ctx.$slots, \"title\", { unwrap: \"p\" }, () => {\n    _push(` Hero title `)\n  }, _push, _parent)\n  _push(`</div><div class=\"description\" data-v-ce2c89e1>`)\n  _ssrRenderMDCSlot(_ctx.$slots, \"description\", { unwrap: \"p\" }, () => {\n    _push(` Hero description `)\n  }, _push, _parent)\n  _push(`</div></div>`)\n  if (__props.image) {\n    _push(_ssrRenderComponent(_component_NuxtImg, {\n      class: __props.imagePosition,\n      src: __props.image,\n      alt: __props.imageAlt,\n      width: 16,\n      height: 9\n    }, null, _parent))\n  } else {\n    _push(`<!---->`)\n  }\n  _push(`</div></section>`)\n}\n}\n\n})",
+      "start": 1774875881096,
+      "end": 1774875881096,
+      "order": "pre"
+    },
+    {
+      "name": "content-slot",
+      "start": 1774875881096,
+      "end": 1774875881096,
+      "order": "pre"
+    },
+    {
+      "name": "content-slot",
+      "start": 1774875881096,
+      "end": 1774875881096,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1774875881096,
+      "end": 1774875881096,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1774875881096,
+      "end": 1774875881096,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { defineComponent as _defineComponent } from \"vue\";\nimport { resolveComponent as _resolveComponent, mergeProps as _mergeProps } from \"vue\";\nimport { ssrRenderComponent as _ssrRenderComponent, ssrRenderAttrs as _ssrRenderAttrs } from \"vue/server-renderer\";\nimport { ssrRenderSlot as _ssrRenderMDCSlot } from \"/Users/jiyankang/vscodeProjects/witque-blog/node_modules/.pnpm/@nuxtjs+mdc@0.3.2_rollup@3.29.3/node_modules/@nuxtjs/mdc/dist/runtime/utils/ssrSlot\";\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"Hero\",\n  __ssrInlineRender: true,\n  props: {\n    image: {\n      type: String,\n      default: null\n    },\n    imageAlt: {\n      type: String,\n      default: \"Hero Image\"\n    },\n    imagePosition: {\n      type: String,\n      default: \"right\"\n    }\n  },\n  setup(__props) {\n    return (_ctx, _push, _parent, _attrs) => {\n      const _component_MDCSlot = _resolveComponent(\"MDCSlot\");\n      const _component_NuxtImg = _resolveComponent(\"NuxtImg\");\n      _push(`<section${_ssrRenderAttrs(_mergeProps({ class: \"hero\" }, _attrs))} data-v-ce2c89e1><div class=\"layout\" data-v-ce2c89e1><div class=\"content\" data-v-ce2c89e1><div class=\"title\" data-v-ce2c89e1>`);\n      _ssrRenderMDCSlot(_ctx.$slots, \"title\", { unwrap: \"p\" }, () => {\n        _push(` Hero title `);\n      }, _push, _parent);\n      _push(`</div><div class=\"description\" data-v-ce2c89e1>`);\n      _ssrRenderMDCSlot(_ctx.$slots, \"description\", { unwrap: \"p\" }, () => {\n        _push(` Hero description `);\n      }, _push, _parent);\n      _push(`</div></div>`);\n      if (__props.image) {\n        _push(_ssrRenderComponent(_component_NuxtImg, {\n          class: __props.imagePosition,\n          src: __props.image,\n          alt: __props.imageAlt,\n          width: 16,\n          height: 9\n        }, null, _parent));\n      } else {\n        _push(`<!---->`);\n      }\n      _push(`</div></section>`);\n    };\n  }\n});\n",
+      "start": 1774875881096,
+      "end": 1774875881237,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/Users/jiyankang/vscodeProjects/witque-blog/components/content/Hero.vue?vue&type=script&setup=true&lang.ts"
+        ],
+        "sourcesContent": [
+          "import { defineComponent as _defineComponent } from 'vue'\nimport { resolveComponent as _resolveComponent, withCtx as _withCtx, createTextVNode as _createTextVNode, mergeProps as _mergeProps } from \"vue\"\nimport { ssrRenderComponent as _ssrRenderComponent, ssrRenderSlot as _ssrRenderSlot, ssrRenderAttrs as _ssrRenderAttrs } from \"vue/server-renderer\"\nimport { ssrRenderSlot as _ssrRenderMDCSlot } from '/Users/jiyankang/vscodeProjects/witque-blog/node_modules/.pnpm/@nuxtjs+mdc@0.3.2_rollup@3.29.3/node_modules/@nuxtjs/mdc/dist/runtime/utils/ssrSlot'\n\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'Hero',\n  __ssrInlineRender: true,\n  props: {\n  image: {\n    type: String,\n    default: null\n  },\n  imageAlt: {\n    type: String,\n    default: 'Hero Image'\n  },\n  imagePosition: {\n    type: String,\n    default: 'right'\n  }\n},\n  setup(__props) {\n\n\n\nreturn (_ctx: any,_push: any,_parent: any,_attrs: any) => {\n  const _component_MDCSlot = _resolveComponent(\"MDCSlot\")!\n  const _component_NuxtImg = _resolveComponent(\"NuxtImg\")!\n\n  _push(`<section${_ssrRenderAttrs(_mergeProps({ class: \"hero\" }, _attrs))} data-v-ce2c89e1><div class=\"layout\" data-v-ce2c89e1><div class=\"content\" data-v-ce2c89e1><div class=\"title\" data-v-ce2c89e1>`)\n  _ssrRenderMDCSlot(_ctx.$slots, \"title\", { unwrap: \"p\" }, () => {\n    _push(` Hero title `)\n  }, _push, _parent)\n  _push(`</div><div class=\"description\" data-v-ce2c89e1>`)\n  _ssrRenderMDCSlot(_ctx.$slots, \"description\", { unwrap: \"p\" }, () => {\n    _push(` Hero description `)\n  }, _push, _parent)\n  _push(`</div></div>`)\n  if (__props.image) {\n    _push(_ssrRenderComponent(_component_NuxtImg, {\n      class: __props.imagePosition,\n      src: __props.image,\n      alt: __props.imageAlt,\n      width: 16,\n      height: 9\n    }, null, _parent))\n  } else {\n    _push(`<!---->`)\n  }\n  _push(`</div></section>`)\n}\n}\n\n})"
+        ],
+        "mappings": "AAAA,SAAS,mBAAmB,wBAAwB;AACpD,SAAS,oBAAoB,mBAA6E,cAAc,mBAAmB;AAC3I,SAAS,sBAAsB,qBAAsD,kBAAkB,uBAAuB;AAC9H,SAAS,iBAAiB,yBAAyB;AAInD,eAA4B,iCAAiB;AAAA,EAC3C,QAAQ;AAAA,EACR,mBAAmB;AAAA,EACnB,OAAO;AAAA,IACP,OAAO;AAAA,MACL,MAAM;AAAA,MACN,SAAS;AAAA,IACX;AAAA,IACA,UAAU;AAAA,MACR,MAAM;AAAA,MACN,SAAS;AAAA,IACX;AAAA,IACA,eAAe;AAAA,MACb,MAAM;AAAA,MACN,SAAS;AAAA,IACX;AAAA,EACF;AAAA,EACE,MAAM,SAAS;AAIjB,WAAO,CAAC,MAAU,OAAW,SAAa,WAAgB;AACxD,YAAM,qBAAqB,kBAAkB,SAAS;AACtD,YAAM,qBAAqB,kBAAkB,SAAS;AAEtD,YAAM,WAAW,gBAAgB,YAAY,EAAE,OAAO,OAAO,GAAG,MAAM,CAAC,CAAC,+HAA+H;AACvM,wBAAkB,KAAK,QAAQ,SAAS,EAAE,QAAQ,IAAI,GAAG,MAAM;AAC7D,cAAM,cAAc;AAAA,MACtB,GAAG,OAAO,OAAO;AACjB,YAAM,iDAAiD;AACvD,wBAAkB,KAAK,QAAQ,eAAe,EAAE,QAAQ,IAAI,GAAG,MAAM;AACnE,cAAM,oBAAoB;AAAA,MAC5B,GAAG,OAAO,OAAO;AACjB,YAAM,cAAc;AACpB,UAAI,QAAQ,OAAO;AACjB,cAAM,oBAAoB,oBAAoB;AAAA,UAC5C,OAAO,QAAQ;AAAA,UACf,KAAK,QAAQ;AAAA,UACb,KAAK,QAAQ;AAAA,UACb,OAAO;AAAA,UACP,QAAQ;AAAA,QACV,GAAG,MAAM,OAAO,CAAC;AAAA,MACnB,OAAO;AACL,cAAM,SAAS;AAAA,MACjB;AACA,YAAM,kBAAkB;AAAA,IAC1B;AAAA,EACA;AAEA,CAAC;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:json",
+      "start": 1774875881237,
+      "end": 1774875881237,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1774875881237,
+      "end": 1774875881237,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1774875881237,
+      "end": 1774875881237,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1774875881237,
+      "end": 1774875881237,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1774875881238,
+      "end": 1774875881238,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1774875881238,
+      "end": 1774875881238,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1774875881238,
+      "end": 1774875881238,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1774875881238,
+      "end": 1774875881238,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1774875881238,
+      "end": 1774875881238,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1774875881238,
+      "end": 1774875881238,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1774875881238,
+      "end": 1774875881239,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1774875881239,
+      "end": 1774875881239,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1774875881239,
+      "end": 1774875881239,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1774875881239,
+      "end": 1774875881239,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1774875881239,
+      "end": 1774875881239,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1774875881239,
+      "end": 1774875881239,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1774875881239,
+      "end": 1774875881239,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1774875881239,
+      "end": 1774875881239,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1774875881239,
+      "end": 1774875881239,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1774875881239,
+      "end": 1774875881239,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1774875881239,
+      "end": 1774875881239,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1774875881239,
+      "end": 1774875881242,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1774875881239,
+      "end": 1774875881242,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1774875881242,
+      "end": 1774875881242,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1774875881242,
+      "end": 1774875881242,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1774875881242,
+      "end": 1774875881242,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1774875881242,
+      "end": 1774875881242,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1774875881242,
+      "end": 1774875881242,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "result": "import { default as __nuxt_component_0 } from \"/Users/jiyankang/vscodeProjects/witque-blog/node_modules/.pnpm/@nuxtjs+mdc@0.3.2_rollup@3.29.3/node_modules/@nuxtjs/mdc/dist/runtime/components/MDCSlot\";\nimport { default as __nuxt_component_1 } from \"/Users/jiyankang/vscodeProjects/witque-blog/node_modules/.pnpm/@nuxt-themes+elements@0.9.5_rollup@3.29.3_vue@3.4.15/node_modules/@nuxt-themes/elements/components/globals/NuxtImg.vue\";\nimport { defineComponent as _defineComponent } from \"vue\";\nimport { resolveComponent as _resolveComponent, mergeProps as _mergeProps } from \"vue\";\nimport { ssrRenderComponent as _ssrRenderComponent, ssrRenderAttrs as _ssrRenderAttrs } from \"vue/server-renderer\";\nimport { ssrRenderSlot as _ssrRenderMDCSlot } from \"/Users/jiyankang/vscodeProjects/witque-blog/node_modules/.pnpm/@nuxtjs+mdc@0.3.2_rollup@3.29.3/node_modules/@nuxtjs/mdc/dist/runtime/utils/ssrSlot\";\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"Hero\",\n  __ssrInlineRender: true,\n  props: {\n    image: {\n      type: String,\n      default: null\n    },\n    imageAlt: {\n      type: String,\n      default: \"Hero Image\"\n    },\n    imagePosition: {\n      type: String,\n      default: \"right\"\n    }\n  },\n  setup(__props) {\n    return (_ctx, _push, _parent, _attrs) => {\n      const _component_MDCSlot = __nuxt_component_0;\n      const _component_NuxtImg = __nuxt_component_1;\n      _push(`<section${_ssrRenderAttrs(_mergeProps({ class: \"hero\" }, _attrs))} data-v-ce2c89e1><div class=\"layout\" data-v-ce2c89e1><div class=\"content\" data-v-ce2c89e1><div class=\"title\" data-v-ce2c89e1>`);\n      _ssrRenderMDCSlot(_ctx.$slots, \"title\", { unwrap: \"p\" }, () => {\n        _push(` Hero title `);\n      }, _push, _parent);\n      _push(`</div><div class=\"description\" data-v-ce2c89e1>`);\n      _ssrRenderMDCSlot(_ctx.$slots, \"description\", { unwrap: \"p\" }, () => {\n        _push(` Hero description `);\n      }, _push, _parent);\n      _push(`</div></div>`);\n      if (__props.image) {\n        _push(_ssrRenderComponent(_component_NuxtImg, {\n          class: __props.imagePosition,\n          src: __props.image,\n          alt: __props.imageAlt,\n          width: 16,\n          height: 9\n        }, null, _parent));\n      } else {\n        _push(`<!---->`);\n      }\n      _push(`</div></section>`);\n    };\n  }\n});\n",
+      "start": 1774875881242,
+      "end": 1774875881243,
+      "order": "post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          ""
+        ],
+        "names": [],
+        "mappings": ";;AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxM,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC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AAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/M,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5E,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC;"
+      }
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1774875881243,
+      "end": 1774875881243,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1774875881243,
+      "end": 1774875881243,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1774875881243,
+      "end": 1774875881243,
+      "order": "normal"
+    }
+  ]
+}

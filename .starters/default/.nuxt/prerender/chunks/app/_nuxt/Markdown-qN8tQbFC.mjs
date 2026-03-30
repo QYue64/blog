@@ -1,0 +1,33 @@
+import { defineComponent, getCurrentInstance, useSlots, computed, useSSRContext } from 'file:///Users/jiyankang/vscodeProjects/witque-blog/node_modules/.pnpm/vue@3.4.15_typescript@5.3.3/node_modules/vue/index.mjs';
+import _sfc_main$1 from './ContentSlot-Mgo3qbbS.mjs';
+import './MDCSlot-VIEgV7xL.mjs';
+
+const _sfc_main = defineComponent({
+  name: "Markdown",
+  extends: _sfc_main$1,
+  setup(props) {
+    const { parent } = getCurrentInstance();
+    const { between, default: fallbackSlot } = useSlots();
+    const tags = computed(() => {
+      if (typeof props.unwrap === "string") {
+        return props.unwrap.split(" ");
+      }
+      return ["*"];
+    });
+    return {
+      fallbackSlot,
+      tags,
+      between,
+      parent
+    };
+  }
+});
+const _sfc_setup = _sfc_main.setup;
+_sfc_main.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("../../node_modules/.pnpm/@nuxt+content@2.11.0_nuxt@3.9.3_rollup@3.29.3_vue@3.4.15/node_modules/@nuxt/content/dist/runtime/components/Markdown.vue");
+  return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
+};
+
+export { _sfc_main as default };
+//# sourceMappingURL=Markdown-qN8tQbFC.mjs.map

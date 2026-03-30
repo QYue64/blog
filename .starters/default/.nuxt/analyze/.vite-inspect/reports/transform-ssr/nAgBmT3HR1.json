@@ -1,0 +1,294 @@
+{
+  "resolvedId": "/Users/jiyankang/vscodeProjects/witque-blog/components/data-entry/Input.vue?vue&type=script&setup=true&lang.ts",
+  "transforms": [
+    {
+      "name": "vite:vue",
+      "result": "import { defineComponent as _defineComponent } from 'vue'\nimport { ssrRenderAttr as _ssrRenderAttr, ssrRenderAttrs as _ssrRenderAttrs, ssrInterpolate as _ssrInterpolate } from \"vue/server-renderer\"\n\nimport type { PropType } from 'vue'\nimport type { Field } from '../types/contact'\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'Input',\n  __ssrInlineRender: true,\n  props: {\n  modelValue: {\n    type: String,\n    required: true\n  },\n  field: {\n    type: Object as PropType<Field>,\n    required: true,\n    validator: (value: Field) => {\n      if (!value.name) {\n        return false\n      }\n      return true\n    }\n  }\n},\n  emits: ['update:modelValue'],\n  setup(__props) {\n\n\n\n\n\n\nreturn (_ctx: any,_push: any,_parent: any,_attrs: any) => {\n  _push(`<div${\n    _ssrRenderAttrs(_attrs)\n  } data-v-d1bc9653><label${\n    _ssrRenderAttr(\"for\", __props.field.name)\n  } data-v-d1bc9653>${\n    _ssrInterpolate(__props.field.label)\n  }</label>`)\n  if (__props.field.type !== 'textarea') {\n    _push(`<input${\n      _ssrRenderAttr(\"id\", __props.field.name)\n    }${\n      _ssrRenderAttr(\"name\", __props.field.name)\n    }${\n      _ssrRenderAttr(\"value\", __props.modelValue)\n    }${\n      _ssrRenderAttr(\"type\", __props.field.type ? __props.field.type : 'text')\n    }${\n      _ssrRenderAttr(\"placeholder\", __props.field.placeholder ? __props.field.placeholder : '')\n    } data-v-d1bc9653>`)\n  } else {\n    _push(`<textarea${\n      _ssrRenderAttr(\"id\", __props.field.name)\n    }${\n      _ssrRenderAttr(\"name\", __props.field.name)\n    }${\n      _ssrRenderAttr(\"type\", __props.field.type ? __props.field.type : 'text')\n    }${\n      _ssrRenderAttr(\"placeholder\", __props.field.placeholder ? __props.field.placeholder : '')\n    } data-v-d1bc9653>${\n      _ssrInterpolate(__props.modelValue)\n    }</textarea>`)\n  }\n  _push(`</div>`)\n}\n}\n\n})",
+      "start": 1774875881092,
+      "end": 1774875881092,
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/Users/jiyankang/vscodeProjects/witque-blog/components/data-entry/Input.vue"
+        ],
+        "sourcesContent": [
+          "<script setup lang=\"ts\">\nimport type { PropType } from 'vue'\nimport type { Field } from '../types/contact'\n\ndefineEmits(['update:modelValue'])\n\ndefineProps({\n  modelValue: {\n    type: String,\n    required: true\n  },\n  field: {\n    type: Object as PropType<Field>,\n    required: true,\n    validator: (value: Field) => {\n      if (!value.name) {\n        return false\n      }\n      return true\n    }\n  }\n})\n\n</script>\n\n<template>\n  <div>\n    <label :for=\"field.name\">\n      {{ field.label }}\n    </label>\n    <input\n      v-if=\"field.type !== 'textarea'\"\n      :id=\"field.name\"\n      :name=\"field.name\"\n      :value=\"modelValue\"\n      :type=\"field.type ? field.type : 'text'\"\n      :placeholder=\"field.placeholder ? field.placeholder : ''\"\n      @input=\"$emit('update:modelValue', $event.target.value)\"\n    >\n    <textarea\n      v-else\n      :id=\"field.name\"\n      :name=\"field.name\"\n      :value=\"modelValue\"\n      :type=\"field.type ? field.type : 'text'\"\n      :placeholder=\"field.placeholder ? field.placeholder : ''\"\n      @input=\"$emit('update:modelValue', $event.target.value)\"\n    />\n  </div>\n</template>\n\n<style scoped lang=\"postcss\" transformed>\ndiv label{display:block;font-size:var(--text-base-fontSize);line-height:var(--text-base-lineHeight);font-weight:var(--fontWeight-semibold);margin-bottom:var(--space-2);cursor:pointer;}div input,div textarea{background-color:transparent;outline:none;border:1px solid var(--color-gray-300);border-radius:var(--radii-sm);padding:var(--space-2) var(--space-4);width:100%;caret-color:var(--color-gray-500);}div input:focus,div textarea:focus{border-color:var(--color-gray-700);}:root.dark div input,:root.dark div textarea{border-color:var(--color-gray-700);}:root.dark div input:focus,:root.dark div textarea:focus{border-color:var(--color-gray-400);}div textarea{resize:none;height:var(--space-48);}\n</style>\n"
+        ],
+        "names": [],
+        "mappings": ";;;AACA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C;;;;;;;;;;;;;;;;;;;;;;;AAHwB;AAIU;AAClC;AAgBE;AACF;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;"
+      }
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1774875881092,
+      "end": 1774875881092,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1774875881092,
+      "end": 1774875881092,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1774875881093,
+      "end": 1774875881093,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1774875881093,
+      "end": 1774875881093,
+      "order": "pre"
+    },
+    {
+      "name": "pinceau-transforms",
+      "result": "import { defineComponent as _defineComponent } from 'vue'\nimport { ssrRenderAttr as _ssrRenderAttr, ssrRenderAttrs as _ssrRenderAttrs, ssrInterpolate as _ssrInterpolate } from \"vue/server-renderer\"\n\nimport type { PropType } from 'vue'\nimport type { Field } from '../types/contact'\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'Input',\n  __ssrInlineRender: true,\n  props: {\n  modelValue: {\n    type: String,\n    required: true\n  },\n  field: {\n    type: Object as PropType<Field>,\n    required: true,\n    validator: (value: Field) => {\n      if (!value.name) {\n        return false\n      }\n      return true\n    }\n  }\n},\n  emits: ['update:modelValue'],\n  setup(__props) {\n\n\n\n\n\n\nreturn (_ctx: any,_push: any,_parent: any,_attrs: any) => {\n  _push(`<div${\n    _ssrRenderAttrs(_attrs)\n  } data-v-d1bc9653><label${\n    _ssrRenderAttr(\"for\", __props.field.name)\n  } data-v-d1bc9653>${\n    _ssrInterpolate(__props.field.label)\n  }</label>`)\n  if (__props.field.type !== 'textarea') {\n    _push(`<input${\n      _ssrRenderAttr(\"id\", __props.field.name)\n    }${\n      _ssrRenderAttr(\"name\", __props.field.name)\n    }${\n      _ssrRenderAttr(\"value\", __props.modelValue)\n    }${\n      _ssrRenderAttr(\"type\", __props.field.type ? __props.field.type : 'text')\n    }${\n      _ssrRenderAttr(\"placeholder\", __props.field.placeholder ? __props.field.placeholder : '')\n    } data-v-d1bc9653>`)\n  } else {\n    _push(`<textarea${\n      _ssrRenderAttr(\"id\", __props.field.name)\n    }${\n      _ssrRenderAttr(\"name\", __props.field.name)\n    }${\n      _ssrRenderAttr(\"type\", __props.field.type ? __props.field.type : 'text')\n    }${\n      _ssrRenderAttr(\"placeholder\", __props.field.placeholder ? __props.field.placeholder : '')\n    } data-v-d1bc9653>${\n      _ssrInterpolate(__props.modelValue)\n    }</textarea>`)\n  }\n  _push(`</div>`)\n}\n}\n\n})",
+      "start": 1774875881093,
+      "end": 1774875881093,
+      "order": "pre"
+    },
+    {
+      "name": "pinceau-transforms",
+      "result": "import { defineComponent as _defineComponent } from 'vue'\nimport { ssrRenderAttr as _ssrRenderAttr, ssrRenderAttrs as _ssrRenderAttrs, ssrInterpolate as _ssrInterpolate } from \"vue/server-renderer\"\n\nimport type { PropType } from 'vue'\nimport type { Field } from '../types/contact'\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'Input',\n  __ssrInlineRender: true,\n  props: {\n  modelValue: {\n    type: String,\n    required: true\n  },\n  field: {\n    type: Object as PropType<Field>,\n    required: true,\n    validator: (value: Field) => {\n      if (!value.name) {\n        return false\n      }\n      return true\n    }\n  }\n},\n  emits: ['update:modelValue'],\n  setup(__props) {\n\n\n\n\n\n\nreturn (_ctx: any,_push: any,_parent: any,_attrs: any) => {\n  _push(`<div${\n    _ssrRenderAttrs(_attrs)\n  } data-v-d1bc9653><label${\n    _ssrRenderAttr(\"for\", __props.field.name)\n  } data-v-d1bc9653>${\n    _ssrInterpolate(__props.field.label)\n  }</label>`)\n  if (__props.field.type !== 'textarea') {\n    _push(`<input${\n      _ssrRenderAttr(\"id\", __props.field.name)\n    }${\n      _ssrRenderAttr(\"name\", __props.field.name)\n    }${\n      _ssrRenderAttr(\"value\", __props.modelValue)\n    }${\n      _ssrRenderAttr(\"type\", __props.field.type ? __props.field.type : 'text')\n    }${\n      _ssrRenderAttr(\"placeholder\", __props.field.placeholder ? __props.field.placeholder : '')\n    } data-v-d1bc9653>`)\n  } else {\n    _push(`<textarea${\n      _ssrRenderAttr(\"id\", __props.field.name)\n    }${\n      _ssrRenderAttr(\"name\", __props.field.name)\n    }${\n      _ssrRenderAttr(\"type\", __props.field.type ? __props.field.type : 'text')\n    }${\n      _ssrRenderAttr(\"placeholder\", __props.field.placeholder ? __props.field.placeholder : '')\n    } data-v-d1bc9653>${\n      _ssrInterpolate(__props.modelValue)\n    }</textarea>`)\n  }\n  _push(`</div>`)\n}\n}\n\n})",
+      "start": 1774875881093,
+      "end": 1774875881093,
+      "order": "pre"
+    },
+    {
+      "name": "content-slot",
+      "start": 1774875881093,
+      "end": 1774875881093,
+      "order": "pre"
+    },
+    {
+      "name": "content-slot",
+      "start": 1774875881093,
+      "end": 1774875881093,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1774875881093,
+      "end": 1774875881093,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1774875881093,
+      "end": 1774875881093,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { defineComponent as _defineComponent } from \"vue\";\nimport { ssrRenderAttr as _ssrRenderAttr, ssrRenderAttrs as _ssrRenderAttrs, ssrInterpolate as _ssrInterpolate } from \"vue/server-renderer\";\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"Input\",\n  __ssrInlineRender: true,\n  props: {\n    modelValue: {\n      type: String,\n      required: true\n    },\n    field: {\n      type: Object,\n      required: true,\n      validator: (value) => {\n        if (!value.name) {\n          return false;\n        }\n        return true;\n      }\n    }\n  },\n  emits: [\"update:modelValue\"],\n  setup(__props) {\n    return (_ctx, _push, _parent, _attrs) => {\n      _push(`<div${_ssrRenderAttrs(_attrs)} data-v-d1bc9653><label${_ssrRenderAttr(\"for\", __props.field.name)} data-v-d1bc9653>${_ssrInterpolate(__props.field.label)}</label>`);\n      if (__props.field.type !== \"textarea\") {\n        _push(`<input${_ssrRenderAttr(\"id\", __props.field.name)}${_ssrRenderAttr(\"name\", __props.field.name)}${_ssrRenderAttr(\"value\", __props.modelValue)}${_ssrRenderAttr(\"type\", __props.field.type ? __props.field.type : \"text\")}${_ssrRenderAttr(\"placeholder\", __props.field.placeholder ? __props.field.placeholder : \"\")} data-v-d1bc9653>`);\n      } else {\n        _push(`<textarea${_ssrRenderAttr(\"id\", __props.field.name)}${_ssrRenderAttr(\"name\", __props.field.name)}${_ssrRenderAttr(\"type\", __props.field.type ? __props.field.type : \"text\")}${_ssrRenderAttr(\"placeholder\", __props.field.placeholder ? __props.field.placeholder : \"\")} data-v-d1bc9653>${_ssrInterpolate(__props.modelValue)}</textarea>`);\n      }\n      _push(`</div>`);\n    };\n  }\n});\n",
+      "start": 1774875881093,
+      "end": 1774875881237,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/Users/jiyankang/vscodeProjects/witque-blog/components/data-entry/Input.vue?vue&type=script&setup=true&lang.ts"
+        ],
+        "sourcesContent": [
+          "import { defineComponent as _defineComponent } from 'vue'\nimport { ssrRenderAttr as _ssrRenderAttr, ssrRenderAttrs as _ssrRenderAttrs, ssrInterpolate as _ssrInterpolate } from \"vue/server-renderer\"\n\nimport type { PropType } from 'vue'\nimport type { Field } from '../types/contact'\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'Input',\n  __ssrInlineRender: true,\n  props: {\n  modelValue: {\n    type: String,\n    required: true\n  },\n  field: {\n    type: Object as PropType<Field>,\n    required: true,\n    validator: (value: Field) => {\n      if (!value.name) {\n        return false\n      }\n      return true\n    }\n  }\n},\n  emits: ['update:modelValue'],\n  setup(__props) {\n\n\n\n\n\n\nreturn (_ctx: any,_push: any,_parent: any,_attrs: any) => {\n  _push(`<div${\n    _ssrRenderAttrs(_attrs)\n  } data-v-d1bc9653><label${\n    _ssrRenderAttr(\"for\", __props.field.name)\n  } data-v-d1bc9653>${\n    _ssrInterpolate(__props.field.label)\n  }</label>`)\n  if (__props.field.type !== 'textarea') {\n    _push(`<input${\n      _ssrRenderAttr(\"id\", __props.field.name)\n    }${\n      _ssrRenderAttr(\"name\", __props.field.name)\n    }${\n      _ssrRenderAttr(\"value\", __props.modelValue)\n    }${\n      _ssrRenderAttr(\"type\", __props.field.type ? __props.field.type : 'text')\n    }${\n      _ssrRenderAttr(\"placeholder\", __props.field.placeholder ? __props.field.placeholder : '')\n    } data-v-d1bc9653>`)\n  } else {\n    _push(`<textarea${\n      _ssrRenderAttr(\"id\", __props.field.name)\n    }${\n      _ssrRenderAttr(\"name\", __props.field.name)\n    }${\n      _ssrRenderAttr(\"type\", __props.field.type ? __props.field.type : 'text')\n    }${\n      _ssrRenderAttr(\"placeholder\", __props.field.placeholder ? __props.field.placeholder : '')\n    } data-v-d1bc9653>${\n      _ssrInterpolate(__props.modelValue)\n    }</textarea>`)\n  }\n  _push(`</div>`)\n}\n}\n\n})"
+        ],
+        "mappings": "AAAA,SAAS,mBAAmB,wBAAwB;AACpD,SAAS,iBAAiB,gBAAgB,kBAAkB,iBAAiB,kBAAkB,uBAAuB;AAMtH,eAA4B,iCAAiB;AAAA,EAC3C,QAAQ;AAAA,EACR,mBAAmB;AAAA,EACnB,OAAO;AAAA,IACP,YAAY;AAAA,MACV,MAAM;AAAA,MACN,UAAU;AAAA,IACZ;AAAA,IACA,OAAO;AAAA,MACL,MAAM;AAAA,MACN,UAAU;AAAA,MACV,WAAW,CAAC,UAAiB;AAC3B,YAAI,CAAC,MAAM,MAAM;AACf,iBAAO;AAAA,QACT;AACA,eAAO;AAAA,MACT;AAAA,IACF;AAAA,EACF;AAAA,EACE,OAAO,CAAC,mBAAmB;AAAA,EAC3B,MAAM,SAAS;AAOjB,WAAO,CAAC,MAAU,OAAW,SAAa,WAAgB;AACxD,YAAM,OACJ,gBAAgB,MAAM,CACxB,0BACE,eAAe,OAAO,QAAQ,MAAM,IAAI,CAC1C,oBACE,gBAAgB,QAAQ,MAAM,KAAK,CACrC,UAAU;AACV,UAAI,QAAQ,MAAM,SAAS,YAAY;AACrC,cAAM,SACJ,eAAe,MAAM,QAAQ,MAAM,IAAI,CACzC,GACE,eAAe,QAAQ,QAAQ,MAAM,IAAI,CAC3C,GACE,eAAe,SAAS,QAAQ,UAAU,CAC5C,GACE,eAAe,QAAQ,QAAQ,MAAM,OAAO,QAAQ,MAAM,OAAO,MAAM,CACzE,GACE,eAAe,eAAe,QAAQ,MAAM,cAAc,QAAQ,MAAM,cAAc,EAAE,CAC1F,mBAAmB;AAAA,MACrB,OAAO;AACL,cAAM,YACJ,eAAe,MAAM,QAAQ,MAAM,IAAI,CACzC,GACE,eAAe,QAAQ,QAAQ,MAAM,IAAI,CAC3C,GACE,eAAe,QAAQ,QAAQ,MAAM,OAAO,QAAQ,MAAM,OAAO,MAAM,CACzE,GACE,eAAe,eAAe,QAAQ,MAAM,cAAc,QAAQ,MAAM,cAAc,EAAE,CAC1F,oBACE,gBAAgB,QAAQ,UAAU,CACpC,aAAa;AAAA,MACf;AACA,YAAM,QAAQ;AAAA,IAChB;AAAA,EACA;AAEA,CAAC;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:json",
+      "start": 1774875881237,
+      "end": 1774875881237,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1774875881237,
+      "end": 1774875881237,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1774875881237,
+      "end": 1774875881237,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1774875881237,
+      "end": 1774875881237,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1774875881238,
+      "end": 1774875881238,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1774875881238,
+      "end": 1774875881238,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1774875881238,
+      "end": 1774875881238,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1774875881238,
+      "end": 1774875881238,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1774875881238,
+      "end": 1774875881238,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1774875881238,
+      "end": 1774875881238,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1774875881238,
+      "end": 1774875881239,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1774875881239,
+      "end": 1774875881239,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1774875881239,
+      "end": 1774875881239,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1774875881239,
+      "end": 1774875881239,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1774875881239,
+      "end": 1774875881239,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1774875881239,
+      "end": 1774875881239,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1774875881239,
+      "end": 1774875881239,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1774875881239,
+      "end": 1774875881239,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1774875881239,
+      "end": 1774875881239,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1774875881239,
+      "end": 1774875881239,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1774875881239,
+      "end": 1774875881239,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1774875881239,
+      "end": 1774875881241,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1774875881239,
+      "end": 1774875881242,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1774875881242,
+      "end": 1774875881242,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1774875881242,
+      "end": 1774875881242,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1774875881242,
+      "end": 1774875881242,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1774875881242,
+      "end": 1774875881242,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1774875881242,
+      "end": 1774875881242,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1774875881242,
+      "end": 1774875881242,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1774875881243,
+      "end": 1774875881243,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1774875881243,
+      "end": 1774875881243,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1774875881243,
+      "end": 1774875881243,
+      "order": "normal"
+    }
+  ]
+}

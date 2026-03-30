@@ -1,0 +1,236 @@
+{
+  "resolvedId": "/Users/jiyankang/vscodeProjects/witque-blog/components/AppFooter.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<script lang=\"ts\" setup>\nconst alpine = useAppConfig().alpine\n</script>\n\n<template>\n  <footer\n    :class=\"[\n      alpine.footer.alignment\n    ]\"\n  >\n    <NuxtLink v-if=\"alpine.footer?.credits?.enabled\" class=\"credits\" :to=\"alpine.footer.credits.repository\">\n      {{ alpine.footer?.credits?.text }}\n    </NuxtLink>\n\n    <p v-if=\"alpine.footer?.message\" class=\"message\">\n      {{ alpine.footer.message }}\n    </p>\n\n    <div class=\"icons\">\n      <div v-if=\"alpine.socials && Object.entries(alpine.socials)\" class=\"social\">\n        <SocialIcons :socials=\"alpine.socials\" />\n      </div>\n      <div class=\"color-mode-switch\">\n        <ColorModeSwitch />\n      </div>\n    </div>\n  </footer>\n</template>\n\n<style scoped lang=\"ts\">\ncss({\n  footer: {\n    display: 'flex',\n    flexDirection: 'column',\n    alignItems: 'center',\n    marginTop: '{space.24}',\n    py: '{space.8}',\n    '&.left': {\n      alignItems: 'flex-start'\n    },\n    '&.right': {\n      alignItems: 'flex-end'\n    },\n    '@md': {\n      minHeight: '{space.36}',\n    },\n    '.credits': {\n      fontSize: '{text.sm.fontSize}',\n      lineHeight: '{text.sm.lineHeight}',\n      fontWeight: '{fontWeight.normal}',\n      color: '{color.gray.500}',\n      marginBottom: '{space.4}',\n    },\n    '.message': {\n      textAlign: 'center',\n      marginBottom: '{space.4}',\n    },\n    '.icons': {\n      display: 'grid',\n      width: '100%',\n      gridTemplateColumns: 'repeat(12, minmax(0, 1fr))',\n      gap: '{space.4}',\n      '.left &&': {\n        display: 'flex',\n        alignItems: 'center',\n        justifyContent: 'space-between'\n      },\n      '.right &&': {\n        display: 'flex',\n        alignItems: 'center',\n        justifyContent: 'space-between',\n        flexDirection: 'row-reverse'\n      },\n      '.social': {\n        gridColumn: 'span 12 / span 12',\n        display: 'flex',\n        justifyContent: 'center',\n        gap: '{space.4}',\n        '@xs': {\n          gridColumn: 'span 4 / span 4',\n          gridColumnStart: 5,\n        }\n      },\n      '.color-mode-switch': {\n        gridColumn: 'span 12 / span 12',\n        display: 'flex',\n        justifyContent: 'center',\n        '@xs': {\n          gridColumn: 'span 2 / span 2',\n          gridColumnStart: 11,\n          justifyContent: 'flex-end',\n        }\n      }\n    },\n  }\n})\n</style>\n",
+      "start": 1774875879224,
+      "end": 1774875879267,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1774875879267,
+      "end": 1774875879267,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1774875879267,
+      "end": 1774875879267,
+      "order": "pre"
+    },
+    {
+      "name": "pinceau-transforms",
+      "result": "<script lang=\"ts\" setup>\nconst alpine = useAppConfig().alpine\n</script>\n\n<template>\n  <footer\n    :class=\"[\n      alpine.footer.alignment\n    ]\"\n  >\n    <NuxtLink v-if=\"alpine.footer?.credits?.enabled\" class=\"credits\" :to=\"alpine.footer.credits.repository\">\n      {{ alpine.footer?.credits?.text }}\n    </NuxtLink>\n\n    <p v-if=\"alpine.footer?.message\" class=\"message\">\n      {{ alpine.footer.message }}\n    </p>\n\n    <div class=\"icons\">\n      <div v-if=\"alpine.socials && Object.entries(alpine.socials)\" class=\"social\">\n        <SocialIcons :socials=\"alpine.socials\" />\n      </div>\n      <div class=\"color-mode-switch\">\n        <ColorModeSwitch />\n      </div>\n    </div>\n  </footer>\n</template>\n\n<style scoped lang=\"postcss\" transformed>\nfooter{display:flex;flex-direction:column;align-items:center;margin-top:var(--space-24);padding-top:var(--space-8);padding-bottom:var(--space-8);}footer.left{align-items:flex-start;}footer.right{align-items:flex-end;}@media (min-width: 768px){footer{min-height:var(--space-36);}}footer .credits{font-size:var(--text-sm-fontSize);line-height:var(--text-sm-lineHeight);font-weight:var(--fontWeight-normal);color:var(--color-gray-500);margin-bottom:var(--space-4);}footer .message{text-align:center;margin-bottom:var(--space-4);}footer .icons{display:grid;width:100%;grid-template-columns:repeat(12, minmax(0, 1fr));gap:var(--space-4);}.left :is(footer .icons):is(footer .icons){display:flex;align-items:center;justify-content:space-between;}.right :is(footer .icons):is(footer .icons){display:flex;align-items:center;justify-content:space-between;flex-direction:row-reverse;}footer .icons .social{grid-column:span 12 / span 12;display:flex;justify-content:center;gap:var(--space-4);}@media (min-width: 475px){footer .icons .social{grid-column:span 4 / span 4;grid-column-start:5;}}footer .icons .color-mode-switch{grid-column:span 12 / span 12;display:flex;justify-content:center;}@media (min-width: 475px){footer .icons .color-mode-switch{grid-column:span 2 / span 2;grid-column-start:11;justify-content:flex-end;}}\n</style>\n",
+      "start": 1774875879267,
+      "end": 1774875879269,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "file": "/Users/jiyankang/vscodeProjects/witque-blog/components/AppFooter.vue",
+        "sources": [
+          "/Users/jiyankang/vscodeProjects/witque-blog/components/AppFooter.vue"
+        ],
+        "names": [],
+        "mappings": "AAAA,wBAAwB;AAAA;AAAA,AAExB;AACA;AACA,UAAU;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,AAuBV;AACA;AACA;;AAmEA;"
+      }
+    },
+    {
+      "name": "content-slot",
+      "start": 1774875879269,
+      "end": 1774875879269,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1774875879269,
+      "end": 1774875879269,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1774875879269,
+      "end": 1774875879269,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1774875879269,
+      "end": 1774875879269,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1774875879269,
+      "end": 1774875879269,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1774875879269,
+      "end": 1774875879269,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "import _sfc_main from \"/Users/jiyankang/vscodeProjects/witque-blog/components/AppFooter.vue?vue&type=script&setup=true&lang.ts\";\nexport * from \"/Users/jiyankang/vscodeProjects/witque-blog/components/AppFooter.vue?vue&type=script&setup=true&lang.ts\";\nimport \"/Users/jiyankang/vscodeProjects/witque-blog/components/AppFooter.vue?vue&type=style&index=0&scoped=03ae78f0&transformed=true&lang.postcss\";\nimport _export_sfc from \"\\0plugin-vue:export-helper\";\nexport default /* @__PURE__ */ _export_sfc(_sfc_main, [[\"__scopeId\", \"data-v-03ae78f0\"]]);\n",
+      "start": 1774875879269,
+      "end": 1774875879277,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1774875879277,
+      "end": 1774875879277,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1774875879277,
+      "end": 1774875879278,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1774875879278,
+      "end": 1774875879278,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1774875879278,
+      "end": 1774875879278,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1774875879278,
+      "end": 1774875879278,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1774875879278,
+      "end": 1774875879278,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1774875879278,
+      "end": 1774875879278,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1774875879278,
+      "end": 1774875879278,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1774875879278,
+      "end": 1774875879278,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1774875879278,
+      "end": 1774875879278,
+      "order": "normal"
+    }
+  ]
+}

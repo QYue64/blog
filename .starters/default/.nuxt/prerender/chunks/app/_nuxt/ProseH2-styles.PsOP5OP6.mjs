@@ -1,0 +1,6 @@
+const ProseH2_vue_vue_type_style_index_0_scoped_50b70a6c_transformed_true_lang = "h2[data-v-50b70a6c]{display:block;font-family:var(--typography-font-display);font-size:var(--prose-h2-fontSize);font-weight:var(--prose-h2-fontWeight);letter-spacing:var(--prose-h2-letterSpacing);line-height:var(--prose-h2-lineHeight);margin:var(--prose-h2-margin)}h2[data-v-50b70a6c] .icon{display:inline-block;height:var(--prose-h2-iconSize);margin-inline-start:12px;opacity:0;transition:opacity .1s;width:var(--prose-h2-iconSize)}h2 a[data-v-50b70a6c]:hover .icon{opacity:1}";
+
+const ProseH2Styles_PsOP5OP6 = [ProseH2_vue_vue_type_style_index_0_scoped_50b70a6c_transformed_true_lang];
+
+export { ProseH2Styles_PsOP5OP6 as default };
+//# sourceMappingURL=ProseH2-styles.PsOP5OP6.mjs.map

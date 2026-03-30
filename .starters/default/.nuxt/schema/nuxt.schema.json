@@ -1,0 +1,786 @@
+{
+  "id": "#",
+  "properties": {
+    "appConfig": {
+      "id": "#appConfig",
+      "properties": {
+        "nuxtIcon": {
+          "title": "Nuxt Icon",
+          "description": "Configure the defaults of Nuxt Icon",
+          "id": "#appConfig/nuxtIcon",
+          "properties": {
+            "size": {
+              "title": "Icon Size",
+              "description": "Set the default icon size. Set to false to disable the sizing of icon in style.",
+              "tags": [
+                "@studioIcon material-symbols:format-size-rounded"
+              ],
+              "tsType": "string | false",
+              "id": "#appConfig/nuxtIcon/size",
+              "default": "1em",
+              "type": "string"
+            },
+            "class": {
+              "title": "CSS Class",
+              "description": "Set the default CSS class",
+              "tags": [
+                "@studioIcon material-symbols:css"
+              ],
+              "id": "#appConfig/nuxtIcon/class",
+              "default": "",
+              "type": "string"
+            },
+            "aliases": {
+              "title": "Icon aliases",
+              "description": "Define Icon aliases to update them easily without code changes.",
+              "tags": [
+                "@studioIcon material-symbols:star-rounded",
+                "@studioInputObjectValueType icon"
+              ],
+              "tsType": "{ [alias: string]: string }",
+              "id": "#appConfig/nuxtIcon/aliases",
+              "default": {},
+              "type": "object"
+            }
+          },
+          "type": "object",
+          "default": {
+            "size": "1em",
+            "class": "",
+            "aliases": {}
+          }
+        },
+        "prose": {
+          "title": "",
+          "description": "",
+          "tags": [],
+          "id": "#appConfig/prose",
+          "properties": {
+            "copyButton": {
+              "title": "",
+              "description": "",
+              "tags": [],
+              "id": "#appConfig/prose/copyButton",
+              "properties": {
+                "iconCopy": {
+                  "title": "",
+                  "description": "",
+                  "tags": [],
+                  "id": "#appConfig/prose/copyButton/iconCopy",
+                  "default": "ph:copy",
+                  "type": "string"
+                },
+                "iconCopied": {
+                  "title": "",
+                  "description": "",
+                  "tags": [],
+                  "id": "#appConfig/prose/copyButton/iconCopied",
+                  "default": "ph:check",
+                  "type": "string"
+                }
+              },
+              "type": "object",
+              "default": {
+                "iconCopy": "ph:copy",
+                "iconCopied": "ph:check"
+              }
+            },
+            "headings": {
+              "title": "",
+              "description": "",
+              "tags": [],
+              "id": "#appConfig/prose/headings",
+              "properties": {
+                "icon": {
+                  "title": "",
+                  "description": "",
+                  "tags": [],
+                  "tsType": "string|false",
+                  "id": "#appConfig/prose/headings/icon",
+                  "default": "ph:link",
+                  "type": "string"
+                }
+              },
+              "type": "object",
+              "default": {
+                "icon": "ph:link"
+              }
+            },
+            "h1": {
+              "title": "",
+              "description": "",
+              "tags": [],
+              "id": "#appConfig/prose/h1",
+              "properties": {
+                "icon": {
+                  "title": "",
+                  "description": "",
+                  "tags": [],
+                  "tsType": "string|false",
+                  "id": "#appConfig/prose/h1/icon",
+                  "default": "",
+                  "type": "string"
+                }
+              },
+              "type": "object",
+              "default": {
+                "icon": ""
+              }
+            },
+            "h2": {
+              "title": "",
+              "description": "",
+              "tags": [],
+              "id": "#appConfig/prose/h2",
+              "properties": {
+                "icon": {
+                  "title": "",
+                  "description": "",
+                  "tags": [],
+                  "tsType": "string|false",
+                  "id": "#appConfig/prose/h2/icon",
+                  "default": "",
+                  "type": "string"
+                }
+              },
+              "type": "object",
+              "default": {
+                "icon": ""
+              }
+            },
+            "h3": {
+              "title": "",
+              "description": "",
+              "tags": [],
+              "id": "#appConfig/prose/h3",
+              "properties": {
+                "icon": {
+                  "title": "",
+                  "description": "",
+                  "tags": [],
+                  "tsType": "string|false",
+                  "id": "#appConfig/prose/h3/icon",
+                  "default": "",
+                  "type": "string"
+                }
+              },
+              "type": "object",
+              "default": {
+                "icon": ""
+              }
+            },
+            "h4": {
+              "title": "",
+              "description": "",
+              "tags": [],
+              "id": "#appConfig/prose/h4",
+              "properties": {
+                "icon": {
+                  "title": "",
+                  "description": "",
+                  "tags": [],
+                  "tsType": "string|false",
+                  "id": "#appConfig/prose/h4/icon",
+                  "default": "",
+                  "type": "string"
+                }
+              },
+              "type": "object",
+              "default": {
+                "icon": ""
+              }
+            },
+            "h5": {
+              "title": "",
+              "description": "",
+              "tags": [],
+              "id": "#appConfig/prose/h5",
+              "properties": {
+                "icon": {
+                  "title": "",
+                  "description": "",
+                  "tags": [],
+                  "tsType": "string|false",
+                  "id": "#appConfig/prose/h5/icon",
+                  "default": "",
+                  "type": "string"
+                }
+              },
+              "type": "object",
+              "default": {
+                "icon": ""
+              }
+            },
+            "h6": {
+              "title": "",
+              "description": "",
+              "tags": [],
+              "id": "#appConfig/prose/h6",
+              "properties": {
+                "icon": {
+                  "title": "",
+                  "description": "",
+                  "tags": [],
+                  "tsType": "string|false",
+                  "id": "#appConfig/prose/h6/icon",
+                  "default": "",
+                  "type": "string"
+                }
+              },
+              "type": "object",
+              "default": {
+                "icon": ""
+              }
+            }
+          },
+          "type": "object",
+          "default": {
+            "copyButton": {
+              "iconCopy": "ph:copy",
+              "iconCopied": "ph:check"
+            },
+            "headings": {
+              "icon": "ph:link"
+            },
+            "h1": {
+              "icon": ""
+            },
+            "h2": {
+              "icon": ""
+            },
+            "h3": {
+              "icon": ""
+            },
+            "h4": {
+              "icon": ""
+            },
+            "h5": {
+              "icon": ""
+            },
+            "h6": {
+              "icon": ""
+            }
+          }
+        },
+        "alpine": {
+          "title": "",
+          "description": "",
+          "tags": [],
+          "id": "#appConfig/alpine",
+          "properties": {
+            "title": {
+              "title": "",
+              "description": "",
+              "tags": [],
+              "id": "#appConfig/alpine/title",
+              "default": "Alpine",
+              "type": "string"
+            },
+            "description": {
+              "title": "",
+              "description": "",
+              "tags": [],
+              "id": "#appConfig/alpine/description",
+              "default": "The minimalist blog theme",
+              "type": "string"
+            },
+            "image": {
+              "title": "",
+              "description": "",
+              "tags": [],
+              "id": "#appConfig/alpine/image",
+              "properties": {
+                "src": {
+                  "title": "",
+                  "description": "",
+                  "tags": [],
+                  "id": "#appConfig/alpine/image/src",
+                  "default": "/social-card-preview.png",
+                  "type": "string"
+                },
+                "alt": {
+                  "type": "string",
+                  "id": "#appConfig/alpine/image/alt",
+                  "default": "An image showcasing my project."
+                },
+                "width": {
+                  "type": "number",
+                  "id": "#appConfig/alpine/image/width",
+                  "default": 400
+                },
+                "height": {
+                  "type": "number",
+                  "id": "#appConfig/alpine/image/height",
+                  "default": 300
+                }
+              },
+              "type": "object",
+              "default": {
+                "src": "/social-card-preview.png",
+                "alt": "An image showcasing my project.",
+                "width": 400,
+                "height": 300
+              }
+            },
+            "header": {
+              "title": "",
+              "description": "",
+              "tags": [],
+              "id": "#appConfig/alpine/header",
+              "properties": {
+                "position": {
+                  "title": "",
+                  "description": "",
+                  "tags": [],
+                  "tsType": "'left'|'center'|'right'",
+                  "id": "#appConfig/alpine/header/position",
+                  "default": "right",
+                  "type": "string"
+                },
+                "logo": {
+                  "title": "",
+                  "description": "",
+                  "tags": [],
+                  "id": "#appConfig/alpine/header/logo",
+                  "properties": {
+                    "path": {
+                      "title": "",
+                      "description": "",
+                      "tags": [],
+                      "id": "#appConfig/alpine/header/logo/path",
+                      "default": "/logo.svg",
+                      "type": "string"
+                    },
+                    "pathDark": {
+                      "title": "",
+                      "description": "",
+                      "tags": [],
+                      "id": "#appConfig/alpine/header/logo/pathDark",
+                      "default": "/logo-dark.svg",
+                      "type": "string"
+                    },
+                    "alt": {
+                      "title": "",
+                      "description": "",
+                      "tags": [],
+                      "id": "#appConfig/alpine/header/logo/alt",
+                      "default": "Alpine theme logo",
+                      "type": "string"
+                    }
+                  },
+                  "type": "object",
+                  "default": {
+                    "path": "/logo.svg",
+                    "pathDark": "/logo-dark.svg",
+                    "alt": "Alpine theme logo"
+                  }
+                }
+              },
+              "type": "object",
+              "default": {
+                "position": "right",
+                "logo": {
+                  "path": "/logo.svg",
+                  "pathDark": "/logo-dark.svg",
+                  "alt": "Alpine theme logo"
+                }
+              }
+            },
+            "footer": {
+              "title": "",
+              "description": "",
+              "tags": [],
+              "id": "#appConfig/alpine/footer",
+              "properties": {
+                "credits": {
+                  "title": "",
+                  "description": "",
+                  "tags": [],
+                  "id": "#appConfig/alpine/footer/credits",
+                  "properties": {
+                    "enabled": {
+                      "title": "",
+                      "description": "",
+                      "tags": [],
+                      "id": "#appConfig/alpine/footer/credits/enabled",
+                      "default": true,
+                      "type": "boolean"
+                    },
+                    "text": {
+                      "title": "",
+                      "description": "",
+                      "tags": [],
+                      "id": "#appConfig/alpine/footer/credits/text",
+                      "default": "Alpine",
+                      "type": "string"
+                    },
+                    "repository": {
+                      "title": "",
+                      "description": "",
+                      "tags": [],
+                      "id": "#appConfig/alpine/footer/credits/repository",
+                      "default": "https://www.github.com/nuxt-themes/alpine",
+                      "type": "string"
+                    }
+                  },
+                  "type": "object",
+                  "default": {
+                    "enabled": true,
+                    "text": "Alpine",
+                    "repository": "https://www.github.com/nuxt-themes/alpine"
+                  }
+                },
+                "navigation": {
+                  "title": "",
+                  "description": "",
+                  "tags": [],
+                  "id": "#appConfig/alpine/footer/navigation",
+                  "default": true,
+                  "type": "boolean"
+                },
+                "alignment": {
+                  "title": "",
+                  "description": "",
+                  "tags": [],
+                  "tsType": "'left'|'center'|'right'",
+                  "id": "#appConfig/alpine/footer/alignment",
+                  "default": "center",
+                  "type": "string"
+                },
+                "message": {
+                  "title": "",
+                  "description": "",
+                  "tags": [],
+                  "id": "#appConfig/alpine/footer/message",
+                  "default": "Follow me on",
+                  "type": "string"
+                }
+              },
+              "type": "object",
+              "default": {
+                "credits": {
+                  "enabled": true,
+                  "text": "Alpine",
+                  "repository": "https://www.github.com/nuxt-themes/alpine"
+                },
+                "navigation": true,
+                "alignment": "center",
+                "message": "Follow me on"
+              }
+            },
+            "socials": {
+              "title": "",
+              "description": "",
+              "tags": [],
+              "id": "#appConfig/alpine/socials",
+              "properties": {
+                "twitter": {
+                  "title": "",
+                  "description": "",
+                  "tags": [],
+                  "id": "#appConfig/alpine/socials/twitter",
+                  "default": "",
+                  "type": "string"
+                },
+                "instagram": {
+                  "title": "",
+                  "description": "",
+                  "tags": [],
+                  "id": "#appConfig/alpine/socials/instagram",
+                  "default": "",
+                  "type": "string"
+                },
+                "github": {
+                  "title": "",
+                  "description": "",
+                  "tags": [],
+                  "id": "#appConfig/alpine/socials/github",
+                  "default": "",
+                  "type": "string"
+                },
+                "facebook": {
+                  "title": "",
+                  "description": "",
+                  "tags": [],
+                  "id": "#appConfig/alpine/socials/facebook",
+                  "default": "",
+                  "type": "string"
+                },
+                "medium": {
+                  "title": "",
+                  "description": "",
+                  "tags": [],
+                  "id": "#appConfig/alpine/socials/medium",
+                  "default": "",
+                  "type": "string"
+                },
+                "youtube": {
+                  "title": "",
+                  "description": "",
+                  "tags": [],
+                  "id": "#appConfig/alpine/socials/youtube",
+                  "default": "",
+                  "type": "string"
+                }
+              },
+              "type": "object",
+              "default": {
+                "twitter": "",
+                "instagram": "",
+                "github": "",
+                "facebook": "",
+                "medium": "",
+                "youtube": ""
+              }
+            },
+            "form": {
+              "title": "",
+              "description": "",
+              "tags": [],
+              "id": "#appConfig/alpine/form",
+              "properties": {
+                "successMessage": {
+                  "title": "",
+                  "description": "",
+                  "tags": [],
+                  "id": "#appConfig/alpine/form/successMessage",
+                  "default": "Message sent. Thank you!",
+                  "type": "string"
+                }
+              },
+              "type": "object",
+              "default": {
+                "successMessage": "Message sent. Thank you!"
+              }
+            },
+            "backToTop": {
+              "title": "",
+              "description": "",
+              "tags": [],
+              "id": "#appConfig/alpine/backToTop",
+              "properties": {
+                "icon": {
+                  "type": "string",
+                  "id": "#appConfig/alpine/backToTop/icon",
+                  "default": "material-symbols:arrow-upward"
+                },
+                "text": {
+                  "type": "string",
+                  "id": "#appConfig/alpine/backToTop/text",
+                  "default": "Back to top"
+                }
+              },
+              "type": "object",
+              "default": {
+                "icon": "material-symbols:arrow-upward",
+                "text": "Back to top"
+              }
+            }
+          },
+          "type": "object",
+          "default": {
+            "title": "Alpine",
+            "description": "The minimalist blog theme",
+            "image": {
+              "src": "/social-card-preview.png",
+              "alt": "An image showcasing my project.",
+              "width": 400,
+              "height": 300
+            },
+            "header": {
+              "position": "right",
+              "logo": {
+                "path": "/logo.svg",
+                "pathDark": "/logo-dark.svg",
+                "alt": "Alpine theme logo"
+              }
+            },
+            "footer": {
+              "credits": {
+                "enabled": true,
+                "text": "Alpine",
+                "repository": "https://www.github.com/nuxt-themes/alpine"
+              },
+              "navigation": true,
+              "alignment": "center",
+              "message": "Follow me on"
+            },
+            "socials": {
+              "twitter": "",
+              "instagram": "",
+              "github": "",
+              "facebook": "",
+              "medium": "",
+              "youtube": ""
+            },
+            "form": {
+              "successMessage": "Message sent. Thank you!"
+            },
+            "backToTop": {
+              "icon": "material-symbols:arrow-upward",
+              "text": "Back to top"
+            }
+          }
+        }
+      },
+      "type": "object",
+      "default": {
+        "nuxtIcon": {
+          "size": "1em",
+          "class": "",
+          "aliases": {}
+        },
+        "prose": {
+          "copyButton": {
+            "iconCopy": "ph:copy",
+            "iconCopied": "ph:check"
+          },
+          "headings": {
+            "icon": "ph:link"
+          },
+          "h1": {
+            "icon": ""
+          },
+          "h2": {
+            "icon": ""
+          },
+          "h3": {
+            "icon": ""
+          },
+          "h4": {
+            "icon": ""
+          },
+          "h5": {
+            "icon": ""
+          },
+          "h6": {
+            "icon": ""
+          }
+        },
+        "alpine": {
+          "title": "Alpine",
+          "description": "The minimalist blog theme",
+          "image": {
+            "src": "/social-card-preview.png",
+            "alt": "An image showcasing my project.",
+            "width": 400,
+            "height": 300
+          },
+          "header": {
+            "position": "right",
+            "logo": {
+              "path": "/logo.svg",
+              "pathDark": "/logo-dark.svg",
+              "alt": "Alpine theme logo"
+            }
+          },
+          "footer": {
+            "credits": {
+              "enabled": true,
+              "text": "Alpine",
+              "repository": "https://www.github.com/nuxt-themes/alpine"
+            },
+            "navigation": true,
+            "alignment": "center",
+            "message": "Follow me on"
+          },
+          "socials": {
+            "twitter": "",
+            "instagram": "",
+            "github": "",
+            "facebook": "",
+            "medium": "",
+            "youtube": ""
+          },
+          "form": {
+            "successMessage": "Message sent. Thank you!"
+          },
+          "backToTop": {
+            "icon": "material-symbols:arrow-upward",
+            "text": "Back to top"
+          }
+        }
+      }
+    }
+  },
+  "type": "object",
+  "default": {
+    "appConfig": {
+      "nuxtIcon": {
+        "size": "1em",
+        "class": "",
+        "aliases": {}
+      },
+      "prose": {
+        "copyButton": {
+          "iconCopy": "ph:copy",
+          "iconCopied": "ph:check"
+        },
+        "headings": {
+          "icon": "ph:link"
+        },
+        "h1": {
+          "icon": ""
+        },
+        "h2": {
+          "icon": ""
+        },
+        "h3": {
+          "icon": ""
+        },
+        "h4": {
+          "icon": ""
+        },
+        "h5": {
+          "icon": ""
+        },
+        "h6": {
+          "icon": ""
+        }
+      },
+      "alpine": {
+        "title": "Alpine",
+        "description": "The minimalist blog theme",
+        "image": {
+          "src": "/social-card-preview.png",
+          "alt": "An image showcasing my project.",
+          "width": 400,
+          "height": 300
+        },
+        "header": {
+          "position": "right",
+          "logo": {
+            "path": "/logo.svg",
+            "pathDark": "/logo-dark.svg",
+            "alt": "Alpine theme logo"
+          }
+        },
+        "footer": {
+          "credits": {
+            "enabled": true,
+            "text": "Alpine",
+            "repository": "https://www.github.com/nuxt-themes/alpine"
+          },
+          "navigation": true,
+          "alignment": "center",
+          "message": "Follow me on"
+        },
+        "socials": {
+          "twitter": "",
+          "instagram": "",
+          "github": "",
+          "facebook": "",
+          "medium": "",
+          "youtube": ""
+        },
+        "form": {
+          "successMessage": "Message sent. Thank you!"
+        },
+        "backToTop": {
+          "icon": "material-symbols:arrow-upward",
+          "text": "Back to top"
+        }
+      }
+    }
+  }
+}

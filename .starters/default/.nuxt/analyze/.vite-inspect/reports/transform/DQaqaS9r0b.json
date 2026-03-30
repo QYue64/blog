@@ -1,0 +1,230 @@
+{
+  "resolvedId": "/Users/jiyankang/vscodeProjects/witque-blog/components/SocialIcons.vue?nuxt_component=async&nuxt_component_name=SocialIcons",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<script setup lang=\"ts\">\nconst props = defineProps({\n  socials: {\n    type: Object,\n    default: () => {}\n  }\n})\n\nconst builtInSocials = ['twitter', 'facebook', 'instagram', 'youtube', 'github', 'medium']\n\nconst icons = computed<any>(() => {\n  return Object.entries(props.socials)\n    .map(([key, value]) => {\n      if (typeof value === 'object') {\n        return value\n      } else if (typeof value === 'string' && value && builtInSocials.includes(key)) {\n        return {\n          href: `https://${key}.com/${value}`,\n          icon: `uil:${key}`,\n          label: value\n        }\n      } else {\n        return null\n      }\n    })\n    .filter(Boolean)\n})\n\nconst getRel = (icon:any) => {\n  const base = ['noopener', 'noreferrer']\n  if (icon.rel) {\n    base.push(icon.rel)\n  }\n  return base.join(' ')\n}\n</script>\n\n<template>\n  <!-- eslint-disable-next-line vue/no-multiple-template-root -->\n  <NuxtLink\n    v-for=\"icon in icons\"\n    :key=\"icon.label\"\n    :rel=\"getRel(icon)\"\n    :title=\"icon.label\"\n    :aria-label=\"icon.label\"\n    :href=\"icon.href\"\n    target=\"_blank\"\n  >\n    <Icon v-if=\"icon.icon\" :name=\"icon.icon\" />\n  </NuxtLink>\n</template>\n\n<style scoped lang=\"ts\">\ncss({\n  a: {\n    '--social-icon-size': '24px',\n    width: 'var(--social-icon-size)',\n    height: 'var(--social-icon-size)',\n    display: 'flex',\n    ':hover': {\n      // TODO: why prose links is not yellow, should be primary\n      color: '{color.primary.500}',\n    },\n    svg: {\n      width: '100%',\n      height: '100%',\n    }\n  }\n})\n</style>\n",
+      "start": 1774875878856,
+      "end": 1774875878942,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1774875878942,
+      "end": 1774875878942,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1774875878942,
+      "end": 1774875878942,
+      "order": "pre"
+    },
+    {
+      "name": "pinceau-transforms",
+      "start": 1774875878942,
+      "end": 1774875878942,
+      "order": "pre"
+    },
+    {
+      "name": "content-slot",
+      "start": 1774875878942,
+      "end": 1774875878942,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1774875878942,
+      "end": 1774875878942,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1774875878942,
+      "end": 1774875878942,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1774875878942,
+      "end": 1774875878942,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1774875878942,
+      "end": 1774875878942,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1774875878942,
+      "end": 1774875878942,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "import _sfc_main from \"/Users/jiyankang/vscodeProjects/witque-blog/components/SocialIcons.vue?vue&type=script&setup=true&lang.ts\";\nexport * from \"/Users/jiyankang/vscodeProjects/witque-blog/components/SocialIcons.vue?vue&type=script&setup=true&lang.ts\";\nimport \"/Users/jiyankang/vscodeProjects/witque-blog/components/SocialIcons.vue?vue&type=style&index=0&scoped=f3a3bf70&lang.ts\";\nimport _export_sfc from \"\\0plugin-vue:export-helper\";\nexport default /* @__PURE__ */ _export_sfc(_sfc_main, [[\"__scopeId\", \"data-v-f3a3bf70\"]]);\n",
+      "start": 1774875878942,
+      "end": 1774875879011,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1774875879011,
+      "end": 1774875879011,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1774875879011,
+      "end": 1774875879011,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1774875879011,
+      "end": 1774875879011,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1774875879011,
+      "end": 1774875879011,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "result": "import { defineAsyncComponent } from \"vue\"\nexport default defineAsyncComponent(() => import(\"/Users/jiyankang/vscodeProjects/witque-blog/components/SocialIcons.vue\").then(r => r.default))",
+      "start": 1774875879011,
+      "end": 1774875879011,
+      "order": "normal",
+      "sourcemaps": null
+    },
+    {
+      "name": "replace",
+      "start": 1774875879011,
+      "end": 1774875879011,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1774875879011,
+      "end": 1774875879011,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1774875879011,
+      "end": 1774875879011,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1774875879011,
+      "end": 1774875879011,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1774875879011,
+      "end": 1774875879011,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1774875879011,
+      "end": 1774875879011,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1774875879011,
+      "end": 1774875879011,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1774875879011,
+      "end": 1774875879011,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1774875879011,
+      "end": 1774875879012,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1774875879012,
+      "end": 1774875879012,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1774875879012,
+      "end": 1774875879012,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1774875879012,
+      "end": 1774875879012,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1774875879012,
+      "end": 1774875879012,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1774875879012,
+      "end": 1774875879012,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1774875879012,
+      "end": 1774875879012,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1774875879012,
+      "end": 1774875879012,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1774875879012,
+      "end": 1774875879012,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1774875879012,
+      "end": 1774875879012,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "result": "import { __vitePreload } from \"\u0000vite/preload-helper.js\";import { defineAsyncComponent } from \"vue\"\nexport default defineAsyncComponent(() => __vitePreload(() => import(\"/Users/jiyankang/vscodeProjects/witque-blog/components/SocialIcons.vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(r => r.default))",
+      "start": 1774875879012,
+      "end": 1774875879012,
+      "order": "normal",
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1774875879012,
+      "end": 1774875879012,
+      "order": "normal"
+    }
+  ]
+}

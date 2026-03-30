@@ -1,0 +1,237 @@
+{
+  "resolvedId": "/Users/jiyankang/vscodeProjects/witque-blog/components/DocumentDrivenNotFound.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n  <section>\n    <p class=\"message\">\n      This page could not be found\n    </p>\n\n    <p class=\"status\">\n      404\n    </p>\n\n    <NuxtLink to=\"/\">\n      Back to homepage\n      <Icon name=\"ph:arrow-right\" />\n    </NuxtLink>\n  </section>\n</template>\n\n<style scoped lang=\"ts\">\ncss({\n  section: {\n    minHeight: '50vh',\n    display: 'flex',\n    flexDirection: 'column',\n    alignItems: 'center',\n    justifyContent: 'center',\n    '.message': {\n      fontSize: '{text.3xl.fontSize}',\n      lineHeight: '{text.3xl.lineHeight}',\n      fontWeight: '{fontWeight.medium}',\n    },\n    '.status': {\n      text: '6xl',\n      my: '{space.12}'\n    },\n    a: {\n      position: 'relative',\n      display: 'flex',\n      alignItems: 'center',\n      '.icon': {\n        position: 'absolute',\n        right: 'calc(0px - {space.1})',\n        width: '{space.5}',\n        height: '{space.5}',\n        transform: 'translateX(100%)',\n      }, \n    }\n  }\n})\n</style>",
+      "start": 1774875879089,
+      "end": 1774875879122,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1774875879122,
+      "end": 1774875879122,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1774875879122,
+      "end": 1774875879122,
+      "order": "pre"
+    },
+    {
+      "name": "pinceau-transforms",
+      "result": "<template>\n  <section>\n    <p class=\"message\">\n      This page could not be found\n    </p>\n\n    <p class=\"status\">\n      404\n    </p>\n\n    <NuxtLink to=\"/\">\n      Back to homepage\n      <Icon name=\"ph:arrow-right\" />\n    </NuxtLink>\n  </section>\n</template>\n\n<style scoped lang=\"postcss\" transformed>\nsection{min-height:50vh;display:flex;flex-direction:column;align-items:center;justify-content:center;}section .message{font-size:var(--text-3xl-fontSize);line-height:var(--text-3xl-lineHeight);font-weight:var(--fontWeight-medium);}section .status{font-size:var(--text-6xl-fontSize);line-height:var(--text-6xl-lineHeight);margin-top:var(--space-12);margin-bottom:var(--space-12);}section a{position:relative;display:flex;align-items:center;}section a .icon{position:absolute;right:calc(0px - var(--space-1));width:var(--space-5);height:var(--space-5);transform:translateX(100%);}\n</style>",
+      "start": 1774875879122,
+      "end": 1774875879125,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "file": "/Users/jiyankang/vscodeProjects/witque-blog/components/DocumentDrivenNotFound.vue",
+        "sources": [
+          "/Users/jiyankang/vscodeProjects/witque-blog/components/DocumentDrivenNotFound.vue"
+        ],
+        "names": [],
+        "mappings": "AAAA,UAAU;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,AAeV;AACA;AACA;;AA+BA"
+      }
+    },
+    {
+      "name": "content-slot",
+      "start": 1774875879125,
+      "end": 1774875879125,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1774875879125,
+      "end": 1774875879125,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1774875879125,
+      "end": 1774875879125,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1774875879125,
+      "end": 1774875879125,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1774875879125,
+      "end": 1774875879125,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1774875879125,
+      "end": 1774875879125,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "const _sfc_main = {}\nimport { createElementVNode as _createElementVNode, resolveComponent as _resolveComponent, createVNode as _createVNode, createTextVNode as _createTextVNode, withCtx as _withCtx, openBlock as _openBlock, createElementBlock as _createElementBlock, pushScopeId as _pushScopeId, popScopeId as _popScopeId } from \"vue\"\n\nconst _withScopeId = n => (_pushScopeId(\"data-v-8da1f86a\"),n=n(),_popScopeId(),n)\nconst _hoisted_1 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_createElementVNode(\"p\", { class: \"message\" }, \" This page could not be found \", -1))\nconst _hoisted_2 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_createElementVNode(\"p\", { class: \"status\" }, \" 404 \", -1))\n\nfunction _sfc_render(_ctx, _cache) {\n  const _component_Icon = _resolveComponent(\"Icon\")\n  const _component_NuxtLink = _resolveComponent(\"NuxtLink\")\n\n  return (_openBlock(), _createElementBlock(\"section\", null, [\n    _hoisted_1,\n    _hoisted_2,\n    _createVNode(_component_NuxtLink, { to: \"/\" }, {\n      default: _withCtx(() => [\n        _createTextVNode(\" Back to homepage \"),\n        _createVNode(_component_Icon, { name: \"ph:arrow-right\" })\n      ]),\n      _: 1\n    })\n  ]))\n}\n\nimport \"/Users/jiyankang/vscodeProjects/witque-blog/components/DocumentDrivenNotFound.vue?vue&type=style&index=0&scoped=8da1f86a&transformed=true&lang.postcss\"\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render],['__scopeId',\"data-v-8da1f86a\"]])",
+      "start": 1774875879125,
+      "end": 1774875879125,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1774875879125,
+      "end": 1774875879125,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1774875879125,
+      "end": 1774875879125,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1774875879125,
+      "end": 1774875879125,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1774875879125,
+      "end": 1774875879125,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1774875879125,
+      "end": 1774875879125,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1774875879125,
+      "end": 1774875879125,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1774875879125,
+      "end": 1774875879125,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1774875879125,
+      "end": 1774875879125,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1774875879125,
+      "end": 1774875879125,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1774875879125,
+      "end": 1774875879125,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1774875879125,
+      "end": 1774875879125,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1774875879125,
+      "end": 1774875879125,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1774875879125,
+      "end": 1774875879125,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1774875879125,
+      "end": 1774875879125,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1774875879125,
+      "end": 1774875879125,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1774875879125,
+      "end": 1774875879125,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1774875879125,
+      "end": 1774875879126,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1774875879126,
+      "end": 1774875879126,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1774875879126,
+      "end": 1774875879126,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1774875879126,
+      "end": 1774875879126,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1774875879126,
+      "end": 1774875879126,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "result": "import { default as __nuxt_component_0 } from \"/Users/jiyankang/vscodeProjects/witque-blog/node_modules/.pnpm/nuxt-icon@0.3.3_rollup@3.29.3_vue@3.4.15/node_modules/nuxt-icon/dist/runtime/Icon.vue\";\nimport { default as __nuxt_component_1 } from \"/Users/jiyankang/vscodeProjects/witque-blog/node_modules/.pnpm/nuxt@3.9.3_@types+node@20.11.5_eslint@8.56.0_rollup@3.29.3_typescript@5.3.3/node_modules/nuxt/dist/app/components/nuxt-link\";\nconst _sfc_main = {}\nimport { createElementVNode as _createElementVNode, resolveComponent as _resolveComponent, createVNode as _createVNode, createTextVNode as _createTextVNode, withCtx as _withCtx, openBlock as _openBlock, createElementBlock as _createElementBlock, pushScopeId as _pushScopeId, popScopeId as _popScopeId } from \"vue\"\n\nconst _withScopeId = n => (_pushScopeId(\"data-v-8da1f86a\"),n=n(),_popScopeId(),n)\nconst _hoisted_1 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_createElementVNode(\"p\", { class: \"message\" }, \" This page could not be found \", -1))\nconst _hoisted_2 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_createElementVNode(\"p\", { class: \"status\" }, \" 404 \", -1))\n\nfunction _sfc_render(_ctx, _cache) {\n  const _component_Icon = __nuxt_component_0\n  const _component_NuxtLink = __nuxt_component_1\n\n  return (_openBlock(), _createElementBlock(\"section\", null, [\n    _hoisted_1,\n    _hoisted_2,\n    _createVNode(_component_NuxtLink, { to: \"/\" }, {\n      default: _withCtx(() => [\n        _createTextVNode(\" Back to homepage \"),\n        _createVNode(_component_Icon, { name: \"ph:arrow-right\" })\n      ]),\n      _: 1\n    })\n  ]))\n}\n\nimport \"/Users/jiyankang/vscodeProjects/witque-blog/components/DocumentDrivenNotFound.vue?vue&type=style&index=0&scoped=8da1f86a&transformed=true&lang.postcss\"\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render],['__scopeId',\"data-v-8da1f86a\"]])",
+      "start": 1774875879126,
+      "end": 1774875879126,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1774875879126,
+      "end": 1774875879126,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1774875879126,
+      "end": 1774875879126,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1774875879126,
+      "end": 1774875879126,
+      "order": "normal"
+    }
+  ]
+}

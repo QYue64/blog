@@ -1,0 +1,311 @@
+{
+  "resolvedId": "/Users/jiyankang/vscodeProjects/witque-blog/components/content/ArticlesListItem.vue?vue&type=style&index=0&scoped=8cbebf72&transformed=true&lang.postcss?inline&used",
+  "transforms": [
+    {
+      "name": "pinceau-transforms",
+      "result": "article{display:flex;flex-direction:column;gap:var(--space-4);}@media (min-width: 768px){article.featured{flex-direction:row;gap:var(--space-8);}}article img{width:100%;aspect-ratio:16 / 9;object-fit:cover;border-radius:var(--radii-md);}article .image{flex:1;}article .image div{position:absolute;display:flex;flex-wrap:true;gap:var(--space-2);margin-top:var(--space-2);margin-left:var(--space-2);}article .image div span{padding:var(--space-1);border-radius:var(--radii-sm);font-size:var(--text-xs-fontSize);line-height:var(--text-xs-lineHeight);font-weight:700;}article .content{display:flex;flex-direction:column;flex:1;}article .content .headline{font-size:var(--text-2xl-fontSize);line-height:var(--text-2xl-lineHeight);margin-bottom:var(--space-2);font-weight:var(--fontWeight-semibold);overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;}.featured :is(article .content .headline):is(article .content .headline){font-size:var(--text-4xl-fontSize);line-height:var(--text-4xl-lineHeight);overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;}article .content .description{margin-bottom:var(--space-4);overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;}.featured :is(article .content .description):is(article .content .description){overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:4;}article .content time{font-size:var(--text-sm-fontSize);line-height:var(--text-sm-lineHeight);color:var(--color-gray-500);}:root.dark article .content time{color:var(--color-gray-500);}",
+      "start": 1774875881063,
+      "end": 1774875881064,
+      "sourcemaps": {
+        "version": 3,
+        "file": "/Users/jiyankang/vscodeProjects/witque-blog/components/content/ArticlesListItem.vue",
+        "sources": [
+          "/Users/jiyankang/vscodeProjects/witque-blog/components/content/ArticlesListItem.vue"
+        ],
+        "sourcesContent": [
+          "article{display:flex;flex-direction:column;gap:var(--space-4);}@media (min-width: 768px){article.featured{flex-direction:row;gap:var(--space-8);}}article img{width:100%;aspect-ratio:16 / 9;object-fit:cover;border-radius:var(--radii-md);}article .image{flex:1;}article .image div{position:absolute;display:flex;flex-wrap:true;gap:var(--space-2);margin-top:var(--space-2);margin-left:var(--space-2);}article .image div span{padding:var(--space-1);border-radius:var(--radii-sm);font-size:var(--text-xs-fontSize);line-height:var(--text-xs-lineHeight);font-weight:700;}article .content{display:flex;flex-direction:column;flex:1;}article .content .headline{font-size:var(--text-2xl-fontSize);line-height:var(--text-2xl-lineHeight);margin-bottom:var(--space-2);font-weight:var(--fontWeight-semibold);overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;}.featured :is(article .content .headline):is(article .content .headline){font-size:var(--text-4xl-fontSize);line-height:var(--text-4xl-lineHeight);overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;}article .content .description{margin-bottom:var(--space-4);overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;}.featured :is(article .content .description):is(article .content .description){overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:4;}article .content time{font-size:var(--text-sm-fontSize);line-height:var(--text-sm-lineHeight);color:var(--color-gray-500);}:root.dark article .content time{color:var(--color-gray-500);}"
+        ],
+        "names": [],
+        "mappings": "AAAA"
+      }
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1774875881065,
+      "end": 1774875881065,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1774875881065,
+      "end": 1774875881065,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1774875881066,
+      "end": 1774875881066,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1774875881066,
+      "end": 1774875881066,
+      "order": "pre"
+    },
+    {
+      "name": "pinceau-transforms",
+      "start": 1774875881067,
+      "end": 1774875881067,
+      "order": "pre"
+    },
+    {
+      "name": "pinceau-transforms",
+      "start": 1774875881067,
+      "end": 1774875881068,
+      "order": "pre"
+    },
+    {
+      "name": "content-slot",
+      "start": 1774875881070,
+      "end": 1774875881070,
+      "order": "pre"
+    },
+    {
+      "name": "content-slot",
+      "start": 1774875881070,
+      "end": 1774875881070,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1774875881072,
+      "end": 1774875881072,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "result": "article{display:flex;flex-direction:column;gap:var(--space-4)}@media (min-width:768px){article.featured{flex-direction:row;gap:var(--space-8)}}article img{aspect-ratio:16/9;border-radius:var(--radii-md);-o-object-fit:cover;object-fit:cover;width:100%}article .image{flex:1}article .image div{display:flex;flex-wrap:true;gap:var(--space-2);margin-left:var(--space-2);margin-top:var(--space-2);position:absolute}article .image div span{border-radius:var(--radii-sm);font-size:var(--text-xs-fontSize);font-weight:700;line-height:var(--text-xs-lineHeight);padding:var(--space-1)}article .content{display:flex;flex:1;flex-direction:column}article .content .headline{display:-webkit-box;font-size:var(--text-2xl-fontSize);font-weight:var(--fontWeight-semibold);line-height:var(--text-2xl-lineHeight);margin-bottom:var(--space-2);overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:2}.featured :is(article .content .headline):is(article .content .headline){display:-webkit-box;font-size:var(--text-4xl-fontSize);line-height:var(--text-4xl-lineHeight);overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:3}article .content .description{display:-webkit-box;margin-bottom:var(--space-4);overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:2}.featured :is(article .content .description):is(article .content .description){display:-webkit-box;overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:4}article .content time{font-size:var(--text-sm-fontSize);line-height:var(--text-sm-lineHeight)}:root.dark article .content time,article .content time{color:var(--color-gray-500)}",
+      "start": 1774875881072,
+      "end": 1774875881083,
+      "order": "normal",
+      "sourcemaps": {
+        "file": "/Users/jiyankang/vscodeProjects/witque-blog/components/content/ArticlesListItem.vue",
+        "mappings": "AAAA,QAAQ,YAAY,CAAC,qBAAqB,CAAC,kBAAmB,CAAC,yBAA0B,iBAAiB,kBAAkB,CAAC,kBAAmB,CAAC,CAAC,YAAuB,iBAAmB,CAAkB,6BAA6B,CAA9C,mBAAgB,CAAhB,gBAAgB,CAA/C,UAA8E,CAAC,eAAe,MAAO,CAAC,mBAAqC,YAAY,CAAC,cAAc,CAAC,kBAAkB,CAA2B,0BAA0B,CAApD,yBAAyB,CAA1F,iBAAsH,CAAC,wBAA+C,6BAA6B,CAAC,iCAAiC,CAAuC,eAAe,CAArD,qCAAqC,CAA5H,sBAA6I,CAAC,iBAAiB,YAAY,CAAuB,MAAM,CAA5B,qBAA6B,CAAC,2BAAyL,mBAAmB,CAAjL,kCAAkC,CAAqE,sCAAsC,CAA1G,sCAAsC,CAAC,4BAA4B,CAAwC,eAAe,CAAqB,2BAA2B,CAAC,oBAAqB,CAAC,yEAAmK,mBAAmB,CAA7G,kCAAkC,CAAC,sCAAsC,CAAC,eAAe,CAAqB,2BAA2B,CAAC,oBAAqB,CAAC,8BAA2E,mBAAmB,CAAhE,4BAA4B,CAAC,eAAe,CAAqB,2BAA2B,CAAC,oBAAqB,CAAC,+EAA+F,mBAAmB,CAAnC,eAAe,CAAqB,2BAA2B,CAAC,oBAAqB,CAAC,sBAAsB,iCAAiC,CAAC,qCAAkE,CAAC,uDAA7B,2BAA0F",
+        "names": [],
+        "sources": [
+          "/Users/jiyankang/vscodeProjects/witque-blog/components/content/ArticlesListItem.vue"
+        ],
+        "sourcesContent": [
+          "article{display:flex;flex-direction:column;gap:var(--space-4);}@media (min-width: 768px){article.featured{flex-direction:row;gap:var(--space-8);}}article img{width:100%;aspect-ratio:16 / 9;object-fit:cover;border-radius:var(--radii-md);}article .image{flex:1;}article .image div{position:absolute;display:flex;flex-wrap:true;gap:var(--space-2);margin-top:var(--space-2);margin-left:var(--space-2);}article .image div span{padding:var(--space-1);border-radius:var(--radii-sm);font-size:var(--text-xs-fontSize);line-height:var(--text-xs-lineHeight);font-weight:700;}article .content{display:flex;flex-direction:column;flex:1;}article .content .headline{font-size:var(--text-2xl-fontSize);line-height:var(--text-2xl-lineHeight);margin-bottom:var(--space-2);font-weight:var(--fontWeight-semibold);overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;}.featured :is(article .content .headline):is(article .content .headline){font-size:var(--text-4xl-fontSize);line-height:var(--text-4xl-lineHeight);overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;}article .content .description{margin-bottom:var(--space-4);overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;}.featured :is(article .content .description):is(article .content .description){overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:4;}article .content time{font-size:var(--text-sm-fontSize);line-height:var(--text-sm-lineHeight);color:var(--color-gray-500);}:root.dark article .content time{color:var(--color-gray-500);}"
+        ],
+        "version": 3
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1774875881083,
+      "end": 1774875881084,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1774875881084,
+      "end": 1774875881084,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1774875881085,
+      "end": 1774875881085,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "article[data-v-8cbebf72]{display:flex;flex-direction:column;gap:var(--space-4)}@media (min-width:768px){article.featured[data-v-8cbebf72]{flex-direction:row;gap:var(--space-8)}}article img[data-v-8cbebf72]{aspect-ratio:16/9;border-radius:var(--radii-md);-o-object-fit:cover;object-fit:cover;width:100%}article .image[data-v-8cbebf72]{flex:1}article .image div[data-v-8cbebf72]{display:flex;flex-wrap:true;gap:var(--space-2);margin-left:var(--space-2);margin-top:var(--space-2);position:absolute}article .image div span[data-v-8cbebf72]{border-radius:var(--radii-sm);font-size:var(--text-xs-fontSize);font-weight:700;line-height:var(--text-xs-lineHeight);padding:var(--space-1)}article .content[data-v-8cbebf72]{display:flex;flex:1;flex-direction:column}article .content .headline[data-v-8cbebf72]{display:-webkit-box;font-size:var(--text-2xl-fontSize);font-weight:var(--fontWeight-semibold);line-height:var(--text-2xl-lineHeight);margin-bottom:var(--space-2);overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:2}.featured :is(article .content .headline):is(article .content .headline[data-v-8cbebf72]){display:-webkit-box;font-size:var(--text-4xl-fontSize);line-height:var(--text-4xl-lineHeight);overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:3}article .content .description[data-v-8cbebf72]{display:-webkit-box;margin-bottom:var(--space-4);overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:2}.featured :is(article .content .description):is(article .content .description[data-v-8cbebf72]){display:-webkit-box;overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:4}article .content time[data-v-8cbebf72]{font-size:var(--text-sm-fontSize);line-height:var(--text-sm-lineHeight)}:root.dark article .content time[data-v-8cbebf72],article .content time[data-v-8cbebf72]{color:var(--color-gray-500)}",
+      "start": 1774875881086,
+      "end": 1774875881086,
+      "order": "normal",
+      "sourcemaps": {
+        "file": "/Users/jiyankang/vscodeProjects/witque-blog/components/content/ArticlesListItem.vue",
+        "mappings": "AAAA,yBAAQ,YAAY,CAAC,qBAAqB,CAAC,kBAAkB,CAAC,yBAAyB,kCAAiB,kBAAkB,CAAC,kBAAkB,CAAC,CAAC,6BAAY,iBAAiB,CAAC,6BAA6B,CAAC,mBAAmB,CAAC,gBAAgB,CAAC,UAAU,CAAC,gCAAe,MAAM,CAAC,oCAAmB,YAAY,CAAC,cAAc,CAAC,kBAAkB,CAAC,0BAA0B,CAAC,yBAAyB,CAAC,iBAAiB,CAAC,yCAAwB,6BAA6B,CAAC,iCAAiC,CAAC,eAAe,CAAC,qCAAqC,CAAC,sBAAsB,CAAC,kCAAiB,YAAY,CAAC,MAAM,CAAC,qBAAqB,CAAC,4CAA2B,mBAAmB,CAAC,kCAAkC,CAAC,sCAAsC,CAAC,sCAAsC,CAAC,4BAA4B,CAAC,eAAe,CAAC,2BAA2B,CAAC,oBAAoB,CAAC,0FAAyE,mBAAmB,CAAC,kCAAkC,CAAC,sCAAsC,CAAC,eAAe,CAAC,2BAA2B,CAAC,oBAAoB,CAAC,+CAA8B,mBAAmB,CAAC,4BAA4B,CAAC,eAAe,CAAC,2BAA2B,CAAC,oBAAoB,CAAC,gGAA+E,mBAAmB,CAAC,eAAe,CAAC,2BAA2B,CAAC,oBAAoB,CAAC,uCAAsB,iCAAiC,CAAC,qCAAqC,CAAC,yFAAuD,2BAA2B",
+        "names": [],
+        "sources": [
+          "/Users/jiyankang/vscodeProjects/witque-blog/components/content/ArticlesListItem.vue"
+        ],
+        "sourcesContent": [
+          null
+        ],
+        "version": 3
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1774875881086,
+      "end": 1774875881086,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1774875881087,
+      "end": 1774875881087,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1774875881087,
+      "end": 1774875881087,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1774875881087,
+      "end": 1774875881087,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1774875881087,
+      "end": 1774875881087,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1774875881087,
+      "end": 1774875881087,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1774875881087,
+      "end": 1774875881088,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1774875881088,
+      "end": 1774875881088,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1774875881088,
+      "end": 1774875881088,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "result": "export default \"article[data-v-8cbebf72]{display:flex;flex-direction:column;gap:var(--space-4)}@media (min-width:768px){article.featured[data-v-8cbebf72]{flex-direction:row;gap:var(--space-8)}}article img[data-v-8cbebf72]{aspect-ratio:16/9;border-radius:var(--radii-md);-o-object-fit:cover;object-fit:cover;width:100%}article .image[data-v-8cbebf72]{flex:1}article .image div[data-v-8cbebf72]{display:flex;flex-wrap:true;gap:var(--space-2);margin-left:var(--space-2);margin-top:var(--space-2);position:absolute}article .image div span[data-v-8cbebf72]{border-radius:var(--radii-sm);font-size:var(--text-xs-fontSize);font-weight:700;line-height:var(--text-xs-lineHeight);padding:var(--space-1)}article .content[data-v-8cbebf72]{display:flex;flex:1;flex-direction:column}article .content .headline[data-v-8cbebf72]{display:-webkit-box;font-size:var(--text-2xl-fontSize);font-weight:var(--fontWeight-semibold);line-height:var(--text-2xl-lineHeight);margin-bottom:var(--space-2);overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:2}.featured :is(article .content .headline):is(article .content .headline[data-v-8cbebf72]){display:-webkit-box;font-size:var(--text-4xl-fontSize);line-height:var(--text-4xl-lineHeight);overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:3}article .content .description[data-v-8cbebf72]{display:-webkit-box;margin-bottom:var(--space-4);overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:2}.featured :is(article .content .description):is(article .content .description[data-v-8cbebf72]){display:-webkit-box;overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:4}article .content time[data-v-8cbebf72]{font-size:var(--text-sm-fontSize);line-height:var(--text-sm-lineHeight)}:root.dark article .content time[data-v-8cbebf72],article .content time[data-v-8cbebf72]{color:var(--color-gray-500)}\"",
+      "start": 1774875881088,
+      "end": 1774875881089,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1774875881089,
+      "end": 1774875881089,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1774875881089,
+      "end": 1774875881089,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1774875881089,
+      "end": 1774875881089,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1774875881089,
+      "end": 1774875881089,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1774875881089,
+      "end": 1774875881089,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1774875881089,
+      "end": 1774875881089,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1774875881090,
+      "end": 1774875881090,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1774875881090,
+      "end": 1774875881090,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1774875881090,
+      "end": 1774875881090,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1774875881090,
+      "end": 1774875881090,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1774875881090,
+      "end": 1774875881090,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1774875881090,
+      "end": 1774875881090,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1774875881090,
+      "end": 1774875881090,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1774875881090,
+      "end": 1774875881090,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1774875881091,
+      "end": 1774875881091,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1774875881091,
+      "end": 1774875881091,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1774875881091,
+      "end": 1774875881091,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1774875881091,
+      "end": 1774875881091,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1774875881091,
+      "end": 1774875881091,
+      "order": "normal"
+    }
+  ]
+}

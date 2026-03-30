@@ -1,0 +1,294 @@
+{
+  "resolvedId": "/Users/jiyankang/vscodeProjects/witque-blog/components/AppHeader.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<script lang=\"ts\" setup>\nconst alpine = useAppConfig().alpine\n\nconst show = ref(false)\n</script>\n\n<template>\n  <header :class=\"alpine.header.position || 'left'\">\n    <div class=\"menu\">\n      <button @click=\"(show = !show)\" aria-label=\"Navigation Menu\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 68 68\" fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\">\n          <path d=\"M8 34C8 32.1362 8 31.2044 8.30448 30.4693C8.71046 29.4892 9.48915 28.7105 10.4693 28.3045C11.2044 28 12.1362 28 14 28C15.8638 28 16.7956 28 17.5307 28.3045C18.5108 28.7105 19.2895 29.4892 19.6955 30.4693C20 31.2044 20 32.1362 20 34C20 35.8638 20 36.7956 19.6955 37.5307C19.2895 38.5108 18.5108 39.2895 17.5307 39.6955C16.7956 40 15.8638 40 14 40C12.1362 40 11.2044 40 10.4693 39.6955C9.48915 39.2895 8.71046 38.5108 8.30448 37.5307C8 36.7956 8 35.8638 8 34Z\" />\n          <path d=\"M28 34C28 32.1362 28 31.2044 28.3045 30.4693C28.7105 29.4892 29.4892 28.7105 30.4693 28.3045C31.2044 28 32.1362 28 34 28C35.8638 28 36.7956 28 37.5307 28.3045C38.5108 28.7105 39.2895 29.4892 39.6955 30.4693C40 31.2044 40 32.1362 40 34C40 35.8638 40 36.7956 39.6955 37.5307C39.2895 38.5108 38.5108 39.2895 37.5307 39.6955C36.7956 40 35.8638 40 34 40C32.1362 40 31.2044 40 30.4693 39.6955C29.4892 39.2895 28.7105 38.5108 28.3045 37.5307C28 36.7956 28 35.8638 28 34Z\" />\n          <path d=\"M48 34C48 32.1362 48 31.2044 48.3045 30.4693C48.7105 29.4892 49.4892 28.7105 50.4693 28.3045C51.2044 28 52.1362 28 54 28C55.8638 28 56.7956 28 57.5307 28.3045C58.5108 28.7105 59.2895 29.4892 59.6955 30.4693C60 31.2044 60 32.1362 60 34C60 35.8638 60 36.7956 59.6955 37.5307C59.2895 38.5108 58.5108 39.2895 57.5307 39.6955C56.7956 40 55.8638 40 54 40C52.1362 40 51.2044 40 50.4693 39.6955C49.4892 39.2895 48.7105 38.5108 48.3045 37.5307C48 36.7956 48 35.8638 48 34Z\" />\n        </svg>\n      </button>\n    </div>\n\n    <div class=\"overlay\" :class=\"[show && 'show']\">\n      <MainNav @link-click=\"show = !show\" />\n    </div>\n\n    <div class=\"main-nav\">\n      <MainNav />\n    </div>\n  </header>\n</template>\n\n<style scoped>\nheader {\n  --header-padding: 4rem;\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: flex-start;\n  padding-top: var(--header-padding);\n  padding-bottom: var(--header-padding);\n  padding-left: 0rem;\n}\n\n.menu {\n  display: flex;\n}\n\n.menu:hover {\n  color: #7c3aed;\n}\n\n@media (min-width: 640px) {\n  .menu {\n    display: none;\n  }\n}\n\n.overlay {\n  position: absolute;\n  top: calc(100% + 0.5rem);\n  right: 0;\n  background-color: rgba(255, 255, 255, 0.7);\n  border: 1px solid #e5e7eb;\n  border-radius: 0.375rem;\n  padding: 1.5rem;\n  font-size: 1.125rem;\n  line-height: 1.75rem;\n  font-weight: 500;\n  transition: all 250ms;\n  perspective: 2000px;\n  transform-origin: top;\n  backdrop-filter: blur(20px);\n  will-change: opacity, transform;\n}\n\n.overlay:not(.show) {\n  opacity: 0;\n  transform: translateY(-10px) rotateY(-8deg) rotateX(-20deg);\n  pointer-events: none;\n}\n\n@media (min-width: 640px) {\n  .overlay {\n    display: none;\n  }\n}\n\n.dark .overlay {\n  border-color: #374151;\n  background-color: rgba(17, 24, 39, 0.7);\n}\n\n.main-nav {\n  display: none;\n  font-size: 1.25rem;\n  line-height: 1.75rem;\n  font-weight: 500;\n}\n\n@media (min-width: 640px) {\n  .main-nav {\n    display: flex;\n  }\n}\n</style>\n",
+      "start": 1774875880834,
+      "end": 1774875880870,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1774875880870,
+      "end": 1774875880870,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1774875880870,
+      "end": 1774875880870,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1774875880870,
+      "end": 1774875880870,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1774875880870,
+      "end": 1774875880870,
+      "order": "pre"
+    },
+    {
+      "name": "pinceau-transforms",
+      "result": "<script lang=\"ts\" setup>\nconst alpine = useAppConfig().alpine\n\nconst show = ref(false)\n</script>\n\n<template>\n  <header :class=\"alpine.header.position || 'left'\">\n    <div class=\"menu\">\n      <button @click=\"(show = !show)\" aria-label=\"Navigation Menu\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 68 68\" fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\">\n          <path d=\"M8 34C8 32.1362 8 31.2044 8.30448 30.4693C8.71046 29.4892 9.48915 28.7105 10.4693 28.3045C11.2044 28 12.1362 28 14 28C15.8638 28 16.7956 28 17.5307 28.3045C18.5108 28.7105 19.2895 29.4892 19.6955 30.4693C20 31.2044 20 32.1362 20 34C20 35.8638 20 36.7956 19.6955 37.5307C19.2895 38.5108 18.5108 39.2895 17.5307 39.6955C16.7956 40 15.8638 40 14 40C12.1362 40 11.2044 40 10.4693 39.6955C9.48915 39.2895 8.71046 38.5108 8.30448 37.5307C8 36.7956 8 35.8638 8 34Z\" />\n          <path d=\"M28 34C28 32.1362 28 31.2044 28.3045 30.4693C28.7105 29.4892 29.4892 28.7105 30.4693 28.3045C31.2044 28 32.1362 28 34 28C35.8638 28 36.7956 28 37.5307 28.3045C38.5108 28.7105 39.2895 29.4892 39.6955 30.4693C40 31.2044 40 32.1362 40 34C40 35.8638 40 36.7956 39.6955 37.5307C39.2895 38.5108 38.5108 39.2895 37.5307 39.6955C36.7956 40 35.8638 40 34 40C32.1362 40 31.2044 40 30.4693 39.6955C29.4892 39.2895 28.7105 38.5108 28.3045 37.5307C28 36.7956 28 35.8638 28 34Z\" />\n          <path d=\"M48 34C48 32.1362 48 31.2044 48.3045 30.4693C48.7105 29.4892 49.4892 28.7105 50.4693 28.3045C51.2044 28 52.1362 28 54 28C55.8638 28 56.7956 28 57.5307 28.3045C58.5108 28.7105 59.2895 29.4892 59.6955 30.4693C60 31.2044 60 32.1362 60 34C60 35.8638 60 36.7956 59.6955 37.5307C59.2895 38.5108 58.5108 39.2895 57.5307 39.6955C56.7956 40 55.8638 40 54 40C52.1362 40 51.2044 40 50.4693 39.6955C49.4892 39.2895 48.7105 38.5108 48.3045 37.5307C48 36.7956 48 35.8638 48 34Z\" />\n        </svg>\n      </button>\n    </div>\n\n    <div class=\"overlay\" :class=\"[show && 'show']\">\n      <MainNav @link-click=\"show = !show\" />\n    </div>\n\n    <div class=\"main-nav\">\n      <MainNav />\n    </div>\n  </header>\n</template>\n\n<style scoped>\n\nheader {\n  --header-padding: 4rem;\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: flex-start;\n  padding-top: var(--header-padding);\n  padding-bottom: var(--header-padding);\n  padding-left: 0rem;\n}\n\n.menu {\n  display: flex;\n}\n\n.menu:hover {\n  color: #7c3aed;\n}\n\n@media (min-width: 640px) {\n  .menu {\n    display: none;\n  }\n}\n\n.overlay {\n  position: absolute;\n  top: calc(100% + 0.5rem);\n  right: 0;\n  background-color: rgba(255, 255, 255, 0.7);\n  border: 1px solid #e5e7eb;\n  border-radius: 0.375rem;\n  padding: 1.5rem;\n  font-size: 1.125rem;\n  line-height: 1.75rem;\n  font-weight: 500;\n  transition: all 250ms;\n  perspective: 2000px;\n  transform-origin: top;\n  backdrop-filter: blur(20px);\n  will-change: opacity, transform;\n}\n\n.overlay:not(.show) {\n  opacity: 0;\n  transform: translateY(-10px) rotateY(-8deg) rotateX(-20deg);\n  pointer-events: none;\n}\n\n@media (min-width: 640px) {\n  .overlay {\n    display: none;\n  }\n}\n\n.dark .overlay {\n  border-color: #374151;\n  background-color: rgba(17, 24, 39, 0.7);\n}\n\n.main-nav {\n  display: none;\n  font-size: 1.25rem;\n  line-height: 1.75rem;\n  font-weight: 500;\n}\n\n@media (min-width: 640px) {\n  .main-nav {\n    display: flex;\n  }\n}\n\n</style>\n",
+      "start": 1774875880870,
+      "end": 1774875880870,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "file": "/Users/jiyankang/vscodeProjects/witque-blog/components/AppHeader.vue",
+        "sources": [
+          "/Users/jiyankang/vscodeProjects/witque-blog/components/AppHeader.vue"
+        ],
+        "names": [],
+        "mappings": "AAAA,wBAAwB;AAAA;AAAA;AAAA;AAAA,AAIxB;AACA;AACA,UAAU;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,AAoBV;AACA;AACA;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAyEA;"
+      }
+    },
+    {
+      "name": "pinceau-transforms",
+      "result": "<script lang=\"ts\" setup>\nconst alpine = useAppConfig().alpine\n\nconst show = ref(false)\n</script>\n\n<template>\n  <header :class=\"alpine.header.position || 'left'\">\n    <div class=\"menu\">\n      <button @click=\"(show = !show)\" aria-label=\"Navigation Menu\">\n        <svg width=\"24\" height=\"24\" viewBox=\"0 0 68 68\" fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\">\n          <path d=\"M8 34C8 32.1362 8 31.2044 8.30448 30.4693C8.71046 29.4892 9.48915 28.7105 10.4693 28.3045C11.2044 28 12.1362 28 14 28C15.8638 28 16.7956 28 17.5307 28.3045C18.5108 28.7105 19.2895 29.4892 19.6955 30.4693C20 31.2044 20 32.1362 20 34C20 35.8638 20 36.7956 19.6955 37.5307C19.2895 38.5108 18.5108 39.2895 17.5307 39.6955C16.7956 40 15.8638 40 14 40C12.1362 40 11.2044 40 10.4693 39.6955C9.48915 39.2895 8.71046 38.5108 8.30448 37.5307C8 36.7956 8 35.8638 8 34Z\" />\n          <path d=\"M28 34C28 32.1362 28 31.2044 28.3045 30.4693C28.7105 29.4892 29.4892 28.7105 30.4693 28.3045C31.2044 28 32.1362 28 34 28C35.8638 28 36.7956 28 37.5307 28.3045C38.5108 28.7105 39.2895 29.4892 39.6955 30.4693C40 31.2044 40 32.1362 40 34C40 35.8638 40 36.7956 39.6955 37.5307C39.2895 38.5108 38.5108 39.2895 37.5307 39.6955C36.7956 40 35.8638 40 34 40C32.1362 40 31.2044 40 30.4693 39.6955C29.4892 39.2895 28.7105 38.5108 28.3045 37.5307C28 36.7956 28 35.8638 28 34Z\" />\n          <path d=\"M48 34C48 32.1362 48 31.2044 48.3045 30.4693C48.7105 29.4892 49.4892 28.7105 50.4693 28.3045C51.2044 28 52.1362 28 54 28C55.8638 28 56.7956 28 57.5307 28.3045C58.5108 28.7105 59.2895 29.4892 59.6955 30.4693C60 31.2044 60 32.1362 60 34C60 35.8638 60 36.7956 59.6955 37.5307C59.2895 38.5108 58.5108 39.2895 57.5307 39.6955C56.7956 40 55.8638 40 54 40C52.1362 40 51.2044 40 50.4693 39.6955C49.4892 39.2895 48.7105 38.5108 48.3045 37.5307C48 36.7956 48 35.8638 48 34Z\" />\n        </svg>\n      </button>\n    </div>\n\n    <div class=\"overlay\" :class=\"[show && 'show']\">\n      <MainNav @link-click=\"show = !show\" />\n    </div>\n\n    <div class=\"main-nav\">\n      <MainNav />\n    </div>\n  </header>\n</template>\n\n<style scoped>\n\nheader {\n  --header-padding: 4rem;\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: flex-start;\n  padding-top: var(--header-padding);\n  padding-bottom: var(--header-padding);\n  padding-left: 0rem;\n}\n\n.menu {\n  display: flex;\n}\n\n.menu:hover {\n  color: #7c3aed;\n}\n\n@media (min-width: 640px) {\n  .menu {\n    display: none;\n  }\n}\n\n.overlay {\n  position: absolute;\n  top: calc(100% + 0.5rem);\n  right: 0;\n  background-color: rgba(255, 255, 255, 0.7);\n  border: 1px solid #e5e7eb;\n  border-radius: 0.375rem;\n  padding: 1.5rem;\n  font-size: 1.125rem;\n  line-height: 1.75rem;\n  font-weight: 500;\n  transition: all 250ms;\n  perspective: 2000px;\n  transform-origin: top;\n  backdrop-filter: blur(20px);\n  will-change: opacity, transform;\n}\n\n.overlay:not(.show) {\n  opacity: 0;\n  transform: translateY(-10px) rotateY(-8deg) rotateX(-20deg);\n  pointer-events: none;\n}\n\n@media (min-width: 640px) {\n  .overlay {\n    display: none;\n  }\n}\n\n.dark .overlay {\n  border-color: #374151;\n  background-color: rgba(17, 24, 39, 0.7);\n}\n\n.main-nav {\n  display: none;\n  font-size: 1.25rem;\n  line-height: 1.75rem;\n  font-weight: 500;\n}\n\n@media (min-width: 640px) {\n  .main-nav {\n    display: flex;\n  }\n}\n\n</style>\n",
+      "start": 1774875880870,
+      "end": 1774875880870,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "file": "/Users/jiyankang/vscodeProjects/witque-blog/components/AppHeader.vue",
+        "sources": [
+          "/Users/jiyankang/vscodeProjects/witque-blog/components/AppHeader.vue"
+        ],
+        "names": [],
+        "mappings": "AAAA,wBAAwB;AAAA;AAAA;AAAA;AAAA,AAIxB;AACA;AACA,UAAU;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,AAoBV;AACA;AACA;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAyEA;"
+      }
+    },
+    {
+      "name": "content-slot",
+      "start": 1774875880870,
+      "end": 1774875880870,
+      "order": "pre"
+    },
+    {
+      "name": "content-slot",
+      "start": 1774875880870,
+      "end": 1774875880870,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1774875880870,
+      "end": 1774875880870,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1774875880870,
+      "end": 1774875880870,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1774875880870,
+      "end": 1774875880870,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1774875880870,
+      "end": 1774875880870,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1774875880870,
+      "end": 1774875880870,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "import _sfc_main from \"/Users/jiyankang/vscodeProjects/witque-blog/components/AppHeader.vue?vue&type=script&setup=true&lang.ts\";\nexport * from \"/Users/jiyankang/vscodeProjects/witque-blog/components/AppHeader.vue?vue&type=script&setup=true&lang.ts\";\nimport \"/Users/jiyankang/vscodeProjects/witque-blog/components/AppHeader.vue?vue&type=style&index=0&scoped=00e6b4ed&lang.css\";\nimport { useSSRContext as __vite_useSSRContext } from \"vue\";\nconst _sfc_setup = _sfc_main.setup;\n_sfc_main.setup = (props, ctx) => {\n  const ssrContext = __vite_useSSRContext();\n  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add(\"../../components/AppHeader.vue\");\n  return _sfc_setup ? _sfc_setup(props, ctx) : void 0;\n};\nimport _export_sfc from \"\\0plugin-vue:export-helper\";\nexport default /* @__PURE__ */ _export_sfc(_sfc_main, [[\"__scopeId\", \"data-v-00e6b4ed\"]]);\n",
+      "start": 1774875880870,
+      "end": 1774875880874,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1774875880874,
+      "end": 1774875880874,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1774875880874,
+      "end": 1774875880874,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1774875880874,
+      "end": 1774875880874,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1774875880874,
+      "end": 1774875880874,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1774875880874,
+      "end": 1774875880874,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1774875880874,
+      "end": 1774875880874,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1774875880874,
+      "end": 1774875880874,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1774875880874,
+      "end": 1774875880874,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1774875880874,
+      "end": 1774875880874,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1774875880874,
+      "end": 1774875880874,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1774875880874,
+      "end": 1774875880874,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1774875880874,
+      "end": 1774875880874,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1774875880874,
+      "end": 1774875880874,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1774875880874,
+      "end": 1774875880874,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1774875880874,
+      "end": 1774875880874,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1774875880874,
+      "end": 1774875880874,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1774875880874,
+      "end": 1774875880874,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1774875880874,
+      "end": 1774875880874,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1774875880874,
+      "end": 1774875880874,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1774875880874,
+      "end": 1774875880874,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1774875880874,
+      "end": 1774875880874,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1774875880874,
+      "end": 1774875880874,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1774875880874,
+      "end": 1774875880874,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1774875880874,
+      "end": 1774875880874,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1774875880874,
+      "end": 1774875880874,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1774875880874,
+      "end": 1774875880874,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1774875880874,
+      "end": 1774875880874,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1774875880874,
+      "end": 1774875880874,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1774875880874,
+      "end": 1774875880874,
+      "order": "normal"
+    }
+  ]
+}
