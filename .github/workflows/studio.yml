@@ -1,33 +1,18 @@
 
-name: studio-nuxt-build
-run-name: studio nuxt build
+name: Deploy to GitHub Pages
 
 on:
-  # Runs on pushes targeting the default branch
   push:
-    branches: ["main"]
-
-  # Allows you to run this workflow manually from the Actions tab
+    branches:
+      - main
   workflow_dispatch:
 
-# Add write workflow permissions
 permissions:
   contents: write
 
-# Allow one concurrent deployment
-concurrency:
-  group: "pages"
-  cancel-in-progress: true
-
 jobs:
-  # Build job
   build-and-deploy:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node: [18]
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -35,30 +20,22 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node }}
+          node-version: '18'
           cache: 'pnpm'
 
       - name: Install pnpm
         uses: pnpm/action-setup@v3
         with:
-          version: 8.5.1
+          version: '8.5.1'
           run_install: false
 
       - name: Install dependencies
         run: pnpm install
 
-      - name: Clean previous build
-        run: rm -rf .starters/default/.output .starters/default/.nuxt
-
-      - name: Generate static site
+      - name: Build for production
         run: pnpm generate
-        env:
-          NODE_ENV: production
 
-      - name: Add .nojekyll file
-        run: touch .starters/default/.output/public/.nojekyll
-
-      - name: Deploy 🚀
+      - name: Deploy to gh-pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: .starters/default/.output/public
