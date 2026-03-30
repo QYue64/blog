@@ -1,6 +1,7 @@
 import { createResolver, logger, defineNuxtModule } from '@nuxt/kit'
 import { $fetch } from 'ofetch'
 import { version } from './package.json'
+import { defineNuxtConfig } from 'nuxt/config'
 
 const { resolve } = createResolver(import.meta.url)
 
@@ -30,6 +31,7 @@ const updateModule = defineNuxtModule({
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   app: {
+    baseURL: process.env.NUXT_APP_BASE_URL || '/',
     head: {
       htmlAttrs: {
         lang: 'en'
@@ -75,9 +77,6 @@ export default defineNuxtConfig({
       },
       preload: ['json', 'js', 'ts', 'html', 'css', 'vue', 'diff', 'shell', 'markdown', 'yaml', 'bash', 'ini', 'c', 'cpp']
     }
-  },
-  experimental: {
-    inlineSSRStyles: false
   },
   typescript: {
     includeWorkspace: true
