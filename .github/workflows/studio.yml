@@ -47,6 +47,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      - name: Clean previous build
+        run: rm -rf .starters/default/.output .starters/default/.nuxt
+
       - name: Generate static site
         run: pnpm generate
         env:
