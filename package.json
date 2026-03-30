@@ -1,0 +1,77 @@
+{
+  "name": "@nuxt-themes/alpine",
+  "version": "1.6.6",
+  "type": "module",
+  "exports": "./nuxt.config.ts",
+  "packageManager": "pnpm@8.5.1",
+  "files": [
+    "assets",
+    "components",
+    "composables",
+    "layouts",
+    "types",
+    "app.config.ts",
+    "app.vue",
+    "nuxt.config.ts",
+    "nuxt.schema.ts",
+    "tokens.config.ts"
+  ],
+  "scripts": {
+    "prepare": "nuxi prepare && nuxi prepare .starters/default",
+    "dev": "nuxi dev .starters/default",
+    "build": "nuxi build .starters/default",
+    "generate": "nuxi generate .starters/default",
+    "preview": "nuxi preview .starters/default",
+    "lint": "eslint .",
+    "release": "release-it"
+  },
+  "dependencies": {
+    "@nuxt-themes/elements": "^0.9.5",
+    "@nuxt-themes/tokens": "^1.9.1",
+    "@nuxt-themes/typography": "^0.11.0",
+    "@nuxt/content": "^2.11.0",
+    "@nuxthq/studio": "^0.14.1",
+    "@vueuse/core": "^10.7.2",
+    "ufo": "^1.3.2"
+  },
+  "devDependencies": {
+    "@nuxt/eslint-config": "^0.2.0",
+    "@nuxtjs/plausible": "^0.2.4",
+    "@types/node": "^20.11.5",
+    "eslint": "^8.56.0",
+    "nuxt": "^3.9.3",
+    "release-it": "^16.3.0",
+    "typescript": "^5.3.3",
+    "vite-plugin-inspect": "^0.8.1",
+    "vue": "^3.4.15"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "allowedVersions": {
+        "axios": "0.25.0",
+        "vite": "*"
+      },
+      "ignoreMissing": [
+        "postcss",
+        "postcss-*",
+        "webpack",
+        "axios",
+        "vite",
+        "@nuxt/vite-builder"
+      ]
+    }
+  },
+  "license": "MIT",
+  "release-it": {
+    "npm": {
+      "access": "public"
+    },
+    "git": {
+      "commitMessage": "chore(release): release v${version}"
+    },
+    "github": {
+      "release": true,
+      "releaseName": "v${version}"
+    }
+  }
+}
