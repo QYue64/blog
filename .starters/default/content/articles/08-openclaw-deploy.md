@@ -22,10 +22,7 @@ OpenClaw 是一个**自托管网关**，它将你喜欢的聊天应用与 AI 编
 
 ### 工作原理
 
-- 聊天应用 → Gateway 网关 → AI 智能体
-- Gateway 同时连接 Web 控制台、CLI 和移动节点
-
-Gateway 是会话、路由和渠道连接的单一事实来源。
+聊天应用通过 Gateway 网关连接到 AI 智能体。Gateway 同时提供 Web 控制台、CLI 和移动节点支持。
 
 ---
 
@@ -192,7 +189,7 @@ openclaw channels login
 ```
 
 1. 运行命令后会显示 QR 码
-2. 打开手机 WhatsApp → 设置 → 链接设备
+2. 打开手机 WhatsApp - 设置 - 链接设备
 3. 扫描 QR 码完成配对
 
 详细文档：[WhatsApp 渠道](/channels/whatsapp)
