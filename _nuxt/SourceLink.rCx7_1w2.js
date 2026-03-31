@@ -1,0 +1,1 @@
+import o from"./ProseP.R4mQc-Im.js";import{h as r,o as t,D as n}from"./entry.KH8119dj.js";const m=r({__name:"SourceLink",props:{source:{type:String,required:!0}},setup(_){return(c,p)=>{const e=o;return t(),n(e)}}});export{m as default};
