@@ -11,7 +11,7 @@ date: 2024-08-23
 
 - **报纸墙女孩**
 
-![wallpaper_newspaper01](wallpaper_newspaper01)
+![wallpaper_newspaper01](https://image.baidu.com/search/down?url=https://tvax4.sinaimg.cn/wap720/006PuDzUgy1ht19ahjljcj31z418ge81.jpg)
 ![wallpaper_newspaper02](wallpaper_newspaper02)
 ![wallpaper_newspaper03](wallpaper_newspaper03)
 ![wallpaper_newspaper04](wallpaper_newspaper04)
