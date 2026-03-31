@@ -1,1 +1,0 @@
-import{h as o,o as a,c as s,U as n,_ as d}from"./entry.kOc7TSb_.js";const l=["type","disabled"],c=o({__name:"Button",props:{type:{type:String,default:"submit"},disabled:{type:Boolean,default:!1}},setup(e){return(t,p)=>(a(),s("button",{type:e.type,disabled:e.disabled},[n(t.$slots,"default",{},void 0,!0)],8,l))}}),r=d(c,[["__scopeId","data-v-3925ac92"]]);export{r as default};

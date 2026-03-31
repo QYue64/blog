@@ -1,0 +1,1 @@
+import{_ as t,o,c as s,U as a}from"./entry.ZeIC1ghf.js";const r={},c={class:"preview-layout"};function n(e,_){return o(),s("div",c,[a(e.$slots,"default",{},void 0,!0)])}const l=t(r,[["render",n],["__scopeId","data-v-9e63a761"]]);export{l as default};

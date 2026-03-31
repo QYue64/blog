@@ -1,5 +1,0 @@
-const ProseCodeCopyButton_vue_vue_type_style_index_0_scoped_c3e91f7c_transformed_true_lang = "button[data-v-c3e91f7c]{border-radius:3px;margin:4px;opacity:0;padding:4px;transform:scale(.75);transition:all .2s}button[data-v-c3e91f7c]:hover{background-color:var(--elements-surface-secondary-backgroundColor)}button[data-v-c3e91f7c]:focus{box-shadow:0 0 0 2px var(--color-blue-500);opacity:1;outline:none}button.show[data-v-c3e91f7c]{opacity:1;transform:scale(1)}button .icon-wrapper[data-v-c3e91f7c]{display:block;height:18px;position:relative;width:18px}button .icon-wrapper .icon[data-v-c3e91f7c]{display:block;position:absolute}button .icon-wrapper .fade-enter-active[data-v-c3e91f7c],button .icon-wrapper .fade-leave-active[data-v-c3e91f7c]{transition:opacity .2s}button .icon-wrapper .fade-enter-from[data-v-c3e91f7c],button .icon-wrapper .fade-leave-to[data-v-c3e91f7c]{opacity:0}";
-export {
-  ProseCodeCopyButton_vue_vue_type_style_index_0_scoped_c3e91f7c_transformed_true_lang as default
-};
-//# sourceMappingURL=ProseCodeCopyButton-styles-1.mjs-G4xRzYrJ.js.map

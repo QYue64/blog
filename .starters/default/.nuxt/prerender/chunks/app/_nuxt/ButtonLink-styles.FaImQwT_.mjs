@@ -1,6 +1,0 @@
-const ButtonLink_vue_vue_type_style_index_0_scoped_ade6d4f7_transformed_true_lang = ".button-link[data-v-ade6d4f7]{--button-primary:var(---ym9-button-primary);--button-secondary:var(---a23-button-secondary);align-items:center;background-color:var(---ym9-button-primary);background-color:var(--button-primary);border:1px solid transparent;border-radius:var(--radii-md);color:var(--color-white);display:inline-flex;flex:none;font-weight:var(--fontWeight-bold);transition:color .1s ease-in-out}.button-link[data-v-ade6d4f7]:hover{background-color:var(--button-secondary)}.button-link[data-v-ade6d4f7]:focus{border:1px solid var(--button-primary)}.button-link .icon[data-v-ade6d4f7]{margin-inline-end:var(--space-1)}";
-
-const ButtonLinkStyles_FaImQwT_ = [ButtonLink_vue_vue_type_style_index_0_scoped_ade6d4f7_transformed_true_lang];
-
-export { ButtonLinkStyles_FaImQwT_ as default };
-//# sourceMappingURL=ButtonLink-styles.FaImQwT_.mjs.map

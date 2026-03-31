@@ -1,6 +1,0 @@
-const DocumentDrivenNotFound_vue_vue_type_style_index_0_scoped_8da1f86a_transformed_true_lang = "section[data-v-8da1f86a]{align-items:center;display:flex;flex-direction:column;justify-content:center;min-height:50vh}section .message[data-v-8da1f86a]{font-size:var(--text-3xl-fontSize);font-weight:var(--fontWeight-medium);line-height:var(--text-3xl-lineHeight)}section .status[data-v-8da1f86a]{font-size:var(--text-6xl-fontSize);line-height:var(--text-6xl-lineHeight);margin-bottom:var(--space-12);margin-top:var(--space-12)}section a[data-v-8da1f86a]{align-items:center;display:flex;position:relative}section a .icon[data-v-8da1f86a]{height:var(--space-5);position:absolute;right:calc(0px - var(--space-1));transform:translateX(100%);width:var(--space-5)}";
-
-const DocumentDrivenNotFoundStyles_OyVELl6Y = [DocumentDrivenNotFound_vue_vue_type_style_index_0_scoped_8da1f86a_transformed_true_lang];
-
-export { DocumentDrivenNotFoundStyles_OyVELl6Y as default };
-//# sourceMappingURL=DocumentDrivenNotFound-styles.OyVELl6Y.mjs.map
