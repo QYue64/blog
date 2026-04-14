@@ -1,1 +1,0 @@
-import{_ as t,o as a,c as o,a as s,U as n}from"./entry.KH8119dj.js";const c={},r={class:"table-wrapper"};function _(e,d){return a(),o("div",r,[s("table",null,[n(e.$slots,"default",{},void 0,!0)])])}const f=t(c,[["render",_],["__scopeId","data-v-e9122fed"]]);export{f as default};

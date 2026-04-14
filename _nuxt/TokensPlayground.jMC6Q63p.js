@@ -1,1 +1,0 @@
-import{h as a,ak as n,o as s,c as t,a as o,t as r,s as c}from"./entry.KH8119dj.js";const m=a({__name:"TokensPlayground",setup(l){const{theme:e}=n();return(u,i)=>(s(),t("div",null,[o("pre",null,r(JSON.stringify(c(e),null,2)),1)]))}});export{m as default};
