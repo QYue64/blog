@@ -1,7 +1,7 @@
 ---
 title: Docker 笔记
 description: 小雀 Docker 笔记整理归纳
-cover: https://image.baidu.com/search/down?url=https://tvax2.sinaimg.cn/wap720/006PuDzUgy1ht19c4fa4hj31z418ghdt.jpg
+cover: "https://hailuo-image-algeng-data.oss-cn-wulanchabu.aliyuncs.com/image_inference_output%2Ftalkie%2Fprod%2Fimg%2F2026-04-14%2Fa4da8456-472e-445e-992e-e4665feeec6a_aigc.jpeg?Expires=1776267586&OSSAccessKeyId=LTAI5tB2SwrRwAtD23etQUbC&Signature=Sa5p9vSkZFJIt65WdDBJQ82Ou3Q%3D"
 date: 2024-08-16
 ---
 

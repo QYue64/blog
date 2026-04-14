@@ -1,7 +1,7 @@
 ---
 title: 报纸墙壁纸收集（持续更新）
 description: 报纸墙壁纸
-cover: https://image.baidu.com/search/down?url=https://tvax2.sinaimg.cn/wap720/006PuDzUgy1ht19aszvgvj31z418ge81.jpg
+cover: "https://hailuo-image-algeng-data.oss-cn-wulanchabu.aliyuncs.com/image_inference_output%2Ftalkie%2Fprod%2Fimg%2F2026-04-14%2Fda10d755-b455-432f-ba82-dbabc6402f58_aigc.jpeg?Expires=1776267565&OSSAccessKeyId=LTAI5tB2SwrRwAtD23etQUbC&Signature=p7rBK6uWMqQtoCMB0fmqcOXsJhQ%3D"
 date: 2024-08-23
 ---
 

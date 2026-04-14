@@ -1,0 +1,359 @@
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font-sans)}
+.app{max-width:860px;margin:0 auto;padding:1.5rem 1rem}
+.header{margin-bottom:1.5rem}
+.header h1{font-size:20px;font-weight:500;color:var(--color-text-primary)}
+.header p{font-size:13px;color:var(--color-text-secondary);margin-top:4px}
+.api-bar{display:flex;gap:8px;margin-bottom:1.5rem;align-items:center}
+.api-bar input{flex:1;font-size:13px;padding:0 10px;height:36px;border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-secondary);background:var(--color-background-primary);color:var(--color-text-primary);outline:none}
+.api-bar input:focus{border-color:var(--color-border-primary);box-shadow:0 0 0 2px rgba(0,0,0,0.06)}
+.api-bar button{height:36px;padding:0 14px;font-size:13px;border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-secondary);background:var(--color-background-primary);color:var(--color-text-primary);cursor:pointer;white-space:nowrap}
+.api-bar button:hover{background:var(--color-background-secondary)}
+.tabs{display:flex;gap:2px;margin-bottom:1.25rem;background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:3px}
+.tab{flex:1;height:32px;border:none;background:transparent;color:var(--color-text-secondary);font-size:13px;font-weight:500;cursor:pointer;border-radius:6px;transition:all .15s}
+.tab.active{background:var(--color-background-primary);color:var(--color-text-primary);border:0.5px solid var(--color-border-tertiary)}
+.panel{display:none}
+.panel.active{display:block}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+@media(max-width:540px){.row{grid-template-columns:1fr}}
+.field label{display:block;font-size:12px;color:var(--color-text-secondary);margin-bottom:5px;font-weight:500}
+.field textarea,.field select,.field input[type=number]{width:100%;border:0.5px solid var(--color-border-secondary);border-radius:var(--border-radius-md);background:var(--color-background-primary);color:var(--color-text-primary);font-size:13px;outline:none;font-family:var(--font-sans)}
+.field textarea{padding:10px;line-height:1.5;resize:vertical}
+.field select{height:36px;padding:0 10px;cursor:pointer}
+.field input[type=number]{height:36px;padding:0 10px}
+.field textarea:focus,.field select:focus,.field input[type=number]:focus{border-color:var(--color-border-primary);box-shadow:0 0 0 2px rgba(0,0,0,0.06)}
+.upload-zone{border:0.5px dashed var(--color-border-secondary);border-radius:var(--border-radius-md);padding:1.5rem;text-align:center;cursor:pointer;background:var(--color-background-secondary);transition:border-color .15s;position:relative;overflow:hidden}
+.upload-zone:hover{border-color:var(--color-border-primary)}
+.upload-zone input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
+.upload-zone p{font-size:13px;color:var(--color-text-secondary)}
+.upload-preview{margin-top:10px;position:relative;display:inline-block}
+.upload-preview img{max-height:120px;max-width:100%;border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-tertiary);display:block}
+.upload-preview button{position:absolute;top:-6px;right:-6px;width:20px;height:20px;border-radius:50%;border:0.5px solid var(--color-border-secondary);background:var(--color-background-primary);color:var(--color-text-secondary);font-size:12px;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1}
+.toggles{display:flex;flex-direction:column;gap:8px;margin-bottom:12px}
+.toggle-row{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--color-text-primary)}
+.toggle-row span{color:var(--color-text-secondary);font-size:12px;margin-left:6px}
+.switch{position:relative;display:inline-block;width:34px;height:20px;flex-shrink:0}
+.switch input{opacity:0;width:0;height:0}
+.slider{position:absolute;inset:0;background:var(--color-border-secondary);border-radius:10px;cursor:pointer;transition:.2s}
+.slider:before{content:"";position:absolute;height:14px;width:14px;left:3px;bottom:3px;background:white;border-radius:50%;transition:.2s}
+input:checked+.slider{background:#1D9E75}
+input:checked+.slider:before{transform:translateX(14px)}
+.gen-btn{width:100%;height:42px;border-radius:var(--border-radius-md);border:none;background:#1D9E75;color:white;font-size:14px;font-weight:500;cursor:pointer;margin-top:4px;transition:opacity .15s}
+.gen-btn:hover{opacity:.88}
+.gen-btn:disabled{opacity:.45;cursor:not-allowed}
+.results{margin-top:1.5rem}
+.results-header{font-size:13px;font-weight:500;color:var(--color-text-secondary);margin-bottom:10px}
+.img-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px}
+.img-card{border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-tertiary);overflow:hidden;background:var(--color-background-secondary)}
+.img-card img{width:100%;display:block;cursor:pointer}
+.img-card-actions{padding:8px;display:flex;gap:6px}
+.img-card-actions button{flex:1;height:28px;font-size:12px;border-radius:6px;border:0.5px solid var(--color-border-secondary);background:var(--color-background-primary);color:var(--color-text-primary);cursor:pointer}
+.img-card-actions button:hover{background:var(--color-background-secondary)}
+.status{padding:12px 14px;border-radius:var(--border-radius-md);font-size:13px;margin-top:12px}
+.status.loading{background:var(--color-background-secondary);color:var(--color-text-secondary)}
+.status.error{background:#FCEBEB;color:#A32D2D;border:0.5px solid #F09595}
+.spinner{display:inline-block;width:12px;height:12px;border:1.5px solid currentColor;border-top-color:transparent;border-radius:50%;animation:spin .6s linear infinite;margin-right:6px;vertical-align:middle}
+@keyframes spin{to{transform:rotate(360deg)}}
+.saved-ok{font-size:12px;color:#0F6E56}
+.divider{height:0.5px;background:var(--color-border-tertiary);margin:14px 0}
+</style>
+
+<h2 class="sr-only">MiniMax 图片生成工具，支持文生图和图生图</h2>
+
+<div class="app">
+  <div class="header">
+    <h1>MiniMax 图片生成</h1>
+    <p>文生图 & 图生图，基于 MiniMax image-01 / image-01-live 模型</p>
+  </div>
+
+  <div class="api-bar">
+    <input type="password" id="apiKey" placeholder="输入 MiniMax API Key" autocomplete="off">
+    <button onclick="saveKey()">保存</button>
+    <span id="saveOk" class="saved-ok" style="display:none">已保存</span>
+  </div>
+
+  <div class="tabs">
+    <button class="tab active" onclick="switchTab('t2i',this)">文生图</button>
+    <button class="tab" onclick="switchTab('i2i',this)">图生图</button>
+  </div>
+
+  <!-- 文生图 -->
+  <div class="panel active" id="panel-t2i">
+    <div class="field" style="margin-bottom:12px">
+      <label>提示词</label>
+      <textarea id="t2i-prompt" rows="3" placeholder="描述你想生成的图片，最多 1500 字符..."></textarea>
+    </div>
+    <div class="row">
+      <div class="field">
+        <label>模型</label>
+        <select id="t2i-model">
+          <option value="image-01">image-01</option>
+          <option value="image-01-live">image-01-live（动漫风）</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>宽高比</label>
+        <select id="t2i-ratio">
+          <option value="1:1">1:1 (1024×1024)</option>
+          <option value="16:9">16:9 (1280×720)</option>
+          <option value="9:16">9:16 (720×1280)</option>
+          <option value="4:3">4:3 (1152×864)</option>
+          <option value="3:4">3:4 (864×1152)</option>
+          <option value="3:2">3:2 (1248×832)</option>
+          <option value="2:3">2:3 (832×1248)</option>
+          <option value="21:9">21:9 宽屏</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="field">
+        <label>生成数量（1–9）</label>
+        <input type="number" id="t2i-n" value="1" min="1" max="9">
+      </div>
+      <div class="field">
+        <label>随机种子（可选）</label>
+        <input type="number" id="t2i-seed" placeholder="留空则随机">
+      </div>
+    </div>
+    <div class="toggles">
+      <div class="toggle-row">
+        <div>Prompt 优化 <span>自动增强提示词</span></div>
+        <label class="switch"><input type="checkbox" id="t2i-optimizer"><span class="slider"></span></label>
+      </div>
+      <div class="toggle-row">
+        <div>AIGC 水印 <span>在图片中添加水印</span></div>
+        <label class="switch"><input type="checkbox" id="t2i-watermark"><span class="slider"></span></label>
+      </div>
+    </div>
+    <button class="gen-btn" id="t2i-btn" onclick="generate('t2i')">生成图片</button>
+    <div id="t2i-status"></div>
+    <div id="t2i-results" class="results"></div>
+  </div>
+
+  <!-- 图生图 -->
+  <div class="panel" id="panel-i2i">
+    <div class="field" style="margin-bottom:12px">
+      <label>提示词</label>
+      <textarea id="i2i-prompt" rows="3" placeholder="描述图片风格或变换方向..."></textarea>
+    </div>
+    <div class="field" style="margin-bottom:12px">
+      <label>参考图片（人物主体参考）</label>
+      <div class="upload-zone" id="upload-zone">
+        <input type="file" accept="image/*" onchange="handleUpload(event)">
+        <p id="upload-tip">点击或拖拽上传图片</p>
+        <div id="upload-preview"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="field">
+        <label>模型</label>
+        <select id="i2i-model">
+          <option value="image-01">image-01</option>
+          <option value="image-01-live">image-01-live（动漫风）</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>宽高比</label>
+        <select id="i2i-ratio">
+          <option value="1:1">1:1 (1024×1024)</option>
+          <option value="16:9">16:9 (1280×720)</option>
+          <option value="9:16">9:16 (720×1280)</option>
+          <option value="4:3">4:3 (1152×864)</option>
+          <option value="3:4">3:4 (864×1152)</option>
+          <option value="3:2">3:2 (1248×832)</option>
+          <option value="2:3">2:3 (832×1248)</option>
+          <option value="21:9">21:9 宽屏</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="field">
+        <label>生成数量（1–9）</label>
+        <input type="number" id="i2i-n" value="1" min="1" max="9">
+      </div>
+      <div class="field">
+        <label>随机种子（可选）</label>
+        <input type="number" id="i2i-seed" placeholder="留空则随机">
+      </div>
+    </div>
+    <div class="toggles">
+      <div class="toggle-row">
+        <div>Prompt 优化 <span>自动增强提示词</span></div>
+        <label class="switch"><input type="checkbox" id="i2i-optimizer"><span class="slider"></span></label>
+      </div>
+      <div class="toggle-row">
+        <div>AIGC 水印 <span>在图片中添加水印</span></div>
+        <label class="switch"><input type="checkbox" id="i2i-watermark"><span class="slider"></span></label>
+      </div>
+    </div>
+    <button class="gen-btn" id="i2i-btn" onclick="generate('i2i')">生成图片</button>
+    <div id="i2i-status"></div>
+    <div id="i2i-results" class="results"></div>
+  </div>
+</div>
+
+<script>
+let uploadedImage = null;
+
+function saveKey(){
+  const k = document.getElementById('apiKey').value.trim();
+  if(!k) return;
+  sessionStorage.setItem('mmKey', k);
+  const ok = document.getElementById('saveOk');
+  ok.style.display = 'inline';
+  setTimeout(()=>ok.style.display='none', 1800);
+}
+
+function getKey(){
+  return document.getElementById('apiKey').value.trim() || sessionStorage.getItem('mmKey') || '';
+}
+
+function switchTab(id, btn){
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('panel-'+id).classList.add('active');
+}
+
+function handleUpload(e){
+  const file = e.target.files[0];
+  if(!file) return;
+  const reader = new FileReader();
+  reader.onload = ev => {
+    uploadedImage = ev.target.result;
+    const prev = document.getElementById('upload-preview');
+    prev.innerHTML = `<div class="upload-preview"><img src="${uploadedImage}"><button onclick="clearUpload()">×</button></div>`;
+    document.getElementById('upload-tip').style.display = 'none';
+  };
+  reader.readAsDataURL(file);
+}
+
+function clearUpload(){
+  uploadedImage = null;
+  document.getElementById('upload-preview').innerHTML = '';
+  document.getElementById('upload-tip').style.display = '';
+}
+
+function setStatus(mode, html, cls=''){
+  const el = document.getElementById(mode+'-status');
+  el.innerHTML = html ? `<div class="status ${cls}">${html}</div>` : '';
+}
+
+function setLoading(mode, loading){
+  const btn = document.getElementById(mode+'-btn');
+  btn.disabled = loading;
+  btn.textContent = loading ? '生成中...' : '生成图片';
+}
+
+async function generate(mode){
+  const key = getKey();
+  if(!key){ alert('请先填写 API Key'); return; }
+
+  const prompt = document.getElementById(mode+'-prompt').value.trim();
+  if(!prompt){ alert('请填写提示词'); return; }
+
+  const model = document.getElementById(mode+'-model').value;
+  const ratio = document.getElementById(mode+'-ratio').value;
+  const n = parseInt(document.getElementById(mode+'-n').value) || 1;
+  const seedVal = document.getElementById(mode+'-seed').value;
+  const optimizer = document.getElementById(mode+'-optimizer').checked;
+  const watermark = document.getElementById(mode+'-watermark').checked;
+
+  if(mode === 'i2i' && !uploadedImage){
+    alert('请上传参考图片');
+    return;
+  }
+
+  const body = {
+    model, prompt,
+    aspect_ratio: ratio,
+    n: Math.min(9, Math.max(1, n)),
+    response_format: 'url',
+    prompt_optimizer: optimizer,
+    aigc_watermark: watermark
+  };
+
+  if(seedVal) body.seed = parseInt(seedVal);
+
+  if(mode === 'i2i'){
+    body.subject_reference = [{
+      type: 'character',
+      image_file: uploadedImage
+    }];
+  }
+
+  setLoading(mode, true);
+  setStatus(mode, '<span class="spinner"></span>正在生成，请稍候...', 'loading');
+  document.getElementById(mode+'-results').innerHTML = '';
+
+  try {
+    const resp = await fetch('https://api.minimaxi.com/v1/image_generation', {
+      method: 'POST',
+      headers: {
+        'Authorization': 'Bearer ' + key,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(body)
+    });
+
+    const data = await resp.json();
+
+    if(!resp.ok || data.base_resp?.status_code !== 0){
+      const msg = data.base_resp?.status_msg || data.error?.message || '请求失败';
+      setStatus(mode, '错误：' + msg, 'error');
+      return;
+    }
+
+    const urls = data.data?.image_urls || [];
+    const failed = data.metadata?.failed_count || '0';
+    const success = data.metadata?.success_count || urls.length;
+
+    setStatus(mode, `生成完成，共 ${success} 张${failed !== '0' ? `，${failed} 张因安全检查未返回` : ''}`, 'loading');
+
+    if(urls.length === 0){
+      setStatus(mode, '未返回任何图片，可能被内容安全过滤', 'error');
+      return;
+    }
+
+    const grid = document.createElement('div');
+    grid.className = 'results';
+    grid.innerHTML = `<div class="results-header">生成结果（${urls.length} 张）</div><div class="img-grid" id="${mode}-grid"></div>`;
+    document.getElementById(mode+'-results').appendChild(grid);
+
+    const imgGrid = document.getElementById(mode+'-grid');
+    urls.forEach((url, i) => {
+      const card = document.createElement('div');
+      card.className = 'img-card';
+      card.innerHTML = `
+        <img src="${url}" alt="生成图片${i+1}" loading="lazy" onerror="this.style.display='none'">
+        <div class="img-card-actions">
+          <button onclick="window.open('${url}','_blank')">查看</button>
+          <button onclick="downloadImg('${url}', ${i+1})">下载</button>
+        </div>`;
+      imgGrid.appendChild(card);
+    });
+
+  } catch(err){
+    setStatus(mode, '网络错误：' + err.message, 'error');
+  } finally {
+    setLoading(mode, false);
+  }
+}
+
+async function downloadImg(url, idx){
+  try {
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `minimax-image-${idx}.jpg`;
+    a.target = '_blank';
+    a.click();
+  } catch(e) {
+    window.open(url, '_blank');
+  }
+}
+
+const saved = sessionStorage.getItem('mmKey');
+if(saved) document.getElementById('apiKey').value = saved;
+</script>
