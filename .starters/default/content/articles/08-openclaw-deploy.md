@@ -1,7 +1,7 @@
 ---
 title: OpenClaw 部署教程
 description: OpenClaw AI 助手部署指南
-cover: "https://hailuo-image-algeng-data.oss-cn-wulanchabu.aliyuncs.com/image_inference_output%2Ftalkie%2Fprod%2Fimg%2F2026-04-14%2F17897ed4-88a2-49da-9149-26ded50db28a_aigc.jpeg?Expires=1776267667&OSSAccessKeyId=LTAI5tB2SwrRwAtD23etQUbC&Signature=qQ2WSyUzvuVCneuFJVY2jbANv3M%3D"
+cover: "https://img.mxai.eu.cc/imgs/cover_1776321288087_1776321288.jpg"
 date: 2026-03-31
 ---
 

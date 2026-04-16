@@ -1,7 +1,7 @@
 ---
 title: Docker 笔记
 description: 小雀 Docker 笔记整理归纳
-cover: "https://hailuo-image-algeng-data.oss-cn-wulanchabu.aliyuncs.com/image_inference_output%2Ftalkie%2Fprod%2Fimg%2F2026-04-14%2Fa4da8456-472e-445e-992e-e4665feeec6a_aigc.jpeg?Expires=1776267586&OSSAccessKeyId=LTAI5tB2SwrRwAtD23etQUbC&Signature=Sa5p9vSkZFJIt65WdDBJQ82Ou3Q%3D"
+cover: "https://img.mxai.eu.cc/imgs/cover_1776321181642_1776321181.jpg"
 date: 2024-08-16
 ---
 

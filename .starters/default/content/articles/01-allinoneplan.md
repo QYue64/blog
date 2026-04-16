@@ -1,7 +1,7 @@
 ---
 title: All In One 方案变更
 description: All In One 方案变更
-cover: "https://hailuo-image-algeng-data.oss-cn-wulanchabu.aliyuncs.com/image_inference_output%2Ftalkie%2Fprod%2Fimg%2F2026-04-14%2F1efd54b4-9de6-4ed2-9dbd-a2ab3398bb71_aigc.jpeg?Expires=1776267526&OSSAccessKeyId=LTAI5tB2SwrRwAtD23etQUbC&Signature=38nCJFLKlUU%2Frr%2F2Vk%2BglHMpfKo%3D"
+cover: "https://img.mxai.eu.cc/imgs/cover_1776321104590_1776321104.jpg"
 date: 2024-09-23
 ---
 

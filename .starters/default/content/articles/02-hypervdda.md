@@ -1,7 +1,7 @@
 ---
 title: Hyper-v 直通和卸载命令
 description: Hyper-v 直通和卸载命令
-cover: "https://hailuo-image-algeng-data.oss-cn-wulanchabu.aliyuncs.com/image_inference_output%2Ftalkie%2Fprod%2Fimg%2F2026-04-14%2Fd2430bd2-4183-4fde-996d-1f42f051c13e_aigc.jpeg?Expires=1776267546&OSSAccessKeyId=LTAI5tB2SwrRwAtD23etQUbC&Signature=u0VuYI5AJlxU1%2Fo2G83v1o52tOI%3D"
+cover: "https://img.mxai.eu.cc/imgs/cover_1776321128625_1776321128.jpg"
 date: 2024-09-23
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Zerotier/FRP迁移的记录文档
 description: Zerotier/FRP迁移的记录文档
-cover: "https://hailuo-image-algeng-data.oss-cn-wulanchabu.aliyuncs.com/image_inference_output%2Ftalkie%2Fprod%2Fimg%2F2026-04-14%2Fde714a75-8f33-41c0-9322-cee0f243dd97_aigc.jpeg?Expires=1776267605&OSSAccessKeyId=LTAI5tB2SwrRwAtD23etQUbC&Signature=6Y2b3dS43%2BDjQU1b8NdmuqWKgzI%3D"
+cover: "https://img.mxai.eu.cc/imgs/cover_1776321204820_1776321204.jpg"
 date: 2024-07-14
 ---
 

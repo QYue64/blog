@@ -1,7 +1,7 @@
 ---
 title: 常用机场记录
 description: 常用机场记录
-cover: "https://hailuo-image-algeng-data.oss-cn-wulanchabu.aliyuncs.com/image_inference_output%2Ftalkie%2Fprod%2Fimg%2F2026-04-14%2Fe78f3a62-5fb4-4019-94e3-064d5a1c45d1_aigc.jpeg?Expires=1776267647&OSSAccessKeyId=LTAI5tB2SwrRwAtD23etQUbC&Signature=C3uLU4%2BFCQ5tNFJurWW9OU7WQAE%3D"
+cover: "https://img.mxai.eu.cc/imgs/cover_1776321264254_1776321264.jpg"
 date: 2024-05-19
 ---
 

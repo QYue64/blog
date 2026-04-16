@@ -1,7 +1,7 @@
 ---
 title: 用 Cloudflare Worker 将带端口的 HTTP 地址转为 HTTPS
 description: 使用 Cloudflare Worker 将非标准端口的 HTTP 服务转为干净的 HTTPS 对外暴露
-cover: "https://hailuo-image-algeng-data.oss-cn-wulanchabu.aliyuncs.com/image_inference_output%2Ftalkie%2Fprod%2Fimg%2F2026-04-14%2F2aa09e48-e8cb-41e9-9966-a5ea224dc1e8_aigc.jpeg?Expires=1776267710&OSSAccessKeyId=LTAI5tB2SwrRwAtD23etQUbC&Signature=ZrjKJfXbXVyEuzk35%2B4BsEgh0x4%3D"
+cover: "https://img.mxai.eu.cc/imgs/cover_1776321345148_1776321345.jpg"
 date: 2026-04-14
 ---
 

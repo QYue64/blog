@@ -1,7 +1,7 @@
 ---
 title: Linux Service/Systemctl 服务配置
 description: service服务的配置
-cover: "https://hailuo-image-algeng-data.oss-cn-wulanchabu.aliyuncs.com/image_inference_output%2Ftalkie%2Fprod%2Fimg%2F2026-04-14%2Fa6bddd67-739e-43da-a0b9-8ef7f495596c_aigc.jpeg?Expires=1776267627&OSSAccessKeyId=LTAI5tB2SwrRwAtD23etQUbC&Signature=uSgUFyh3IOE0Y%2FpoDVhXE7osu0o%3D"
+cover: "https://img.mxai.eu.cc/imgs/cover_1776321240715_1776321240.jpg"
 date: 2024-06-14
 ---
 
