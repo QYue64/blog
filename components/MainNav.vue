@@ -6,7 +6,7 @@ const emits = defineEmits(['linkClick'])
 // 自定义外部导航链接
 const externalLinks = [
   { label: '笔记', href: 'https://memo.witque.cn:8888/', target: '_blank' },
-  { label: '工具', href: 'https://pages.witque.cn/', target: '_blank' },
+  { label: 'AI', href: 'https://queai.de', target: '_blank' },
   { label: 'DSM', href: 'https://qnas.dsmynas.com:5001/', target: '_blank' },
   { label: 'Terminal', href: 'https://tunnel.witque.cn:8888/', target: '_blank' }
 ]
