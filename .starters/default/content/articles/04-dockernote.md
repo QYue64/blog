@@ -4,6 +4,7 @@ description: 小雀 Docker 笔记整理归纳
 cover: "https://img.mxai.eu.cc/imgs/cover_1776321181642_1776321181.jpg"
 date: 2024-08-16
 category: CONTAINERS
+layout: article
 ---
 
 

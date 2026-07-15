@@ -4,6 +4,7 @@ description: 报纸墙壁纸
 cover: "https://img.mxai.eu.cc/imgs/cover_1776321158670_1776321158.jpg"
 date: 2024-08-23
 category: VISUAL ARCHIVE
+layout: article
 ---
 
 # 报纸墙壁纸收集（持续更新）

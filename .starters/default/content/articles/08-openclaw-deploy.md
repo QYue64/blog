@@ -4,6 +4,7 @@ description: OpenClaw AI 助手部署指南
 cover: "https://img.mxai.eu.cc/imgs/cover_1776321288087_1776321288.jpg"
 date: 2026-03-31
 category: AI / DEPLOY
+layout: article
 ---
 
 # OpenClaw 部署教程

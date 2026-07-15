@@ -8,6 +8,10 @@ export interface ArticleRecord {
   body?: unknown
 }
 
+export const getArticleEntries = <T extends ArticleRecord>(articles: T[]) => {
+  return articles.filter(article => article._path.startsWith('/articles/'))
+}
+
 const getTimestamp = (date?: string) => {
   if (!date) { return 0 }
   const timestamp = new Date(date).getTime()

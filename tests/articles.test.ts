@@ -4,6 +4,7 @@ import {
   estimateReadingMinutes,
   formatArticleDate,
   getAdjacentArticles,
+  getArticleEntries,
   getArticleNumber,
   getHomeFeed,
   sortArticles
@@ -24,6 +25,19 @@ describe('文章数据工具', () => {
       '/articles/old'
     ])
     expect(articles[0]._path).toBe('/articles/old')
+  })
+
+  it('文章集合排除索引页和非文章路径', () => {
+    const entries = getArticleEntries([
+      ...articles,
+      { _path: '/articles', title: '所有记录' },
+      { _path: '/about', title: '关于' }
+    ])
+    expect(entries.map(article => article._path)).toEqual([
+      '/articles/old',
+      '/articles/new',
+      '/articles/middle'
+    ])
   })
 
   it('缺少日期时排在最后，同日按 _id 倒序', () => {
@@ -70,9 +84,20 @@ describe('文章数据工具', () => {
     expect(adjacent.next?._path).toBe('/articles/new')
   })
 
+  it('当前路径不存在时上下篇都为空', () => {
+    expect(getAdjacentArticles(sortArticles(articles), '/missing')).toEqual({
+      previous: null,
+      next: null
+    })
+  })
+
   it('把滚动位置限制在 0 到 100', () => {
     expect(calculateReadingProgress(0, 1000, 500)).toBe(0)
     expect(calculateReadingProgress(250, 1000, 500)).toBe(50)
     expect(calculateReadingProgress(900, 1000, 500)).toBe(100)
+  })
+
+  it('没有可滚动内容时进度为零', () => {
+    expect(calculateReadingProgress(100, 500, 500)).toBe(0)
   })
 })

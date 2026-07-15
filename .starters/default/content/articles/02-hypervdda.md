@@ -4,6 +4,7 @@ description: Hyper-v 直通和卸载命令
 cover: "https://img.mxai.eu.cc/imgs/cover_1776321128625_1776321128.jpg"
 date: 2024-09-23
 category: VIRTUALIZATION
+layout: article
 ---
 
 

@@ -4,6 +4,7 @@ description: service服务的配置
 cover: "https://img.mxai.eu.cc/imgs/cover_1776321240715_1776321240.jpg"
 date: 2024-06-14
 category: LINUX
+layout: article
 ---
 
 

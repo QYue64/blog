@@ -1,13 +1,16 @@
 <script setup lang="ts">
 import type { ArticleRecord } from '../../utils/articles'
-import { getHomeFeed, sortArticles } from '../../utils/articles'
+import { getArticleEntries, getHomeFeed, sortArticles } from '../../utils/articles'
 import { externalLinks, keywords } from '../../composables/site'
 
 const { data } = await useAsyncData('home-specimen-articles', () => {
   return queryContent('/articles').find()
 })
 
-const articles = computed(() => sortArticles((data.value || []) as ArticleRecord[]))
+const articles = computed(() => {
+  const entries = getArticleEntries((data.value || []) as ArticleRecord[])
+  return sortArticles(entries)
+})
 const feed = computed(() => getHomeFeed(articles.value, 3))
 </script>
 

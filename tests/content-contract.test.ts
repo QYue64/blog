@@ -8,7 +8,7 @@ const articleFiles = readdirSync(articlesDirectory)
   .sort()
 
 describe('博客内容契约', () => {
-  it('每篇文章保留唯一数字前缀并包含分类', () => {
+  it('每篇文章保留唯一数字前缀并包含分类与阅读布局', () => {
     const prefixes = articleFiles.map(file => file.match(/^(\d+)-/)?.[1])
     expect(prefixes.every(Boolean)).toBe(true)
     expect(new Set(prefixes).size).toBe(articleFiles.length)
@@ -16,6 +16,7 @@ describe('博客内容契约', () => {
     for (const file of articleFiles) {
       const content = readFileSync(resolve(articlesDirectory, file), 'utf8')
       expect(content).toMatch(/^---[\s\S]*\ncategory: .+[\s\S]*\n---/)
+      expect(content).toMatch(/^---[\s\S]*\nlayout: article[\s\S]*\n---/)
     }
   })
 
@@ -32,5 +33,25 @@ describe('博客内容契约', () => {
     expect(list).toContain('variant="full"')
     expect(list).not.toContain('ArticlesListItem')
     expect(existsSync(resolve('components/content/ArticlesListItem.vue'))).toBe(false)
+  })
+
+  it('文章布局组合完整的阅读增强组件', () => {
+    const components = [
+      'ReadingProgress.vue',
+      'ArticleHeader.vue',
+      'ArticleToc.vue',
+      'ArticlePagination.vue',
+      'ProsePre.vue'
+    ]
+
+    for (const component of components) {
+      expect(existsSync(resolve('components/content', component))).toBe(true)
+    }
+
+    const layout = readFileSync(resolve('layouts/article.vue'), 'utf8')
+    expect(layout).toContain('<ReadingProgress')
+    expect(layout).toContain('<ArticleHeader')
+    expect(layout).toContain('<ArticleToc')
+    expect(layout).toContain('<ArticlePagination')
   })
 })
