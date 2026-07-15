@@ -18,18 +18,17 @@ useContentHead(alpine as any)
 </script>
 
 <template>
-  <Container class="app-layout">
+  <div class="app-layout">
     <AppLoadingBar />
     <AppHeader v-if="alpine.header" />
     <slot />
     <AppFooter v-if="alpine.footer" />
-  </Container>
+  </div>
 </template>
 
-<style lang="ts" scoped>
-css({
-  '.app-layout': {
-    minWidth: '{size.xs}'
-  }
-})
+<style scoped>
+.app-layout {
+  min-width: 320px;
+  min-height: 100vh;
+}
 </style>

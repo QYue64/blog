@@ -11,18 +11,27 @@ export default defineTheme({
     },
     body: {
       backgroundColor: {
-        initial: '{color.white}',
-        dark: '{color.black}'
+        initial: '#EDF4FF',
+        dark: '#EDF4FF'
       },
       color: {
-        initial: '{color.gray.800}',
-        dark: '{color.gray.200}'
+        initial: '#172030',
+        dark: '#172030'
       }
+    },
+    specimen: {
+      ice: '#EDF4FF',
+      ink: '#172030',
+      lime: '#C9FF5C',
+      violet: '#7656EF',
+      pink: '#FFB8DB',
+      muted: '#596578',
+      line: '#9BA7BA'
     },
     backdrop: {
       backgroundColor: {
-        initial: '#f4f4f5b3', // TODO: rgba({color.gray.100}, 0.7)
-        dark: '#18181bb3' // TODO: rgba({color.gray.900}, 0.7)
+        initial: '#17203038',
+        dark: '#17203038'
       }
     },
     readableLine: '68ch'
@@ -41,11 +50,11 @@ export default defineTheme({
   color: {
     white: '#FFFFFF',
     // @ts-ignore
-    primary: theme.color.lightblue
+    primary: theme.color.indigo
   },
   prose: {
     p: {
-      fontSize: '18px'
+      fontSize: '17px'
     },
   }
 })

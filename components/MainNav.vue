@@ -1,89 +1,61 @@
-<script lang="ts" setup>
-const { navigation } = useContent()
-
-const emits = defineEmits(['linkClick'])
-
-// 自定义外部导航链接
-const externalLinks = [
-  { label: '笔记', href: 'https://memo.witque.cn:8888/', target: '_blank' },
-  { label: 'AI', href: 'https://queai.de', target: '_blank' },
-  { label: 'DSM', href: 'https://qnas.dsmynas.com:5001/', target: '_blank' },
-  { label: 'Terminal', href: 'https://tunnel.witque.cn:8888/', target: '_blank' }
-]
-
-function handleClick() {
-  emits('linkClick')
-}
+<script setup lang="ts">
+import { siteNavigation } from '../composables/site'
 </script>
 
 <template>
-  <nav>
-    <ul>
-      <!-- 内部链接 -->
+  <nav aria-label="主导航">
+    <ul class="main-nav__list">
       <li
-        v-for="link of navigation"
-        :key="link._path"
+        v-for="link in siteNavigation"
+        :key="link.to"
       >
-        <NuxtLink
-          :to="link._path"
-          @click="handleClick"
-        >
-          <span class="underline-fx" />
-          {{ link.title }}
+        <NuxtLink :to="link.to">
+          {{ link.label }}
         </NuxtLink>
-      </li>
-      
-      <!-- 外部链接 -->
-      <li
-        v-for="extLink of externalLinks"
-        :key="extLink.href"
-      >
-        <a
-          :href="extLink.href"
-          :target="extLink.target"
-          rel="noopener noreferrer"
-          @click="handleClick"
-        >
-          <span class="underline-fx" />
-          {{ extLink.label }}
-        </a>
       </li>
     </ul>
   </nav>
 </template>
 
-<style scoped lang="ts">
-css({
-  nav: {
-    ul: {
-      display: 'flex',
-      flexDirection: 'column',
-      width: '100%',
-      justifyContent: 'center',
-      gap: '{space.4}',
-      '@sm': {
-        flexDirection: 'row',
-        gap: '{space.8}',
-      },
-      a: {
-        position: 'relative',
-        '&.router-link-active': {
-          color: '{color.primary.500}'
-        },
-        '.underline-fx': {
-          position: 'absolute',
-          bottom: '-4px',
-          width: 0,
-          height: '1px',
-          backgroundColor: 'currentColor',
-          transition: 'width 200ms ease-in-out',
-          'a:hover &&': {
-            width: '100%'
-          }
-        }
-      },
+<style scoped>
+.main-nav__list {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 2.4vw, 2.35rem);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
 
-    }
-  }
-})
+a {
+  position: relative;
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  font-family: var(--specimen-mono);
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-decoration: none;
+}
+
+a::after {
+  position: absolute;
+  right: 0;
+  bottom: .4rem;
+  left: 0;
+  height: 2px;
+  background: var(--specimen-violet);
+  content: '';
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 180ms ease;
+}
+
+a:hover::after,
+a:focus-visible::after,
+a.router-link-active::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
 </style>
