@@ -34,27 +34,29 @@ onBeforeUnmount(() => {
       QYUE://HOME
     </NuxtLink>
 
-    <div class="app-header__desktop-nav">
-      <MainNav />
-    </div>
+    <div class="app-header__actions">
+      <div class="app-header__desktop-nav">
+        <MainNav />
+      </div>
 
-    <button
-      ref="menuButton"
-      class="app-header__menu-button specimen-mono"
-      type="button"
-      aria-controls="site-menu"
-      aria-label="打开站点菜单"
-      :aria-expanded="menuOpen"
-      @click="menuOpen = true"
-    >
-      <span>菜单</span>
-      <svg
-        aria-hidden="true"
-        viewBox="0 0 24 24"
+      <button
+        ref="menuButton"
+        class="app-header__menu-button specimen-mono"
+        type="button"
+        aria-controls="site-menu"
+        aria-label="打开站点菜单"
+        :aria-expanded="menuOpen"
+        @click="menuOpen = true"
       >
-        <path d="M3 6h18M3 12h18M3 18h18" />
-      </svg>
-    </button>
+        <span>菜单</span>
+        <svg
+          aria-hidden="true"
+          viewBox="0 0 24 24"
+        >
+          <path d="M3 6h18M3 12h18M3 18h18" />
+        </svg>
+      </button>
+    </div>
 
     <AppMobileMenu
       :open="menuOpen"
@@ -85,8 +87,14 @@ onBeforeUnmount(() => {
   text-decoration: none;
 }
 
+.app-header__actions {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 2.4vw, 2.35rem);
+}
+
 .app-header__menu-button {
-  display: none;
+  display: inline-flex;
   min-width: 44px;
   min-height: 44px;
   align-items: center;
@@ -107,7 +115,7 @@ onBeforeUnmount(() => {
   stroke-width: 1.8;
 }
 
-@media (max-width: 47.99rem) {
+@media (max-width: 48rem) {
   .app-header {
     width: min(100% - 2rem, 90rem);
   }
@@ -116,8 +124,5 @@ onBeforeUnmount(() => {
     display: none;
   }
 
-  .app-header__menu-button {
-    display: inline-flex;
-  }
 }
 </style>

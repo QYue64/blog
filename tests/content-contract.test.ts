@@ -54,4 +54,20 @@ describe('博客内容契约', () => {
     expect(layout).toContain('<ArticleToc')
     expect(layout).toContain('<ArticlePagination')
   })
+
+  it('降级页和菜单保留中文文案与无障碍语义', () => {
+    const notFound = readFileSync(resolve('components/DocumentDrivenNotFound.vue'), 'utf8')
+    expect(notFound).toContain('QYUE://404')
+    expect(notFound).toContain('这条记录不存在。')
+    expect(notFound).toContain('返回首页 →')
+
+    const header = readFileSync(resolve('components/AppHeader.vue'), 'utf8')
+    expect(header).toContain('aria-controls="site-menu"')
+    expect(header).toContain(':aria-expanded="menuOpen"')
+
+    const menu = readFileSync(resolve('components/AppMobileMenu.vue'), 'utf8')
+    expect(menu).toContain('role="dialog"')
+    expect(menu).toContain('aria-modal="true"')
+    expect(menu).toMatch(/onKeyStroke\('Escape'/)
+  })
 })
