@@ -58,6 +58,12 @@ describe('文章数据工具', () => {
     expect(feed.recent.map(article => article._path)).toEqual(['/articles/middle', '/articles/old'])
   })
 
+  it('首页文章不足时不会产生空日志行', () => {
+    const feed = getHomeFeed([articles[1]], 3)
+    expect(feed.featured?._path).toBe('/articles/new')
+    expect(feed.recent).toEqual([])
+  })
+
   it('使用相同排序关系计算上一篇和下一篇', () => {
     const adjacent = getAdjacentArticles(sortArticles(articles), '/articles/middle')
     expect(adjacent.previous?._path).toBe('/articles/old')
