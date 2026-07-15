@@ -18,6 +18,7 @@ Thumbs.db
 # Local History
 .history
 .superpowers/
+.worktrees/
 
 # VSCode
 .vscode/
