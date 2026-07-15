@@ -66,41 +66,54 @@ const onSend = async (e: any) => {
     method: e.target.method,
     body: data,
     headers: {
-      'Accept': 'application/json'
+      Accept: 'application/json'
     }
   }).then(response => {
     if (response.ok) {
       status.value = alpine.form.successMessage
       e.target.reset()
     } else {
-      // Handle errors from API
+      // 处理接口返回的错误
       response.json().then(data => {
         if (Object.hasOwn(data, 'errors')) {
-          status.value = data["errors"][0].message
-          console.error(data["errors"].map((error: any) => error["message"]).join(", "))
+          status.value = data['errors'][0].message
+          console.error(data['errors'].map((error: any) => error['message']).join(', '))
           setTimeout(() => {
             status.value = 'Send message'
           }, 2000)
         } else {
-          console.error("There was a problem submitting your form")
+          console.error('There was a problem submitting your form')
         }
       })
     }
   }).catch(() => {
-    // Catch all other errors
-    console.error("There was a problem submitting your form")
+    // 捕获其他错误
+    console.error('There was a problem submitting your form')
   })
 }
 
 </script>
 
 <template>
-  <form class="contact-form" method="POST" :action="FORMSPREE_URL" @submit="onSend">
+  <form
+    class="contact-form"
+    method="POST"
+    :action="FORMSPREE_URL"
+    @submit="onSend"
+  >
     <div class="inputs">
-      <Input v-for="(field, index) in form" :key="index" v-model="field.data" :field="field" />
+      <Input
+        v-for="(field, index) in form"
+        :key="index"
+        v-model="field.data"
+        :field="field"
+      />
     </div>
     <div>
-      <Button type="submit" :disabled="!FORMSPREE_URL">
+      <Button
+        type="submit"
+        :disabled="!FORMSPREE_URL"
+      >
         {{ status ? status : submitButtonText }}
       </Button>
     </div>
