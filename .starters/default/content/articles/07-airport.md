@@ -3,6 +3,7 @@ title: 常用机场记录
 description: 常用机场记录
 cover: "https://img.mxai.eu.cc/imgs/cover_1776321264254_1776321264.jpg"
 date: 2024-05-19
+category: LINKS
 ---
 
 

@@ -34,7 +34,7 @@ export default defineNuxtConfig({
     baseURL: process.env.NUXT_APP_BASE_URL || '/',
     head: {
       htmlAttrs: {
-        lang: 'en'
+        lang: 'zh-CN'
       }
     }
   },
@@ -60,6 +60,8 @@ export default defineNuxtConfig({
     resolve('./assets/main.css'),
   ],
   colorMode: {
+    preference: 'light',
+    fallback: 'light',
     classSuffix: ''
   },
   pinceau: {

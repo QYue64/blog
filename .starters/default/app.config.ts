@@ -2,7 +2,7 @@
 export default defineAppConfig({
   alpine: {
     title: '雀雀博客',
-    description: '这里是雀雀的新博客，基于 Alpine 二次开发，一个由 Nuxt 驱动的 Markdown 博客系统.',
+    description: '雀雀的个人技术日志，记录 AI、自托管、DevOps 与数字生活。',
     image: {
       src: '/social-card-preview.png',
       alt: '雀雀博客',

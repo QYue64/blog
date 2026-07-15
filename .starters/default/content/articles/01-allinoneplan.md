@@ -3,6 +3,7 @@ title: All In One 方案变更
 description: All In One 方案变更
 cover: "https://img.mxai.eu.cc/imgs/cover_1776321104590_1776321104.jpg"
 date: 2024-09-23
+category: HOMELAB
 ---
 
 

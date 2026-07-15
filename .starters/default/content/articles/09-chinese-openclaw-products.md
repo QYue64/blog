@@ -3,6 +3,7 @@ title: 国产 OpenClaw 衍生产品大盘点
 description: JVS Claw、Qclaw、ClawX 等国产 OpenClaw 衍生产品对比，包含价格、客户端、功能特性
 cover: "https://img.mxai.eu.cc/imgs/cover_1776321315117_1776321315.jpg"
 date: 2026-03-31
+category: AI / TOOLS
 ---
 
 # 国产 OpenClaw 衍生产品大盘点

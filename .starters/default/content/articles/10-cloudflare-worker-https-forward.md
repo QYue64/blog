@@ -3,6 +3,7 @@ title: 用 Cloudflare Worker 将带端口的 HTTP 地址转为 HTTPS
 description: 使用 Cloudflare Worker 将非标准端口的 HTTP 服务转为干净的 HTTPS 对外暴露
 cover: "https://img.mxai.eu.cc/imgs/cover_1776321345148_1776321345.jpg"
 date: 2026-04-14
+category: INFRASTRUCTURE
 ---
 
 有时候我们的服务跑在一个非标准端口上，比如 `http://1.2.3.4:8080`，想对外暴露一个干净的 `https://api.yourdomain.com`。Cloudflare Worker 可以免费实现这个转发，本文记录完整步骤和踩坑解决方案。

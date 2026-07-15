@@ -3,6 +3,7 @@ title: Zerotier/FRP迁移的记录文档
 description: Zerotier/FRP迁移的记录文档
 cover: "https://img.mxai.eu.cc/imgs/cover_1776321204820_1776321204.jpg"
 date: 2024-07-14
+category: NETWORKING
 ---
 
 
