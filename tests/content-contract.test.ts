@@ -1,4 +1,4 @@
-import { readdirSync, readFileSync } from 'node:fs'
+import { existsSync, readdirSync, readFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { describe, expect, it } from 'vitest'
 
@@ -24,5 +24,13 @@ describe('博客内容契约', () => {
     const articles = readFileSync(resolve('.starters/default/content/2.articles.md'), 'utf8')
     expect(home).toContain('::home-specimen')
     expect(articles).toContain('::articles-list')
+  })
+
+  it('文章索引使用共享日志组件并移除旧卡片组件', () => {
+    const list = readFileSync(resolve('components/content/ArticlesList.vue'), 'utf8')
+    expect(list).toContain('<ArticleLogList')
+    expect(list).toContain('variant="full"')
+    expect(list).not.toContain('ArticlesListItem')
+    expect(existsSync(resolve('components/content/ArticlesListItem.vue'))).toBe(false)
   })
 })

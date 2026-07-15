@@ -51,6 +51,10 @@ withDefaults(defineProps<{
   width: 100%;
 }
 
+.article-log-list.is-full {
+  width: 100%;
+}
+
 .article-log-list__header {
   display: flex;
   align-items: flex-end;
