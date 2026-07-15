@@ -1,7 +1,10 @@
 <script setup lang="ts">
+import { getSiteBrand } from '../composables/site'
+
 const route = useRoute()
 const menuOpen = ref(false)
 const menuButton = ref<HTMLButtonElement | null>(null)
+const siteBrand = computed(() => getSiteBrand(route.path))
 
 const closeMenu = async (restoreFocus = true) => {
   menuOpen.value = false
@@ -31,7 +34,7 @@ onBeforeUnmount(() => {
       class="app-header__brand specimen-mono"
       to="/"
     >
-      QYUE://HOME
+      {{ siteBrand }}
     </NuxtLink>
 
     <div class="app-header__actions">

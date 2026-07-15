@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { externalLinks, keywords, siteNavigation } from '../composables/site'
+import { externalLinks, getSiteBrand, keywords, siteNavigation } from '../composables/site'
 
 describe('站点导航', () => {
   it('只暴露已批准的主导航', () => {
@@ -17,5 +17,11 @@ describe('站点导航', () => {
 
   it('关键词来自真实内容主题', () => {
     expect(keywords).toEqual(['AI', 'HOMELAB', 'DOCKER', 'OPENCLAW', 'CLOUDFLARE', 'NOTES'])
+  })
+
+  it('根据当前内容路由切换品牌标识', () => {
+    expect(getSiteBrand('/')).toBe('QYUE://HOME')
+    expect(getSiteBrand('/articles')).toBe('QYUE://LOGS')
+    expect(getSiteBrand('/articles/10-cloudflare-worker-https-forward')).toBe('QYUE://ENTRY_010')
   })
 })

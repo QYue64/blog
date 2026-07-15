@@ -12,3 +12,16 @@ export const externalLinks = [
 ]
 
 export const keywords = ['AI', 'HOMELAB', 'DOCKER', 'OPENCLAW', 'CLOUDFLARE', 'NOTES']
+
+export const getSiteBrand = (path: string) => {
+  if (path === '/articles' || path === '/articles/') {
+    return 'QYUE://LOGS'
+  }
+
+  const articleMatch = path.match(/^\/articles\/(\d+)(?:-|$)/)
+  if (articleMatch) {
+    return `QYUE://ENTRY_${articleMatch[1].padStart(3, '0')}`
+  }
+
+  return 'QYUE://HOME'
+}
