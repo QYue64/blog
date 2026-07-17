@@ -47,13 +47,13 @@ const alpine = useAppConfig().alpine
 <style scoped>
 .app-footer {
   display: grid;
-  width: min(100% - 2.5rem, 90rem);
+  width: min(calc(100% - (var(--page-gutter) * 2)), var(--page-width));
   grid-template-columns: 1fr auto auto;
   gap: 2rem;
   align-items: start;
   padding: 1.5rem 0 2.5rem;
   margin: clamp(5rem, 10vw, 9rem) auto 0;
-  border-top: 1px solid var(--specimen-ink);
+  border-top: 1.5px solid var(--specimen-ink);
   font-family: var(--specimen-mono);
   font-size: .72rem;
   line-height: 1.6;
@@ -74,7 +74,7 @@ const alpine = useAppConfig().alpine
 
 @media (max-width: 47.99rem) {
   .app-footer {
-    width: min(100% - 2rem, 90rem);
+    width: calc(100% - 2rem);
     grid-template-columns: 1fr;
   }
 }

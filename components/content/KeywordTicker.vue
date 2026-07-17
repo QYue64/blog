@@ -32,9 +32,10 @@ defineProps<{
 <style scoped>
 .keyword-ticker {
   overflow: hidden;
-  border-top: 1px solid var(--specimen-ink);
-  border-bottom: 1px solid var(--specimen-ink);
-  color: var(--specimen-violet);
+  border-top: 1.5px solid var(--specimen-ink);
+  border-bottom: 1.5px solid var(--specimen-ink);
+  background: var(--specimen-ink);
+  color: #fff;
   font-size: .78rem;
   font-weight: 750;
 }
@@ -61,7 +62,8 @@ defineProps<{
 
 .keyword-ticker__group span::after {
   margin-left: 3rem;
-  content: '·';
+  color: var(--specimen-pink);
+  content: '/';
 }
 
 @keyframes specimen-ticker {

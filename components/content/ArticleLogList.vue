@@ -43,7 +43,7 @@ withDefaults(defineProps<{
 
 <style scoped>
 .article-log-list {
-  width: min(100% - 2.5rem, 90rem);
+  width: min(calc(100% - (var(--page-gutter) * 2)), var(--page-width));
   margin-inline: auto;
 }
 
@@ -60,13 +60,29 @@ withDefaults(defineProps<{
   align-items: flex-end;
   justify-content: space-between;
   padding-bottom: 1rem;
-  border-bottom: 3px solid var(--specimen-ink);
+  gap: 1rem;
+  border-bottom: 1.5px solid var(--specimen-ink);
 }
 
 h2 {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: .8rem;
   margin: 0;
-  font-size: clamp(1.75rem, 3vw, 2.5rem);
-  letter-spacing: -.05em;
+  font-size: clamp(2rem, 4vw, 3.65rem);
+  font-weight: 850;
+  letter-spacing: -.065em;
+  line-height: 1;
+}
+
+h2::before {
+  width: 1.15rem;
+  height: 1.15rem;
+  flex: 0 0 auto;
+  background: var(--specimen-violet);
+  clip-path: polygon(50% 0, 61% 38%, 100% 50%, 61% 62%, 50% 100%, 39% 62%, 0 50%, 39% 38%);
+  content: '';
 }
 
 .article-log-list__header a {
@@ -76,7 +92,11 @@ h2 {
 
 @media (max-width: 47.99rem) {
   .article-log-list {
-    width: min(100% - 2rem, 90rem);
+    width: calc(100% - 2rem);
+  }
+
+  .article-log-list__header a {
+    display: none;
   }
 }
 </style>

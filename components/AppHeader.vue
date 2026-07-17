@@ -34,7 +34,13 @@ onBeforeUnmount(() => {
       class="app-header__brand specimen-mono"
       to="/"
     >
-      {{ siteBrand }}
+      <svg
+        aria-hidden="true"
+        viewBox="0 0 32 32"
+      >
+        <path d="M16 1.5 19.6 12 30.5 16l-10.9 4L16 30.5 12.4 20 1.5 16l10.9-4L16 1.5Z" />
+      </svg>
+      <span>{{ siteBrand }}</span>
     </NuxtLink>
 
     <div class="app-header__actions">
@@ -73,21 +79,34 @@ onBeforeUnmount(() => {
   position: relative;
   z-index: 40;
   display: flex;
-  width: min(100% - 2.5rem, 90rem);
-  min-height: 4.5rem;
+  width: min(calc(100% - (var(--page-gutter) * 2)), var(--page-width));
+  min-height: 5.25rem;
   align-items: center;
   justify-content: space-between;
   margin-inline: auto;
-  border-bottom: 1px solid var(--specimen-ink);
+  border-bottom: 1px solid rgb(23 23 43 / 72%);
 }
 
 .app-header__brand {
   display: inline-flex;
   min-height: 44px;
   align-items: center;
-  font-size: .84rem;
-  font-weight: 800;
+  gap: .75rem;
+  font-size: .96rem;
+  font-weight: 850;
+  letter-spacing: -.015em;
   text-decoration: none;
+}
+
+.app-header__brand svg {
+  width: 1.65rem;
+  height: 1.65rem;
+  fill: var(--specimen-violet);
+  transition: transform 220ms ease;
+}
+
+.app-header__brand:hover svg {
+  transform: rotate(45deg);
 }
 
 .app-header__actions {
@@ -97,7 +116,7 @@ onBeforeUnmount(() => {
 }
 
 .app-header__menu-button {
-  display: inline-flex;
+  display: none;
   min-width: 44px;
   min-height: 44px;
   align-items: center;
@@ -120,11 +139,16 @@ onBeforeUnmount(() => {
 
 @media (max-width: 48rem) {
   .app-header {
-    width: min(100% - 2rem, 90rem);
+    width: calc(100% - 2rem);
+    min-height: 4.5rem;
   }
 
   .app-header__desktop-nav {
     display: none;
+  }
+
+  .app-header__menu-button {
+    display: inline-flex;
   }
 
 }

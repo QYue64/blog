@@ -27,15 +27,26 @@ import { siteNavigation } from '../composables/site'
   list-style: none;
 }
 
+.main-nav__list li {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 2.4vw, 2.35rem);
+}
+
+.main-nav__list li:not(:last-child)::after {
+  color: var(--specimen-muted);
+  content: '/';
+  font-family: var(--specimen-mono);
+}
+
 a {
   position: relative;
   display: inline-flex;
   min-height: 44px;
   align-items: center;
-  font-family: var(--specimen-mono);
-  font-size: .78rem;
-  font-weight: 700;
-  letter-spacing: .04em;
+  font-size: .93rem;
+  font-weight: 760;
+  letter-spacing: .02em;
   text-decoration: none;
 }
 
@@ -44,7 +55,7 @@ a::after {
   right: 0;
   bottom: .4rem;
   left: 0;
-  height: 2px;
+  height: 3px;
   background: var(--specimen-violet);
   content: '';
   transform: scaleX(0);

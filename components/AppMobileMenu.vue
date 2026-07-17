@@ -107,7 +107,7 @@ const keepFocusInside = (event: KeyboardEvent) => {
   inset: 0;
   display: grid;
   justify-items: end;
-  background: rgb(23 32 48 / 22%);
+  background: rgb(23 23 43 / 32%);
 }
 
 .mobile-menu {
@@ -118,7 +118,7 @@ const keepFocusInside = (event: KeyboardEvent) => {
   padding: 1rem 1.25rem 2rem;
   border-left: 1px solid var(--specimen-ink);
   background: var(--specimen-ice);
-  box-shadow: -10px 0 0 var(--specimen-violet);
+  box-shadow: -9px 0 0 var(--specimen-violet);
 }
 
 .mobile-menu__header {

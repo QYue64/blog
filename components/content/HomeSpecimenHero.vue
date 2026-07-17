@@ -3,46 +3,56 @@
     class="specimen-hero"
     aria-labelledby="home-title"
   >
-    <div
-      class="specimen-hero__blob"
-      aria-hidden="true"
-    />
-
     <div class="specimen-hero__copy">
       <h1 id="home-title">
-        好奇心，<br>
-        有自己的 <em>homepage.</em>
+        好奇心，<br>有自己的<br><em>homepage.</em>
       </h1>
+
       <p class="specimen-mono">
-        AI · HOMELAB · DEVOPS
+        AI · HOMELAB · DEVOPS <span aria-hidden="true" />
       </p>
+
+      <div class="specimen-hero__actions">
+        <NuxtLink
+          class="specimen-hero__primary"
+          to="/articles"
+        >
+          开始阅读
+        </NuxtLink>
+        <NuxtLink
+          class="specimen-hero__secondary"
+          to="/#about"
+        >
+          认识雀雀
+        </NuxtLink>
+      </div>
     </div>
 
-    <SpecimenWindow
-      title="NOW.TXT"
-      class="specimen-hero__now"
-    >
-      正在研究如何让 AI 工具<br>真正融入日常工作流。
-    </SpecimenWindow>
+    <figure class="specimen-hero__media">
+      <img
+        src="/images/anime/qyue-hero.webp"
+        alt="月光下拿着笔记本、坐在家庭服务器旁的动漫角色"
+        width="1122"
+        height="1402"
+      >
+    </figure>
 
-    <SpecimenWindow
-      title="STATUS"
-      tone="pink"
-      class="specimen-hero__status"
-    >
-      BUILDING<br>
-      DOCUMENTING<br>
-      SHARING
-    </SpecimenWindow>
+    <div
+      class="specimen-hero__speed-lines"
+      aria-hidden="true"
+    />
   </section>
 </template>
 
 <style scoped>
 .specimen-hero {
   position: relative;
-  width: min(100% - 2.5rem, 90rem);
-  min-height: 34rem;
-  padding: clamp(4.5rem, 7vw, 6rem) 0 3rem;
+  display: grid;
+  width: min(calc(100% - (var(--page-gutter) * 2)), var(--page-width));
+  min-height: min(47rem, calc(100svh - 9rem));
+  grid-template-columns: minmax(0, .92fr) minmax(28rem, 1.08fr);
+  align-items: stretch;
+  padding: clamp(3.25rem, 6vw, 6.5rem) 0 clamp(2.5rem, 5vw, 5rem);
   margin-inline: auto;
   overflow: hidden;
 }
@@ -50,129 +60,186 @@
 .specimen-hero__copy {
   position: relative;
   z-index: 3;
+  align-self: start;
+  padding-top: clamp(3rem, 6vw, 5.75rem);
 }
 
 h1 {
-  max-width: 11.5ch;
+  max-width: 9.5ch;
   margin: 0;
-  font-size: clamp(4rem, 8.4vw, 7.5rem);
-  font-weight: 790;
-  letter-spacing: -.08em;
-  line-height: .87;
+  font-size: clamp(4.1rem, 7.2vw, 7.4rem);
+  font-weight: 900;
+  letter-spacing: -.085em;
+  line-height: .9;
 }
 
 h1 em {
   color: var(--specimen-ink);
   font-family: var(--specimen-serif);
-  font-size: 1.02em;
+  font-size: .92em;
   font-weight: 400;
   letter-spacing: -.055em;
 }
 
 .specimen-hero__copy p {
   margin: clamp(2rem, 4vw, 3.5rem) 0 0;
-  font-size: clamp(.74rem, 1.2vw, .95rem);
-  font-weight: 650;
+  color: var(--specimen-violet);
+  font-size: clamp(.78rem, 1.1vw, .95rem);
+  font-weight: 800;
 }
 
-.specimen-hero__blob {
+.specimen-hero__copy p span {
+  display: inline-block;
+  width: .17rem;
+  height: 1.05em;
+  margin-left: .45rem;
+  background: currentColor;
+  vertical-align: -.15em;
+  animation: cursor-blink 1.1s steps(1) infinite;
+}
+
+.specimen-hero__actions {
+  display: flex;
+  align-items: center;
+  gap: clamp(1.5rem, 3vw, 3rem);
+  margin-top: clamp(2.25rem, 4vw, 3.75rem);
+}
+
+.specimen-hero__actions a {
+  display: inline-flex;
+  min-height: 3.6rem;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.specimen-hero__primary {
+  min-width: 12.5rem;
+  padding: 0 2rem;
+  border: 2px solid var(--specimen-ink);
+  background: var(--specimen-violet);
+  box-shadow: 6px 6px 0 var(--specimen-ink);
+  clip-path: polygon(.7rem 0, calc(100% - .7rem) 0, 100% .7rem, 100% calc(100% - .7rem), calc(100% - .7rem) 100%, .7rem 100%, 0 calc(100% - .7rem), 0 .7rem);
+  color: #fff;
+  transition: box-shadow 180ms ease, transform 180ms ease;
+}
+
+.specimen-hero__primary:hover {
+  box-shadow: 3px 3px 0 var(--specimen-ink);
+  transform: translate(3px, 3px);
+}
+
+.specimen-hero__secondary {
+  position: relative;
+  color: var(--specimen-ink);
+}
+
+.specimen-hero__secondary::after {
   position: absolute;
+  right: 0;
+  bottom: .65rem;
+  left: 0;
+  height: 3px;
+  background: var(--specimen-violet);
+  content: '';
+  transition: transform 180ms ease;
+}
+
+.specimen-hero__secondary:hover::after {
+  transform: translateY(-.2rem);
+}
+
+.specimen-hero__media {
+  position: relative;
   z-index: 1;
-  top: clamp(3rem, 8vw, 6rem);
-  right: -5rem;
-  width: clamp(24rem, 48vw, 47rem);
-  aspect-ratio: 1.85;
-  border-radius: 58% 42% 62% 38% / 45% 55% 45% 55%;
-  background: var(--specimen-lime);
-  transform: rotate(-7deg);
-  animation: blob-drift 12s ease-in-out infinite alternate;
+  align-self: stretch;
+  min-height: 0;
+  margin: 0 -2rem -5rem -5rem;
+  overflow: hidden;
 }
 
-.specimen-hero__now,
-.specimen-hero__status {
+.specimen-hero__media img {
   position: absolute;
-  z-index: 4;
-  width: clamp(13rem, 20vw, 18rem);
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 36%;
+  mask-image: linear-gradient(to right, transparent 0, #000 13%, #000 100%);
 }
 
-.specimen-hero__now {
-  top: clamp(4.5rem, 8vw, 6.5rem);
-  right: clamp(13rem, 22vw, 22rem);
-  transform: rotate(-1deg);
-  animation: window-float 6s ease-in-out infinite alternate;
+.specimen-hero__speed-lines {
+  position: absolute;
+  z-index: 0;
+  top: 1rem;
+  right: 39%;
+  width: 13rem;
+  height: 8rem;
+  background: repeating-linear-gradient(25deg, transparent 0 13px, rgb(108 92 231 / 38%) 14px 15px, transparent 16px 25px);
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+  opacity: .8;
 }
 
-.specimen-hero__status {
-  right: clamp(1rem, 5vw, 5rem);
-  bottom: clamp(4.5rem, 8vw, 7rem);
-  transform: rotate(1deg);
-  animation: window-float 7s 1.2s ease-in-out infinite alternate-reverse;
+@keyframes cursor-blink {
+  50% { opacity: 0; }
 }
 
-@keyframes blob-drift {
-  to { transform: translate3d(1.25rem, -.75rem, 0) rotate(-4deg); }
-}
-
-@keyframes window-float {
-  to { transform: translate3d(0, -.6rem, 0) rotate(.5deg); }
-}
-
-@media (max-width: 61.99rem) {
+@media (max-width: 67rem) {
   .specimen-hero {
     min-height: 43rem;
+    grid-template-columns: minmax(0, 1fr) minmax(24rem, .85fr);
   }
 
-  .specimen-hero__blob {
-    top: 18rem;
-    right: -9rem;
+  h1 {
+    font-size: clamp(3.8rem, 8.5vw, 6.2rem);
   }
 
-  .specimen-hero__now {
-    top: 22rem;
-    right: 8rem;
-  }
-
-  .specimen-hero__status {
-    right: 1rem;
-    bottom: 3rem;
+  .specimen-hero__media {
+    margin-left: -7rem;
   }
 }
 
 @media (max-width: 47.99rem) {
   .specimen-hero {
-    width: min(100% - 2rem, 90rem);
-    min-height: 42rem;
-    padding-top: 4.25rem;
+    width: calc(100% - 2rem);
+    min-height: auto;
+    grid-template-columns: 1fr;
+    padding: 3.5rem 0 0;
+    overflow: visible;
   }
 
   h1 {
-    max-width: 8.5ch;
-    font-size: clamp(3.65rem, 18vw, 5.1rem);
+    max-width: 8.8ch;
+    font-size: clamp(3.45rem, 17vw, 5.2rem);
   }
 
-  h1 em {
-    display: block;
+  .specimen-hero__copy {
+    padding-top: 0;
   }
 
-  .specimen-hero__blob {
-    top: 19rem;
-    right: -10rem;
-    width: 28rem;
+  .specimen-hero__actions {
+    gap: 1.35rem;
   }
 
-  .specimen-hero__now,
-  .specimen-hero__status {
-    width: 12rem;
+  .specimen-hero__primary {
+    min-width: 10rem;
+    padding-inline: 1.4rem;
   }
 
-  .specimen-hero__now {
-    top: 22.5rem;
-    right: 5.5rem;
+  .specimen-hero__media {
+    height: min(34rem, 133vw);
+    margin: 1.75rem -1rem 0 -4rem;
   }
 
-  .specimen-hero__status {
-    right: .5rem;
-    bottom: 2.25rem;
+  .specimen-hero__media img {
+    object-position: center 28%;
+  }
+
+  .specimen-hero__speed-lines {
+    top: 46%;
+    right: -1rem;
   }
 }
 </style>

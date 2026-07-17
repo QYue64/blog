@@ -1,16 +1,20 @@
 :root {
   color-scheme: light;
-  --specimen-ice: #edf4ff;
-  --specimen-ink: #172030;
-  --specimen-lime: #c9ff5c;
-  --specimen-violet: #7656ef;
-  --specimen-pink: #ffb8db;
-  --specimen-muted: #596578;
-  --specimen-line: #9ba7ba;
-  --specimen-white: rgb(255 255 255 / 87%);
+  --specimen-ice: #f7f6ff;
+  --specimen-ink: #17172b;
+  --specimen-lime: #ffd76a;
+  --specimen-violet: #6c5ce7;
+  --specimen-pink: #ff8f9c;
+  --specimen-muted: #66627b;
+  --specimen-line: #b9b5ce;
+  --specimen-white: #fff;
+  --specimen-violet-soft: #ebe8ff;
+  --specimen-coral-soft: #fff0f2;
   --specimen-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  --specimen-sans: Inter, "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+  --specimen-sans: Inter, "Arial Nova", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
   --specimen-serif: Georgia, "Songti SC", "STSong", serif;
+  --page-gutter: clamp(1.25rem, 4vw, 4rem);
+  --page-width: 92rem;
 }
 
 html {
@@ -26,6 +30,18 @@ body {
   color: var(--specimen-ink);
   font-family: var(--specimen-sans);
   text-rendering: optimizeLegibility;
+}
+
+body::before {
+  position: fixed;
+  z-index: -1;
+  inset: 0;
+  background-image: radial-gradient(circle, rgb(108 92 231 / 12%) 1px, transparent 1px);
+  background-position: calc(100% - 2rem) 8rem;
+  background-size: 7px 7px;
+  content: '';
+  mask-image: linear-gradient(120deg, transparent 60%, #000 100%);
+  pointer-events: none;
 }
 
 *,
@@ -64,6 +80,34 @@ button {
   font-family: var(--specimen-mono);
   letter-spacing: .04em;
   text-transform: uppercase;
+}
+
+.anime-section-title {
+  display: flex;
+  align-items: center;
+  gap: .85rem;
+  margin: 0;
+  color: var(--specimen-ink);
+  font-size: clamp(2rem, 4vw, 3.65rem);
+  font-weight: 850;
+  letter-spacing: -.065em;
+  line-height: 1;
+}
+
+.anime-section-title::before {
+  width: 1.15rem;
+  height: 1.15rem;
+  flex: 0 0 auto;
+  background: var(--specimen-violet);
+  clip-path: polygon(50% 0, 61% 38%, 100% 50%, 61% 62%, 50% 100%, 39% 62%, 0 50%, 39% 38%);
+  content: '';
+}
+
+.anime-section-title::after {
+  height: 1px;
+  flex: 1;
+  background: var(--specimen-ink);
+  content: '';
 }
 
 .sr-only {
