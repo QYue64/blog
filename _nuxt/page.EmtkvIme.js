@@ -1,1 +1,0 @@
-import{_ as a,c as t,V as o,o as s}from"./entry.zShkHNFt.js";const c={},n={class:"page-layout"};function r(e,_){return s(),t("main",n,[o(e.$slots,"default",{},void 0,!0)])}const f=a(c,[["render",r],["__scopeId","data-v-6f25717a"]]);export{f as default};
