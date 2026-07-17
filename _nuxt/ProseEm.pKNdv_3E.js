@@ -1,0 +1,1 @@
+import{_ as o,o as r,c as t,V as n}from"./entry.zShkHNFt.js";const s={};function c(e,a){return r(),t("em",null,[n(e.$slots,"default",{},void 0,!0)])}const d=o(s,[["render",c],["__scopeId","data-v-34e73706"]]);export{d as default};
