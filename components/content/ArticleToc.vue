@@ -53,9 +53,14 @@ onBeforeUnmount(() => {
     class="article-toc"
     aria-label="文章目录"
   >
-    <div class="article-toc__title specimen-mono">
-      <span>ON_THIS_PAGE</span>
-      <span aria-hidden="true">≡</span>
+    <div class="article-toc__title">
+      <span>本页目录</span>
+      <svg
+        aria-hidden="true"
+        viewBox="0 0 32 32"
+      >
+        <path d="M16 1.5 19.6 12 30.5 16l-10.9 4L16 30.5 12.4 20 1.5 16l10.9-4L16 1.5Z" />
+      </svg>
     </div>
     <nav>
       <a
@@ -64,7 +69,20 @@ onBeforeUnmount(() => {
         :href="`#${link.id}`"
         :class="{ 'is-child': link.depth > 2 }"
         :aria-current="activeId === link.id ? 'location' : undefined"
+        @click="activeId = link.id"
       >
+        <span
+          class="article-toc__mark specimen-mono"
+          aria-hidden="true"
+        >
+          <svg
+            v-if="activeId === link.id"
+            viewBox="0 0 32 32"
+          >
+            <path d="M16 1.5 19.6 12 30.5 16l-10.9 4L16 30.5 12.4 20 1.5 16l10.9-4L16 1.5Z" />
+          </svg>
+          <span v-else>//</span>
+        </span>
         {{ link.text }}
       </a>
     </nav>
@@ -74,59 +92,82 @@ onBeforeUnmount(() => {
 <style scoped>
 .article-toc {
   position: sticky;
-  top: 2.5rem;
+  top: 2rem;
   align-self: start;
-  padding: 2rem 0 2rem 1.5rem;
+  max-height: calc(100vh - 4rem);
+  padding: 3rem 0 2rem clamp(1.25rem, 2.5vw, 2.5rem);
+  overflow-y: auto;
 }
 
 .article-toc__title {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-bottom: 1rem;
-  color: var(--specimen-muted);
-  font-size: .68rem;
-  font-weight: 750;
+  gap: .75rem;
+  padding: 0 0 .85rem;
+  border-bottom: 1px solid rgb(108 92 231 / 50%);
+  color: var(--specimen-ink);
+  font-size: .95rem;
+  font-weight: 800;
+}
+
+.article-toc__title svg {
+  width: 1rem;
+  height: 1rem;
+  flex: 0 0 auto;
+  fill: var(--specimen-violet);
 }
 
 .article-toc nav {
   display: grid;
-  gap: .35rem;
+  gap: .15rem;
+  margin-top: 1rem;
 }
 
 .article-toc a {
-  position: relative;
-  display: block;
-  padding: .7rem .5rem .7rem 1rem;
-  color: var(--specimen-muted);
-  font-size: .8rem;
+  display: grid;
+  grid-template-columns: 1.2rem minmax(0, 1fr);
+  gap: .6rem;
+  align-items: start;
+  padding: .58rem 0;
+  color: var(--specimen-ink);
+  font-size: .84rem;
   line-height: 1.5;
   text-decoration: none;
 }
 
-.article-toc a::before {
-  position: absolute;
-  top: .65rem;
-  bottom: .65rem;
-  left: 0;
-  width: 2px;
-  background: var(--specimen-line);
-  content: '';
+.article-toc__mark {
+  display: inline-flex;
+  height: 1.25rem;
+  align-items: center;
+  color: var(--specimen-pink);
+  font-size: .72rem;
+  font-weight: 850;
+  letter-spacing: -.18em;
+}
+
+.article-toc__mark svg {
+  width: .95rem;
+  height: .95rem;
+  fill: var(--specimen-violet);
 }
 
 .article-toc a.is-child {
-  padding-left: 1.75rem;
-  font-size: .75rem;
+  padding-left: .9rem;
+  color: var(--specimen-muted);
+  font-size: .78rem;
 }
 
 .article-toc a:hover,
 .article-toc a:focus-visible,
 .article-toc a[aria-current='location'] {
   color: var(--specimen-violet);
+  font-weight: 750;
 }
 
-.article-toc a[aria-current='location']::before {
-  width: 4px;
-  background: var(--specimen-violet);
+.article-toc a[aria-current='location'] {
+  margin-left: -.85rem;
+  padding-left: .65rem;
+  border-left: 4px solid var(--specimen-violet);
 }
 </style>

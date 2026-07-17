@@ -76,10 +76,12 @@ onBeforeUnmount(() => {
 
 <style scoped>
 .prose-pre {
-  margin-block: 1.75rem;
+  margin-block: 2.25rem;
   overflow: hidden;
-  border: 1px solid var(--specimen-ink);
-  background: var(--specimen-white);
+  border: 1px solid rgb(108 92 231 / 70%);
+  background: #151a31;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 1rem), calc(100% - 1rem) 100%, 0 100%);
+  box-shadow: 7px 8px 0 var(--specimen-violet-soft);
 }
 
 .prose-pre__bar {
@@ -87,11 +89,12 @@ onBeforeUnmount(() => {
   min-height: 3rem;
   align-items: center;
   justify-content: space-between;
-  padding: .25rem .8rem;
-  border-bottom: 1px solid var(--specimen-ink);
+  padding: .2rem .9rem;
+  border-bottom: 1px solid rgb(255 255 255 / 24%);
   background: var(--specimen-pink);
-  font-size: .7rem;
-  font-weight: 750;
+  color: var(--specimen-white);
+  font-size: .72rem;
+  font-weight: 800;
 }
 
 .prose-pre button {
@@ -100,11 +103,13 @@ onBeforeUnmount(() => {
   min-height: 44px;
   align-items: center;
   gap: .45rem;
-  padding: 0 .3rem;
+  padding: 0 .2rem 0 .85rem;
   border: 0;
+  border-left: 1px solid rgb(255 255 255 / 48%);
   background: transparent;
-  font-size: .7rem;
-  font-weight: 750;
+  color: var(--specimen-white);
+  font-size: .68rem;
+  font-weight: 800;
 }
 
 .prose-pre button svg {
@@ -118,14 +123,14 @@ onBeforeUnmount(() => {
 
 .prose-pre pre {
   max-width: 100%;
-  padding: 1rem 1.2rem;
+  padding: 1.15rem 1.35rem 1.35rem;
   margin: 0;
   overflow-x: auto;
   background: transparent !important;
-  color: var(--specimen-ink);
+  color: #f3f2ff;
   font-family: var(--specimen-mono);
-  font-size: .84rem;
-  line-height: 1.7;
+  font-size: .86rem;
+  line-height: 1.68;
   white-space: pre;
 }
 
@@ -134,5 +139,20 @@ onBeforeUnmount(() => {
   min-width: max-content;
   background: transparent !important;
   font: inherit;
+}
+
+.prose-pre :deep(code span) {
+  color: var(--shiki-dark, #f3f2ff) !important;
+}
+
+@media (max-width: 47.99rem) {
+  .prose-pre {
+    margin-inline: -.4rem;
+  }
+
+  .prose-pre pre {
+    padding-inline: 1rem;
+    font-size: .78rem;
+  }
 }
 </style>
