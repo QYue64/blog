@@ -63,6 +63,18 @@ const date = computed(() => formatArticleDate(props.article.date))
 
       <span class="article-log-row__content">
         <strong>{{ article.title }}</strong>
+        <span
+          v-if="variant === 'full' && article.description && article.description !== article.title"
+          class="article-log-row__description"
+        >
+          {{ article.description }}
+        </span>
+        <span
+          v-if="variant === 'full'"
+          class="article-log-row__mobile-meta specimen-mono"
+        >
+          {{ article.category || 'NOTE' }} / {{ date }}
+        </span>
       </span>
 
       <span class="article-log-row__category specimen-mono">
@@ -82,15 +94,6 @@ const date = computed(() => formatArticleDate(props.article.date))
         </svg>
       </span>
     </template>
-
-    <span
-      v-if="variant === 'full'"
-      class="article-log-row__preview specimen-mono"
-      aria-hidden="true"
-    >
-      PREVIEW_{{ number }}.LOG<br>
-      {{ article.description || article.title }}
-    </span>
   </NuxtLink>
 </template>
 
@@ -164,6 +167,10 @@ const date = computed(() => formatArticleDate(props.article.date))
 
 .article-log-row__date {
   text-align: right;
+}
+
+.article-log-row__mobile-meta {
+  display: none;
 }
 
 .article-log-row__arrow {
@@ -259,28 +266,64 @@ const date = computed(() => formatArticleDate(props.article.date))
   transform: scale(1.035);
 }
 
-.article-log-row__preview {
-  position: absolute;
-  z-index: 5;
-  top: 65%;
-  right: 16%;
-  display: none;
-  width: 16rem;
+.article-log-row.is-full {
+  grid-template-columns: var(--logs-columns, 6.25rem minmax(0, 1fr) 10rem 9rem 2.5rem);
+  min-height: 7.5rem;
+  gap: 1rem;
   padding: 1rem;
-  border: 1px solid var(--specimen-ink);
-  background: var(--specimen-pink);
-  box-shadow: 7px 8px 0 var(--specimen-ink);
-  color: var(--specimen-ink);
-  font-size: .68rem;
-  line-height: 1.65;
-  transform: rotate(1deg);
+  border-bottom: 1px solid var(--specimen-ink);
+  overflow: hidden;
 }
 
-@media (hover: hover) and (min-width: 64rem) {
-  .article-log-row.is-full:hover .article-log-row__preview,
-  .article-log-row.is-full:focus-visible .article-log-row__preview {
-    display: block;
-  }
+.article-log-row.is-full:hover,
+.article-log-row.is-full:focus-visible {
+  background: var(--specimen-white);
+  box-shadow: inset 6px 0 0 var(--specimen-violet);
+}
+
+.article-log-row.is-full .article-log-row__number {
+  position: relative;
+  color: var(--specimen-ink);
+  font-size: clamp(2.35rem, 3.4vw, 3.35rem);
+}
+
+.article-log-row.is-full .article-log-row__number::after {
+  position: absolute;
+  top: 50%;
+  right: -.3rem;
+  width: 1.5rem;
+  margin-left: 0;
+  transform: translateY(-50%) rotate(-55deg);
+}
+
+.article-log-row.is-full .article-log-row__content strong {
+  max-width: 34ch;
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  font-weight: 850;
+  letter-spacing: -.04em;
+  line-height: 1.15;
+}
+
+.article-log-row.is-full .article-log-row__description {
+  max-width: 58rem;
+  margin-top: .65rem;
+  font-size: .84rem;
+  line-height: 1.55;
+  -webkit-line-clamp: 1;
+}
+
+.article-log-row.is-full .article-log-row__category {
+  color: var(--specimen-violet);
+  font-size: .72rem;
+  font-weight: 800;
+}
+
+.article-log-row.is-full .article-log-row__date {
+  font-size: .72rem;
+}
+
+.article-log-row.is-full .article-log-row__arrow {
+  justify-self: end;
 }
 
 @media (max-width: 63.99rem) {
@@ -290,6 +333,10 @@ const date = computed(() => formatArticleDate(props.article.date))
 
   .article-log-row.is-featured {
     grid-template-columns: minmax(0, 1fr) minmax(20rem, .8fr);
+  }
+
+  .article-log-row.is-full {
+    grid-template-columns: var(--logs-columns, 4.75rem minmax(0, 1fr) 8.5rem 2rem);
   }
 
   .article-log-row__category {
@@ -311,6 +358,19 @@ const date = computed(() => formatArticleDate(props.article.date))
     padding: 0;
   }
 
+  .article-log-row.is-full {
+    min-height: 0;
+    grid-template-columns: 2.8rem minmax(0, 1fr) 2rem;
+    align-items: start;
+    gap: .75rem;
+    padding: 1.25rem .2rem;
+  }
+
+  .article-log-row.is-full:hover,
+  .article-log-row.is-full:focus-visible {
+    box-shadow: inset 4px 0 0 var(--specimen-violet);
+  }
+
   .article-log-row__date {
     display: none;
   }
@@ -326,6 +386,32 @@ const date = computed(() => formatArticleDate(props.article.date))
 
   .article-log-row__number::after {
     display: none;
+  }
+
+  .article-log-row.is-full .article-log-row__number {
+    padding-top: .05rem;
+    font-size: 1.35rem;
+  }
+
+  .article-log-row.is-full .article-log-row__content strong {
+    max-width: none;
+    font-size: 1.12rem;
+    line-height: 1.25;
+  }
+
+  .article-log-row.is-full .article-log-row__description {
+    margin-top: .5rem;
+    font-size: .8rem;
+    -webkit-line-clamp: 2;
+  }
+
+  .article-log-row.is-full .article-log-row__mobile-meta {
+    display: block;
+    margin-top: .65rem;
+    color: var(--specimen-violet);
+    font-size: .58rem;
+    font-weight: 800;
+    line-height: 1.5;
   }
 
   .article-log-row__featured-copy {

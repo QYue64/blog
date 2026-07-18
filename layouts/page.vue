@@ -6,7 +6,7 @@
 
 <style scoped>
 .page-layout {
-  width: min(100% - 2.5rem, 72rem);
+  width: min(calc(100% - (var(--page-gutter) * 2)), var(--page-width));
   margin-inline: auto;
 }
 
