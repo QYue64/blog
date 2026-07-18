@@ -1,0 +1,1 @@
+import{_ as t,c as a,W as o,o as s}from"./entry.UIRyfFfg.js";const c={},n={class:"page-layout"};function r(e,_){return s(),a("main",n,[o(e.$slots,"default",{},void 0,!0)])}const l=t(c,[["render",r],["__scopeId","data-v-118c3659"]]);export{l as default};
