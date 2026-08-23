@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title description">
+  <title id="title">AI State 2026</title>
+  <desc id="description">紫色与珊瑚色组成的动漫杂志风人工智能主题封面</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8f5ff" />
+      <stop offset="1" stop-color="#efeaff" />
+    </linearGradient>
+    <pattern id="dots" width="18" height="18" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="2" fill="#6c5ce7" opacity=".24" />
+    </pattern>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="22" stdDeviation="24" flood-color="#352b7d" flood-opacity=".18" />
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#background)" />
+  <path d="M0 0h550L170 900H0Z" fill="#6c5ce7" />
+  <path d="M1600 0v900h-330L1490 0Z" fill="#ff6b81" opacity=".94" />
+  <path d="M0 708 930 0h176L178 900H0Z" fill="#ff6b81" opacity=".9" />
+  <rect x="80" y="80" width="330" height="280" fill="url(#dots)" />
+  <rect x="1210" y="560" width="300" height="260" fill="url(#dots)" opacity=".65" />
+  <g filter="url(#shadow)">
+    <path d="M430 112h736l76 76v524l-76 76H430l-76-76V188Z" fill="#fff" stroke="#312a60" stroke-width="8" />
+  </g>
+  <g fill="none" stroke="#6c5ce7" stroke-width="7">
+    <circle cx="798" cy="450" r="185" />
+    <circle cx="798" cy="450" r="116" stroke-dasharray="18 20" />
+    <path d="M798 265v-70M798 705v-70M613 450h-70M1053 450h-70" />
+    <path d="m668 320-51-51M979 631l-51-51M928 320l51-51M617 631l51-51" />
+  </g>
+  <path d="M798 302 835 413l116 37-116 37-37 111-37-111-116-37 116-37Z" fill="#ff6b81" stroke="#312a60" stroke-width="8" />
+  <circle cx="798" cy="450" r="42" fill="#312a60" />
+  <g fill="#312a60" font-family="Arial, Helvetica, sans-serif">
+    <text x="454" y="204" font-size="34" font-weight="700" letter-spacing="8">QYUE // FIELD NOTE</text>
+    <text x="454" y="700" font-size="118" font-weight="900" letter-spacing="-6">AI STATE</text>
+    <text x="1018" y="700" font-size="42" font-weight="800" fill="#6c5ce7">2026</text>
+  </g>
+  <g fill="#fff" font-family="Arial, Helvetica, sans-serif" font-weight="900">
+    <text x="96" y="790" font-size="132" opacity=".92">011</text>
+    <text x="1345" y="170" font-size="40" transform="rotate(90 1345 170)" letter-spacing="9">AGENT ERA</text>
+  </g>
+  <g fill="#312a60">
+    <path d="M1180 108 1192 142l36 12-36 12-12 34-12-34-36-12 36-12Z" />
+    <path d="M378 700 390 734l36 12-36 12-12 34-12-34-36-12 36-12Z" />
+  </g>
+  <g stroke="#312a60" stroke-width="9">
+    <path d="M1260 760h150M1290 790h150M1320 820h150" />
+  </g>
+</svg>
