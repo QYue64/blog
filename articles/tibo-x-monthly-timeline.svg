@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title description">
+  <title id="title">Tibo X Log</title>
+  <desc id="description">紫色与珊瑚色动漫杂志风的 Tibo X 月度时间线封面</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fbf8ff" />
+      <stop offset="1" stop-color="#eee8ff" />
+    </linearGradient>
+    <pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="4" cy="4" r="2.5" fill="#6c5ce7" opacity=".24" />
+    </pattern>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="22" stdDeviation="24" flood-color="#352b7d" flood-opacity=".2" />
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#background)" />
+  <path d="M0 0h500L165 900H0Z" fill="#6c5ce7" />
+  <path d="M1600 0v900h-350L1480 0Z" fill="#ff6b81" />
+  <path d="M0 735 985 0h170L170 900H0Z" fill="#ff6b81" opacity=".9" />
+  <rect x="70" y="74" width="330" height="290" fill="url(#dots)" />
+  <rect x="1215" y="560" width="310" height="260" fill="url(#dots)" opacity=".7" />
+  <g filter="url(#shadow)">
+    <path d="M410 110h770l72 72v536l-72 72H410l-72-72V182Z" fill="#fff" stroke="#312a60" stroke-width="8" />
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#312a60">
+    <text x="438" y="202" font-size="34" font-weight="700" letter-spacing="8">QYUE // MONTHLY SIGNAL</text>
+    <text x="438" y="702" font-size="108" font-weight="900" letter-spacing="-5">TIBO / X LOG</text>
+  </g>
+  <g stroke="#312a60" stroke-width="9" fill="none" stroke-linecap="round">
+    <path d="M606 286v304" />
+    <path d="M606 320h330M606 438h430M606 556h270" />
+  </g>
+  <g stroke="#312a60" stroke-width="8">
+    <circle cx="606" cy="320" r="24" fill="#ff6b81" />
+    <circle cx="606" cy="438" r="24" fill="#6c5ce7" />
+    <circle cx="606" cy="556" r="24" fill="#fff" />
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" font-weight="900">
+    <text x="970" y="342" font-size="72" fill="#6c5ce7">20M</text>
+    <text x="1080" y="458" font-size="34" fill="#ff6b81" letter-spacing="4">AGENT ERA</text>
+    <text x="915" y="574" font-size="30" fill="#312a60" letter-spacing="3">JUL 24 — AUG 23</text>
+  </g>
+  <g fill="#fff" font-family="Arial, Helvetica, sans-serif" font-weight="900">
+    <text x="92" y="800" font-size="132" opacity=".94">012</text>
+    <text x="1368" y="155" font-size="40" transform="rotate(90 1368 155)" letter-spacing="9">CODEX SIGNAL</text>
+  </g>
+  <g fill="#312a60">
+    <path d="M1155 115 1168 151l38 13-38 13-13 36-13-36-38-13 38-13Z" />
+    <path d="M380 694 392 728l36 12-36 12-12 34-12-34-36-12 36-12Z" />
+  </g>
+  <g stroke="#312a60" stroke-width="9">
+    <path d="M1250 760h160M1280 792h160M1310 824h160" />
+  </g>
+</svg>
