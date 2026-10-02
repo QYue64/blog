@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title description">
+  <title id="title">AI Model Release Radar — September 2026</title>
+  <desc id="description">紫色与珊瑚色动漫杂志风模型发布雷达封面</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fbf8ff" />
+      <stop offset="1" stop-color="#eae5ff" />
+    </linearGradient>
+    <pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="4" cy="4" r="2.5" fill="#6c5ce7" opacity=".24" />
+    </pattern>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="22" stdDeviation="24" flood-color="#352b7d" flood-opacity=".2" />
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#background)" />
+  <path d="M0 0h490L165 900H0Z" fill="#6c5ce7" />
+  <path d="M1600 0v900h-340L1460 0Z" fill="#ff6b81" />
+  <path d="M0 735 985 0h170L170 900H0Z" fill="#ff6b81" opacity=".9" />
+  <rect x="70" y="74" width="330" height="290" fill="url(#dots)" />
+  <rect x="1215" y="560" width="310" height="260" fill="url(#dots)" />
+  <path d="M420 110h750l72 72v536l-72 72H420l-72-72V182Z" fill="#fff" stroke="#312a60" stroke-width="8" filter="url(#shadow)" />
+  <g font-family="Arial, Helvetica, sans-serif" fill="#312a60">
+    <text x="448" y="202" font-size="34" font-weight="700" letter-spacing="7">QYUE // RELEASE RADAR</text>
+    <text x="448" y="702" font-size="105" font-weight="900" letter-spacing="-4">MODEL / LOG</text>
+    <text x="448" y="752" font-size="26" font-weight="700" letter-spacing="5">2026.09.02 — 2026.10.02</text>
+  </g>
+  <g fill="none" stroke="#6c5ce7" stroke-width="6">
+    <circle cx="800" cy="428" r="166" />
+    <circle cx="800" cy="428" r="109" stroke-dasharray="10 14" />
+    <circle cx="800" cy="428" r="53" />
+    <path d="M590 428h420M800 218v420" />
+    <path d="M800 428 934 330" stroke="#ff6b81" stroke-width="12" />
+  </g>
+  <path d="M800 428 935 330A166 166 0 0 1 966 428Z" fill="#ff6b81" opacity=".16" />
+  <g stroke="#312a60" stroke-width="6">
+    <circle cx="730" cy="347" r="14" fill="#ff6b81" />
+    <circle cx="934" cy="330" r="17" fill="#ff6b81" />
+    <circle cx="874" cy="499" r="14" fill="#6c5ce7" />
+    <circle cx="696" cy="499" r="14" fill="#fff" />
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="24" letter-spacing="3" fill="#312a60">
+    <text x="470" y="315">REASON</text>
+    <text x="1010" y="345">VOICE</text>
+    <text x="470" y="565">VISION</text>
+    <text x="990" y="555">DECIDE</text>
+  </g>
+  <g fill="#fff" font-family="Arial, Helvetica, sans-serif" font-weight="900">
+    <text x="92" y="800" font-size="132">013</text>
+    <text x="1368" y="155" font-size="40" transform="rotate(90 1368 155)" letter-spacing="9">FRONTIER SIGNAL</text>
+  </g>
+  <path d="M1155 115 1168 151l38 13-38 13-13 36-13-36-38-13 38-13Z" fill="#312a60" />
+</svg>
