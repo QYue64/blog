@@ -1,0 +1,138 @@
+---
+title: "OpenAI × Tibo 近况：从 Codex 用量优化到 GPT-6 Cyber（10.15—11.12）"
+description: 按时间倒序追踪 2026 年 10 月 15 日至 11 月 12 日 OpenAI 与 Tibo 的主要动态，梳理模型、Dots、套餐额度、企业生态和安全治理，并区分发布与预告
+cover: "https://witque.cn/articles/openai-tibo-2026-11.svg"
+date: 2026-11-12
+category: AI / PEOPLE
+layout: article
+---
+
+距离上一篇 DevDay 追踪过去了近一个月。OpenAI 的更新开始从大会上的能力展示，进入更具体的问题：Agent 如何持续工作，额度为什么不够用，企业怎样采购，能力变强后又怎样停止危险的执行。
+
+这篇文章整理 **2026 年 10 月 15 日至 11 月 12 日**公开可核验的主要事件，同时追踪 Tibo（X：**@thsottiaux**）的产品沟通。时间线最新在前；官方公告、本人说法与个人判断分别归因，未覆盖每条回复和全部客户案例。
+
+日期按原公告或 X 原帖所示日期记录，不统一换算北京时间；跨时区事件可能相差一天。本文是截至 11 月 12 日整理时的快照，当天尚未发生或未核实的发布不会当作既成事实。
+
+## 11 月 11 日：Tibo 预告周四可能有 Codex 动静
+
+Tibo 先说，已经有一阵子没有 reset，或许该从“地下室”出来了；随后补充，周四让他感觉很有 Codex 的气息，也许适合来一次 banked reset。
+
+关键词是 **“也许”**。这两条帖子没有给出确定的新模型名称、覆盖套餐或到账时间。因此，它们属于预告信号，不能写成“11 月 12 日已经发放重置”。[第一条原帖](https://x.com/thsottiaux/status/2120410006273380750)、[后续原帖](https://x.com/thsottiaux/status/2120410480204525936)
+
+同一天，OpenAI 发布面向退役军人与转业军人的 Plus 项目进展：过去一年已有超过两万人领取一年免费使用资格。这是既有项目的阶段性回顾，不是面向所有用户新推出的免费 Plus。[官方进展](https://openai.com/index/chatgpt-plus-for-veterans/)
+
+## 11 月 10 日：商家进入 ChatGPT，Dots 扩展电脑控制
+
+**OpenAI：Businesses in ChatGPT 进入 Beta。** 商家可以通过 Business Hub 认领企业、维护资料和产品信息，并查看聚合后的互动洞察。Business Agent 则首先面向符合条件的美国电商与在线服务企业。
+
+商家的 Agent 对话有明确标识，与 ChatGPT 的独立回答分开；企业资料认领与 Business Agent 的准入范围也不同，不能理解成全球商家都能立即上线自己的 Agent。[官方发布](https://openai.com/index/introducing-businesses-chatgpt/)
+
+**Tibo：Dots 可以控制更多机器。** 他表示，除了默认提供的小型云端电脑，Dots 现在还能控制多台机器。原帖没有逐项说明所有系统和账号的覆盖情况，本文只确认这一能力方向，不把它扩大为对任何设备的无限访问。[本人原帖](https://x.com/thsottiaux/status/2120021043876106429)
+
+这两条更新放在一起，体现了一个产品趋势：Agent 的工作入口与执行环境都在增加。我的关注点是，这些入口能否保留清楚的身份、授权与操作记录。
+
+## 11 月 9 日：企业采购与研究安全，各补一块基础设施
+
+ChatGPT Enterprise 上架 AWS Marketplace，企业可以沿用 AWS 的采购和账单关系，符合条件的支出还能计入 AWS 承诺消费。它改变的是采购路径；通过 Marketplace 购买 ChatGPT Enterprise，与在 Bedrock 调模型是两种不同的使用方式。[官方公告](https://openai.com/index/chatgpt-enterprise-aws-marketplace/)
+
+OpenAI 同期介绍了 **Control Room**：一个追踪研究基础设施中模型工作负载、在安全或安全防护问题出现时停止模型输出的中央系统。官方称，从收到停止指令到阻止任务继续推进，最大延迟为 35 秒；机制位于推理层，服务失效时默认拒绝继续推理。
+
+这说的是内部研究工作负载的控制系统，并非向所有开发者开放的通用“一键停机”产品。[Control Room 说明](https://openai.com/index/control-room/)
+
+## 11 月 8 日：Pro 50 是征求意见，还不是套餐发布
+
+Tibo 询问社区：Pro 50 是否有意义，大家怎么看。
+
+这条信息值得跟踪，因为它涉及订阅价格梯度；但原帖没有正式价目表、额度或上线日期。本文将其记为**产品调研**，不据此宣布一个新套餐已经存在。[本人原帖](https://x.com/thsottiaux/status/2119305294291612140)
+
+## 11 月 5 日：GPT-6 Cyber 发布，强调能力与授权范围一起提升
+
+OpenAI 发布安全研究专用模型 **GPT-6 Cyber**，通过 Daybreak Red 等受控访问路径支持更深入的漏洞研究与验证。
+
+官方报告的 ExploitGym 成绩从 GPT-5.6 Cyber 的 32.1% 提高到 48.5%。另一项范围遵守测试中，不使用部署提示词时，避免利用范围外服务的比例为 99.93%；加上部署提示词后为 100%。这些都是厂商在指定测试条件下报告的结果，不能推导为现实任务永远不会越界。
+
+实际研究方面，公告分别列出 Firefox 新漏洞发现、Linux 漏洞复现和可用利用链开发。这里尤其不能把“开发出利用方式”全部写成“发现了全新漏洞”。[发布与评测说明](https://openai.com/index/introducing-gpt-6-cyber/)
+
+我的理解是，专用安全模型的竞争已经包含两部分：能否完成复杂研究，以及能否严格遵守研究者给定的目标与边界。
+
+## 11 月 4 日：Images 2.6，以及拟收购 Pierre
+
+**Images 2.6** 同时进入 ChatGPT、Codex 和 API。API 提供 Flare 与 Sunburst：前者偏向快速生成，后者偏向质量和多轮编辑一致性。发布还包括 GIF、SVG 导出、标注引导编辑与复杂度控制。
+
+官方所说 Flare 最快约六秒，带有低质量档等条件；不能理解为所有复杂图片都六秒完成。[图像模型发布](https://openai.com/index/introducing-images-2-6/)
+
+同日，OpenAI 宣布**拟收购 Pierre Computer Company**。Pierre 的 Trees 与 Diffs 已用于 Codex 的文件浏览和变更审阅；后续目标是把 Git、代码存储和协作流程进一步带入 Codex。
+
+公告明确说明交易仍需满足惯常交割条件，包括监管批准，交割前双方保持独立。因此准确表述是“宣布收购计划”，而不是“已经完成收购”。Pierre 的开源项目将继续保持开源。[收购公告](https://openai.com/index/openai-to-acquire-pierre/)
+
+## 11 月 3 日：Tibo 承认 Agent 仍然让人挫败
+
+在一条更偏个人感受的帖子里，Tibo 说，变化还会不断发生，现在仍是很早期；今天的 Agent 令人惊叹，同时也仍然令人挫败，他希望破解问题、找回流畅工作的状态。
+
+这不是新功能发布，却很能概括这个阶段：单次演示很强，与每天连续使用时顺畅可靠，是两种不同的体验。[本人原帖](https://x.com/thsottiaux/status/2117746467058405665)
+
+## 11 月 1 日：28 天挑战以 banked reset 收尾
+
+Tibo 发布“Day 28 / Banked 2/2”，对应这轮“每天改进，否则 reset”的收尾。此前 10 月 31 日，他宣布移动端可以方便地切换多个账号，桌面端随后跟进，并预告接下来两天是 banked reset。[收尾原帖](https://x.com/thsottiaux/status/2117035794678546764)、[账号切换与预告](https://x.com/thsottiaux/status/2116405414921384099)
+
+这里要分清三个概念：普通 reset 是刷新当时的用量；banked reset 是留待用户选择时机使用的重置机会；永久额度调整则是套餐规则变化。三者不能相互替代。原帖的发放表述，也不能证明每个账号在同一秒收到相同权益，具体以客户端为准。
+
+## 10 月 30 日：安全保护与 Agent 运行机制同时更新
+
+OpenAI 宣布更严格的暴力相关内容边界和青少年武器信息限制，并承诺发布 Community Safety Report。**首份报告计划在 2027 年初发布**，覆盖 2026 年下半年；10 月 30 日并不是这份报告全文已经发布。部分新保护按公告将在之后数周陆续推出。[安全公告](https://openai.com/index/community-safety-report-and-new-protections-for-teens/)
+
+开发者侧，Agents API 更新了会话工具配置、后台上下文压缩和自动审查机制。它们分别关系到长任务的工具调整、上下文维护与权限请求处理。后台压缩可能增加 token 用量，自动审查也有支持范围和额外计费，接入前需要核对配置。[API 更新日志](https://developers.openai.com/api/docs/changelog)
+
+## 10 月 29 日：Tibo 宣布用量调整，OpenAI 更新 Model Spec
+
+Tibo 的 Day 25 原帖宣布，对 Pro 100／200／500 和 Business Premium 的用量限制进行翻倍调整，并回应 Pro 200 用户的反馈。原帖在公开嵌入中有截断，因此这里不延伸解释未完整读取的后续条款，也不把这次调整套用到所有免费或 Plus 账号。[本人公告](https://x.com/thsottiaux/status/2115850175868727621)
+
+同日，OpenAI 更新 **Model Spec**，围绕忠于人类意图、减少伤害、诚实透明、人的自主性与关怀五项价值重新组织指导，补充上下文、监督及副作用等要求，并撤去大量细碎的风格规则。
+
+Model Spec 描述的是目标行为，OpenAI 也明确承认现有模型尚未完全达到它。规范更新本身不能当作所有模型行为立即一致改变的证明。[官方解释](https://openai.com/index/updated-model-spec/)
+
+## 10 月 28 日：符合条件的订阅用户可领取 API credits
+
+OpenAI 将 API credits 纳入符合条件的 Pro 与 Business 订阅权益，最高每月 500 美元，但额度与套餐、付费席位等有关，需要关联自己拥有的 API organization。
+
+这笔权益不会直接提高登录态 Codex 或 ChatGPT 的使用上限，也不支持用 API key 运行 Codex；未用额度有到期规则。Business 还有工作区合并额度与上限，不能将“最高 500 美元”理解成每位席位都拿 500 美元。[权益及资格说明](https://developers.openai.com/api/docs/guides/chatgpt-api-credits)
+
+## 10 月 26 日：GPT-6.1 Terra 补上高频、低成本任务
+
+OpenAI 发布 **GPT-6.1 Terra**，定位为快速、高效的视觉推理、精细电脑操作和自然写作模型。官方在视觉、桌面操作和编码评测中展示了相较 GPT-5.6 Terra 的进步，同时仍建议最复杂的编码任务使用 Sol 或 Astra。
+
+因此，它更适合被理解为工作流中的一个选择：大量重复、预算敏感的任务是否能交给它，需要用自己的样本评估。发布页的速度和成本对比属于指定评测结果，不能直接换算成任何业务都同等省钱。[模型发布](https://openai.com/index/introducing-gpt-6-1-terra/)
+
+## 10 月 22—23 日：Decisions 转正，Agent 可以安排后续任务
+
+10 月 22 日，**Decisions API 正式可用**，支持 GPT-6 Luna；10 月 23 日，Agents API 公共 Beta 加入定时自动化任务。这是本轮开发者更新中两个值得记录的状态变化。[API 更新日志](https://developers.openai.com/api/docs/changelog)
+
+前者让结构化判断成为更稳定的接口路径，后者让工作不必都在一次前台会话里结束。本文把它们与“模型发布”分开记录，因为它们改变的是调用和运行方式。
+
+## 10 月 21 日：Google Cloud 合作与缓存体验
+
+OpenAI 宣布将前沿模型和 Codex Agent 工作流引入 Google Cloud Model Garden，采购可通过 Google Cloud Marketplace，并计划在之后数周正式开放。公告中的未来时需要保留：合作宣布，不等于当天所有 GCP 项目都已可用。[合作公告](https://openai.com/index/openai-models-google-cloud/)
+
+同一天，Tibo 介绍 API 的 12 小时缓存，并表示登录态 Codex 与 Work 会长期保留缓存，让用户隔数小时回来或恢复旧对话时更容易获得缓存收益。这是他的产品说明；具体缓存与计费承诺应结合当前文档和实际账单看，不将一句帖子扩展为无条件的永久服务保证。[本人原帖](https://x.com/thsottiaux/status/2112712984644784534)
+
+## 10 月 16 日：提高“有效用量”，不只靠加额度
+
+Tibo 在 Day 12 说明，团队通过子 Agent 间复用上下文、延长缓存保留，以及改进请求路由提高缓存命中率，增加 Codex 与 Work 的有效用量。
+
+这条解释很关键：同样的名义额度，背后的缓存和上下文处理效率不同，用户最终能完成的工作量也会不同。它描述的是效率改进，不是所有套餐统一增加一个固定百分比。[本人原帖](https://x.com/thsottiaux/status/2111244596131111253)
+
+## 10 月 15 日：减少容量中断，语音继续升级
+
+Tibo 在 Day 11 表示，团队增加计算资源并做了一系列改动，显著减少“所选模型容量已满，请换一个模型”的中断。这是本时间窗口起点的一项基础体验修补。[本人原帖](https://x.com/thsottiaux/status/2110750421367287996)
+
+GPT-Live-1.1 同日开始面向产品用户推出，带来 13 种新声音和多语言口音改进。发布时 API 仍标为即将推出；不能因为论坛在 11 月仍有人回复，就把它误记成 11 月的新发布。[原始发布帖](https://community.openai.com/t/gpt-live-1-1-is-rolling-out-with-new-voices-and-better-accents/1406704)
+
+## 这段时间，最值得留意的三件事
+
+**第一，Agent 的完整工作流程越来越重要。** Dots 控制更多机器、Pierre 相关工具和企业接入，让竞争从“生成答案”延伸到执行、审阅和交付。对使用者而言，少搬运一次结果、少恢复一次上下文，可能比又多一个聊天入口更有价值。
+
+**第二，用量体验需要把套餐、缓存和运行方式一起看。** Tibo 的帖子里既有 reset，也有效率优化和额度调整。只记录“今天有没有重置”，会漏掉真正影响长期使用成本的变化。
+
+**第三，能力扩张正在要求更具体的控制机制。** Cyber 的范围遵守、Control Room 的停止机制与 Model Spec 的行为目标，解决的是不同层次的问题；它们都需要实际验证，不能仅靠发布文案判断可靠性。
+
+本文主要依据文中链接的 OpenAI 官方公告、开发者资料及 Tibo 本人 X 原帖整理。Tibo 帖子的日期与可见文字通过官方公开嵌入核对；长帖截断部分不作推断。评测数据按厂商口径归因，本文没有进行独立复测。11 月 11 日的 reset 暗示与 Pro 50 讨论仍按预告、调研处理，后续以正式发布为准。
